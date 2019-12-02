@@ -19,6 +19,10 @@ jobs:
       run: npm install
       env:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+    - name: Build Package
+      run: npm run build
+      env:
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     - run: npx semantic-release
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
