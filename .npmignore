@@ -1,0 +1,4 @@
+.github/
+.openapi-generator/
+docs/
+node_modules/
