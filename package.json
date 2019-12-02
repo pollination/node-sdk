@@ -1,0 +1,29 @@
+{
+  "name": "@pollination-solutions/pollination-sdk",
+  "version": "0.0.1",
+  "description": "OpenAPI client for the Pollination Cloud Platform.",
+  "author": "OpenAPI-Generator Contributors",
+  "keywords": [
+    "axios",
+    "typescript",
+    "openapi-client",
+    "openapi-generator",
+    "pollination-sdk"
+  ],
+  "license": "Unlicense",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc --outDir dist/",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "@semantic-release/exec": "^3.3.8",
+    "@types/node": "^12.11.5",
+    "semantic-release": "^15.13.31",
+    "typescript": "^3.6.4"
+  }
+}
