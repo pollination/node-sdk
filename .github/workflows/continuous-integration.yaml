@@ -17,6 +17,8 @@ jobs:
         node-version: '10.x'
     - name: Install dependencies
       run: npm install
+      env:
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     - run: npx semantic-release
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -36,6 +38,8 @@ jobs:
         node-version: '10.x'
     - name: Install dependencies
       run: npm install
+      env:
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     - name: Build Docs
       run: npx typedoc
     - name: Deploy
