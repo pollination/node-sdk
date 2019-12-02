@@ -1,6 +1,5 @@
 {
-  "npmName": "pollination-sdk",
-  "packageUrl": "https://github.com/pollination/python-sdk",
+  "npmName": "@pollination-solutions/pollination-sdk",
   "usePromises": true,
   "supportsES6": true,
   "withInterfaces": true,

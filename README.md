@@ -1,4 +1,4 @@
-## pollination-sdk@0.0.1
+# Pollination NodeJS SDK
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -77,7 +77,7 @@ auth.login(APIToken).then(res => {
 
 ## Documentation
 
-Full API documentation for this library can be found at [https://pollination.github.io/node-sdk].
+Full API documentation for this library can be found at [https://pollination.github.io/node-sdk](https://pollination.github.io/node-sdk).
 
 ### Building
 
@@ -98,7 +98,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install pollination-sdk@0.0.1 --save
+npm install @pollination-solutions/pollination-sdk --save
 ```
 
 _unPublished (not recommended):_
