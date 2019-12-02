@@ -6,7 +6,6 @@ jobs:
 
   deploy:
     name: "Semantic Release"
-    needs: test
     if: success() && github.ref == 'refs/heads/master' && github.base_ref == ''
     runs-on: ubuntu-latest
 
