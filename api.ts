@@ -141,6 +141,690 @@ export interface App {
     pattern?: string;
 }
 /**
+ * A minimal argo Archive Location
+ * @export
+ * @interface ArgoArchiveLocation
+ */
+export interface ArgoArchiveLocation {
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ArgoArchiveLocation
+     */
+    archiveLogs?: boolean;
+}
+/**
+ * Arguments to a task or a workflow.  Queenbee accepts two types of arguments: parameters and artifacts. A ``parameter`` is a variable that can be passed to a task or a workflow. An ``artifact`` is a file or folder that can be identified by a url or a path.
+ * @export
+ * @interface ArgoArguments
+ */
+export interface ArgoArguments {
+    /**
+     * Parameters is the list of input parameters to pass to the task or workflow. A parameter can have a default value which will be overwritten if an input value is provided.
+     * @type {Array<ArgoParameter>}
+     * @memberof ArgoArguments
+     */
+    parameters?: Array<ArgoParameter>;
+    /**
+     * Artifacts is the list of file and folder arguments to pass to the task or workflow.
+     * @type {Array<ArgoArtifact>}
+     * @memberof ArgoArguments
+     */
+    artifacts?: Array<ArgoArtifact>;
+}
+/**
+ * Artifact indicates an artifact to place at a specified path
+ * @export
+ * @interface ArgoArtifact
+ */
+export interface ArgoArtifact {
+    /**
+     * name of the artifact. must be unique within a task\'s inputs / outputs.
+     * @type {string}
+     * @memberof ArgoArtifact
+     */
+    name: string;
+    /**
+     * Path the artifact should be copied to in the temporary task folder.
+     * @type {string}
+     * @memberof ArgoArtifact
+     */
+    path?: string;
+    /**
+     * 
+     * @type {object}
+     * @memberof ArgoArtifact
+     */
+    archive?: object;
+    /**
+     * 
+     * @type {ArgoS3Location}
+     * @memberof ArgoArtifact
+     */
+    s3?: ArgoS3Location;
+}
+/**
+ * An argo DAG object
+ * @export
+ * @interface ArgoDAG
+ */
+export interface ArgoDAG {
+    /**
+     * 
+     * @type {Array<ArgoDAGTask>}
+     * @memberof ArgoDAG
+     */
+    tasks: Array<ArgoDAGTask>;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoDAG
+     */
+    target?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ArgoDAG
+     */
+    failFast?: boolean;
+}
+/**
+ * An argo Dag Task object
+ * @export
+ * @interface ArgoDAGTask
+ */
+export interface ArgoDAGTask {
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoDAGTask
+     */
+    name: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoDAGTask
+     */
+    template: string;
+    /**
+     * 
+     * @type {ArgoArguments}
+     * @memberof ArgoDAGTask
+     */
+    arguments?: ArgoArguments;
+    /**
+     * 
+     * @type {Array<object>}
+     * @memberof ArgoDAGTask
+     */
+    withItems?: Array<object>;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoDAGTask
+     */
+    withParam?: string;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof ArgoDAGTask
+     */
+    dependencies?: Array<string>;
+}
+/**
+ * An argo task node status object
+ * @export
+ * @interface ArgoNodeStatus
+ */
+export interface ArgoNodeStatus {
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoNodeStatus
+     */
+    id?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoNodeStatus
+     */
+    name?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoNodeStatus
+     */
+    displayName?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoNodeStatus
+     */
+    type?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoNodeStatus
+     */
+    templateName?: string;
+    /**
+     * 
+     * @type {ArgoTemplateRef}
+     * @memberof ArgoNodeStatus
+     */
+    templateRef?: ArgoTemplateRef;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoNodeStatus
+     */
+    storedTemplateID?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoNodeStatus
+     */
+    workflowTemplateName?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoNodeStatus
+     */
+    phase?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoNodeStatus
+     */
+    boundaryID?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoNodeStatus
+     */
+    message?: string;
+    /**
+     * 
+     * @type {Date}
+     * @memberof ArgoNodeStatus
+     */
+    startedAt?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof ArgoNodeStatus
+     */
+    finishedAt?: Date;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoNodeStatus
+     */
+    podIP?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoNodeStatus
+     */
+    daemoned?: string;
+    /**
+     * 
+     * @type {ArgoArguments}
+     * @memberof ArgoNodeStatus
+     */
+    inputs?: ArgoArguments;
+    /**
+     * 
+     * @type {ArgoOutputs}
+     * @memberof ArgoNodeStatus
+     */
+    outputs?: ArgoOutputs;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof ArgoNodeStatus
+     */
+    children?: Array<string>;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof ArgoNodeStatus
+     */
+    outboundNodes?: Array<string>;
+}
+/**
+ * Arguments to a task or a workflow.  Queenbee accepts two types of arguments: parameters and artifacts. A ``parameter`` is a variable that can be passed to a task or a workflow. An ``artifact`` is a file or folder that can be identified by a url or a path.
+ * @export
+ * @interface ArgoOutputs
+ */
+export interface ArgoOutputs {
+    /**
+     * Parameters is the list of input parameters to pass to the task or workflow. A parameter can have a default value which will be overwritten if an input value is provided.
+     * @type {Array<ArgoParameter>}
+     * @memberof ArgoOutputs
+     */
+    parameters?: Array<ArgoParameter>;
+    /**
+     * Artifacts is the list of file and folder arguments to pass to the task or workflow.
+     * @type {Array<ArgoArtifact>}
+     * @memberof ArgoOutputs
+     */
+    artifacts?: Array<ArgoArtifact>;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoOutputs
+     */
+    result?: string;
+}
+/**
+ * Parameter.  Parameter indicate a passed string parameter to a service template with an optional default value.
+ * @export
+ * @interface ArgoParameter
+ */
+export interface ArgoParameter {
+    /**
+     * Name is the parameter name. must be unique within a task\'s inputs / outputs.
+     * @type {string}
+     * @memberof ArgoParameter
+     */
+    name: string;
+    /**
+     * Default value to use for an input parameter if a value was not supplied.
+     * @type {object}
+     * @memberof ArgoParameter
+     */
+    value?: object;
+}
+/**
+ * An argo retry strategy
+ * @export
+ * @interface ArgoRetryStrategy
+ */
+export interface ArgoRetryStrategy {
+    /**
+     * 
+     * @type {number}
+     * @memberof ArgoRetryStrategy
+     */
+    limit?: number;
+}
+/**
+ * S3Location.  Location infromation to pull artifacts from S3
+ * @export
+ * @interface ArgoS3Location
+ */
+export interface ArgoS3Location {
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoS3Location
+     */
+    endpoint: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoS3Location
+     */
+    bucket: string;
+    /**
+     * 
+     * @type {KeySecret}
+     * @memberof ArgoS3Location
+     */
+    accessKeySecret: KeySecret;
+    /**
+     * 
+     * @type {KeySecret}
+     * @memberof ArgoS3Location
+     */
+    secretKeySecret: KeySecret;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoS3Location
+     */
+    key: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ArgoS3Location
+     */
+    insecure?: boolean;
+}
+/**
+ * An argo workflow step sequence object
+ * @export
+ * @interface ArgoSequence
+ */
+export interface ArgoSequence {
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoSequence
+     */
+    count?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoSequence
+     */
+    start?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoSequence
+     */
+    end?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoSequence
+     */
+    format?: string;
+}
+/**
+ * An argo workflow status object
+ * @export
+ * @interface ArgoStatus
+ */
+export interface ArgoStatus {
+    /**
+     * 
+     * @type {{ [key: string]: ArgoTemplate; }}
+     * @memberof ArgoStatus
+     */
+    storedTemplates: { [key: string]: ArgoTemplate; };
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoStatus
+     */
+    phase?: string;
+    /**
+     * 
+     * @type {Date}
+     * @memberof ArgoStatus
+     */
+    startedAt?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof ArgoStatus
+     */
+    finishedAt?: Date;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoStatus
+     */
+    message?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoStatus
+     */
+    compressedNodes?: string;
+    /**
+     * 
+     * @type {{ [key: string]: ArgoNodeStatus; }}
+     * @memberof ArgoStatus
+     */
+    nodes?: { [key: string]: ArgoNodeStatus; };
+    /**
+     * 
+     * @type {Array<object>}
+     * @memberof ArgoStatus
+     */
+    persistentVolumeClaims?: Array<object>;
+    /**
+     * 
+     * @type {ArgoOutputs}
+     * @memberof ArgoStatus
+     */
+    outputs?: ArgoOutputs;
+}
+/**
+ * An argo template step
+ * @export
+ * @interface ArgoStep
+ */
+export interface ArgoStep {
+    /**
+     * 
+     * @type {Array<ArgoWorkflowStep>}
+     * @memberof ArgoStep
+     */
+    steps: Array<ArgoWorkflowStep>;
+}
+/**
+ * An argo template suspension object
+ * @export
+ * @interface ArgoSuspend
+ */
+export interface ArgoSuspend {
+    /**
+     * 
+     * @type {number}
+     * @memberof ArgoSuspend
+     */
+    duration?: number;
+}
+/**
+ * An argo task container object
+ * @export
+ * @interface ArgoTaskContainer
+ */
+export interface ArgoTaskContainer {
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoTaskContainer
+     */
+    image: string;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof ArgoTaskContainer
+     */
+    command?: Array<string>;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof ArgoTaskContainer
+     */
+    args?: Array<string>;
+}
+/**
+ * An argo workflow template object
+ * @export
+ * @interface ArgoTemplate
+ */
+export interface ArgoTemplate {
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoTemplate
+     */
+    name?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoTemplate
+     */
+    template?: string;
+    /**
+     * 
+     * @type {ArgoArguments}
+     * @memberof ArgoTemplate
+     */
+    arguments?: ArgoArguments;
+    /**
+     * 
+     * @type {ArgoTemplateRef}
+     * @memberof ArgoTemplate
+     */
+    templateRef?: ArgoTemplateRef;
+    /**
+     * 
+     * @type {ArgoArguments}
+     * @memberof ArgoTemplate
+     */
+    inputs?: ArgoArguments;
+    /**
+     * 
+     * @type {ArgoOutputs}
+     * @memberof ArgoTemplate
+     */
+    outputs?: ArgoOutputs;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ArgoTemplate
+     */
+    daemon?: boolean;
+    /**
+     * 
+     * @type {Array<ArgoStep>}
+     * @memberof ArgoTemplate
+     */
+    steps?: Array<ArgoStep>;
+    /**
+     * 
+     * @type {ArgoTaskContainer}
+     * @memberof ArgoTemplate
+     */
+    container?: ArgoTaskContainer;
+    /**
+     * 
+     * @type {ArgoDAG}
+     * @memberof ArgoTemplate
+     */
+    dag?: ArgoDAG;
+    /**
+     * 
+     * @type {ArgoSuspend}
+     * @memberof ArgoTemplate
+     */
+    suspend?: ArgoSuspend;
+    /**
+     * 
+     * @type {ArgoArchiveLocation}
+     * @memberof ArgoTemplate
+     */
+    archiveLocation?: ArgoArchiveLocation;
+    /**
+     * 
+     * @type {number}
+     * @memberof ArgoTemplate
+     */
+    activeDeadlineSeconds?: number;
+    /**
+     * 
+     * @type {ArgoRetryStrategy}
+     * @memberof ArgoTemplate
+     */
+    retryStrategy?: ArgoRetryStrategy;
+    /**
+     * 
+     * @type {number}
+     * @memberof ArgoTemplate
+     */
+    parallelism?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoTemplate
+     */
+    serviceAccountName?: string;
+}
+/**
+ * An argo template reference object
+ * @export
+ * @interface ArgoTemplateRef
+ */
+export interface ArgoTemplateRef {
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoTemplateRef
+     */
+    name?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoTemplateRef
+     */
+    template?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoTemplateRef
+     */
+    runtimeResolution?: string;
+}
+/**
+ * An argo template workflow step
+ * @export
+ * @interface ArgoWorkflowStep
+ */
+export interface ArgoWorkflowStep {
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoWorkflowStep
+     */
+    name?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoWorkflowStep
+     */
+    template?: string;
+    /**
+     * 
+     * @type {ArgoArguments}
+     * @memberof ArgoWorkflowStep
+     */
+    arguments?: ArgoArguments;
+    /**
+     * 
+     * @type {ArgoTemplateRef}
+     * @memberof ArgoWorkflowStep
+     */
+    templateRef?: ArgoTemplateRef;
+    /**
+     * 
+     * @type {Array<object>}
+     * @memberof ArgoWorkflowStep
+     */
+    withItems?: Array<object>;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoWorkflowStep
+     */
+    withParam?: string;
+    /**
+     * 
+     * @type {ArgoSequence}
+     * @memberof ArgoWorkflowStep
+     */
+    withSequence?: ArgoSequence;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoWorkflowStep
+     */
+    when?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ArgoWorkflowStep
+     */
+    continueOn?: string;
+}
+/**
  * Arguments to a task or a workflow.  Queenbee accepts two types of arguments: parameters and artifacts. A ``parameter`` is a variable that can be passed to a task or a workflow. An ``artifact`` is a file or folder that can be identified by a url or a path.
  * @export
  * @interface Arguments
@@ -891,127 +1575,6 @@ export interface NewToken {
     id: string;
 }
 /**
- * An argo task node status object
- * @export
- * @interface NodeStatus
- */
-export interface NodeStatus {
-    /**
-     * 
-     * @type {string}
-     * @memberof NodeStatus
-     */
-    id?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NodeStatus
-     */
-    name?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NodeStatus
-     */
-    displayName?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NodeStatus
-     */
-    type?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NodeStatus
-     */
-    templateName?: string;
-    /**
-     * 
-     * @type {TemplateRef}
-     * @memberof NodeStatus
-     */
-    templateRef?: TemplateRef;
-    /**
-     * 
-     * @type {string}
-     * @memberof NodeStatus
-     */
-    storedTemplateID?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NodeStatus
-     */
-    workflowTemplateName?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NodeStatus
-     */
-    phase?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NodeStatus
-     */
-    boundaryID?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NodeStatus
-     */
-    message?: string;
-    /**
-     * 
-     * @type {Date}
-     * @memberof NodeStatus
-     */
-    startedAt?: Date;
-    /**
-     * 
-     * @type {Date}
-     * @memberof NodeStatus
-     */
-    finishedAt?: Date;
-    /**
-     * 
-     * @type {string}
-     * @memberof NodeStatus
-     */
-    podIP?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NodeStatus
-     */
-    daemoned?: string;
-    /**
-     * 
-     * @type {QueenbeeArgoSchemaArgumentsArguments}
-     * @memberof NodeStatus
-     */
-    inputs?: QueenbeeArgoSchemaArgumentsArguments;
-    /**
-     * 
-     * @type {Outputs}
-     * @memberof NodeStatus
-     */
-    outputs?: Outputs;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof NodeStatus
-     */
-    children?: Array<string>;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof NodeStatus
-     */
-    outboundNodes?: Array<string>;
-}
-/**
  * Opaque Material Schema
  * @export
  * @interface Opaque
@@ -1081,31 +1644,6 @@ export interface Operator {
      * @memberof Operator
      */
     local?: LocalRequirements;
-}
-/**
- * Arguments to a task or a workflow.  Queenbee accepts two types of arguments: parameters and artifacts. A ``parameter`` is a variable that can be passed to a task or a workflow. An ``artifact`` is a file or folder that can be identified by a url or a path.
- * @export
- * @interface Outputs
- */
-export interface Outputs {
-    /**
-     * Parameters is the list of input parameters to pass to the task or workflow. A parameter can have a default value which will be overwritten if an input value is provided.
-     * @type {Array<QueenbeeArgoSchemaArgumentsParameter>}
-     * @memberof Outputs
-     */
-    parameters?: Array<QueenbeeArgoSchemaArgumentsParameter>;
-    /**
-     * Artifacts is the list of file and folder arguments to pass to the task or workflow.
-     * @type {Array<QueenbeeArgoSchemaArgumentsArtifact>}
-     * @memberof Outputs
-     */
-    artifacts?: Array<QueenbeeArgoSchemaArgumentsArtifact>;
-    /**
-     * 
-     * @type {string}
-     * @memberof Outputs
-     */
-    result?: string;
 }
 /**
  * A distribution package.
@@ -1241,187 +1779,6 @@ export enum PlasticTypeEnum {
 }
 
 /**
- * Arguments to a task or a workflow.  Queenbee accepts two types of arguments: parameters and artifacts. A ``parameter`` is a variable that can be passed to a task or a workflow. An ``artifact`` is a file or folder that can be identified by a url or a path.
- * @export
- * @interface QueenbeeArgoSchemaArgumentsArguments
- */
-export interface QueenbeeArgoSchemaArgumentsArguments {
-    /**
-     * Parameters is the list of input parameters to pass to the task or workflow. A parameter can have a default value which will be overwritten if an input value is provided.
-     * @type {Array<QueenbeeArgoSchemaArgumentsParameter>}
-     * @memberof QueenbeeArgoSchemaArgumentsArguments
-     */
-    parameters?: Array<QueenbeeArgoSchemaArgumentsParameter>;
-    /**
-     * Artifacts is the list of file and folder arguments to pass to the task or workflow.
-     * @type {Array<QueenbeeArgoSchemaArgumentsArtifact>}
-     * @memberof QueenbeeArgoSchemaArgumentsArguments
-     */
-    artifacts?: Array<QueenbeeArgoSchemaArgumentsArtifact>;
-}
-/**
- * Artifact indicates an artifact to place at a specified path
- * @export
- * @interface QueenbeeArgoSchemaArgumentsArtifact
- */
-export interface QueenbeeArgoSchemaArgumentsArtifact {
-    /**
-     * name of the artifact. must be unique within a task\'s inputs / outputs.
-     * @type {string}
-     * @memberof QueenbeeArgoSchemaArgumentsArtifact
-     */
-    name: string;
-    /**
-     * Path the artifact should be copied to in the temporary task folder.
-     * @type {string}
-     * @memberof QueenbeeArgoSchemaArgumentsArtifact
-     */
-    path?: string;
-    /**
-     * 
-     * @type {object}
-     * @memberof QueenbeeArgoSchemaArgumentsArtifact
-     */
-    archive?: object;
-    /**
-     * 
-     * @type {S3Location}
-     * @memberof QueenbeeArgoSchemaArgumentsArtifact
-     */
-    s3?: S3Location;
-}
-/**
- * Parameter.  Parameter indicate a passed string parameter to a service template with an optional default value.
- * @export
- * @interface QueenbeeArgoSchemaArgumentsParameter
- */
-export interface QueenbeeArgoSchemaArgumentsParameter {
-    /**
-     * Name is the parameter name. must be unique within a task\'s inputs / outputs.
-     * @type {string}
-     * @memberof QueenbeeArgoSchemaArgumentsParameter
-     */
-    name: string;
-    /**
-     * Default value to use for an input parameter if a value was not supplied.
-     * @type {object}
-     * @memberof QueenbeeArgoSchemaArgumentsParameter
-     */
-    value?: object;
-}
-/**
- * Arguments to a task or a workflow.  Queenbee accepts two types of arguments: parameters and artifacts. A ``parameter`` is a variable that can be passed to a task or a workflow. An ``artifact`` is a file or folder that can be identified by a url or a path.
- * @export
- * @interface QueenbeeSchemaArgumentsArguments
- */
-export interface QueenbeeSchemaArgumentsArguments {
-    /**
-     * Parameters is the list of input parameters to pass to the task or workflow. A parameter can have a default value which will be overwritten if an input value is provided.
-     * @type {Array<QueenbeeSchemaArgumentsParameter>}
-     * @memberof QueenbeeSchemaArgumentsArguments
-     */
-    parameters?: Array<QueenbeeSchemaArgumentsParameter>;
-    /**
-     * Artifacts is the list of file and folder arguments to pass to the task or workflow.
-     * @type {Array<QueenbeeSchemaArgumentsArtifact>}
-     * @memberof QueenbeeSchemaArgumentsArguments
-     */
-    artifacts?: Array<QueenbeeSchemaArgumentsArtifact>;
-}
-/**
- * Artifact indicates an artifact to place at a specified path
- * @export
- * @interface QueenbeeSchemaArgumentsArtifact
- */
-export interface QueenbeeSchemaArgumentsArtifact {
-    /**
-     * name of the artifact. must be unique within a task\'s inputs / outputs.
-     * @type {string}
-     * @memberof QueenbeeSchemaArgumentsArtifact
-     */
-    name: string;
-    /**
-     * Name of the Artifact Location to source this artifact from.
-     * @type {string}
-     * @memberof QueenbeeSchemaArgumentsArtifact
-     */
-    location?: string;
-    /**
-     * Path to the artifact on the local machine, url or S3 bucket.
-     * @type {string}
-     * @memberof QueenbeeSchemaArgumentsArtifact
-     */
-    sourcePath?: string;
-    /**
-     * Path the artifact should be copied to in the temporary task folder.
-     * @type {string}
-     * @memberof QueenbeeSchemaArgumentsArtifact
-     */
-    path?: string;
-    /**
-     * Optional description for input parameter.
-     * @type {string}
-     * @memberof QueenbeeSchemaArgumentsArtifact
-     */
-    description?: string;
-    /**
-     * An object with Key Value pairs of HTTP headers. For artifacts from URL Location only
-     * @type {{ [key: string]: string; }}
-     * @memberof QueenbeeSchemaArgumentsArtifact
-     */
-    headers?: { [key: string]: string; };
-    /**
-     * The HTTP verb to use when making the request. For artifacts from URL Location only
-     * @type {string}
-     * @memberof QueenbeeSchemaArgumentsArtifact
-     */
-    verb?: QueenbeeSchemaArgumentsArtifactVerbEnum;
-}
-
-/**
-    * @export
-    * @enum {string}
-    */
-export enum QueenbeeSchemaArgumentsArtifactVerbEnum {
-    GET = 'GET',
-    POST = 'POST',
-    PUT = 'PUT',
-    PATCH = 'PATCH',
-    DELETE = 'DELETE'
-}
-
-/**
- * Parameter.  Parameter indicate a passed string parameter to a service template with an optional default value.
- * @export
- * @interface QueenbeeSchemaArgumentsParameter
- */
-export interface QueenbeeSchemaArgumentsParameter {
-    /**
-     * Name is the parameter name. must be unique within a task\'s inputs / outputs.
-     * @type {string}
-     * @memberof QueenbeeSchemaArgumentsParameter
-     */
-    name: string;
-    /**
-     * Default value to use for an input parameter if a value was not supplied.
-     * @type {object}
-     * @memberof QueenbeeSchemaArgumentsParameter
-     */
-    value?: object;
-    /**
-     * Optional description for input parameter.
-     * @type {string}
-     * @memberof QueenbeeSchemaArgumentsParameter
-     */
-    description?: string;
-    /**
-     * load parameters from a file. File can be a JSON / YAML or a text file.
-     * @type {string}
-     * @memberof QueenbeeSchemaArgumentsParameter
-     */
-    path?: string;
-}
-/**
  * 
  * @export
  * @interface ReferenceWorkflow
@@ -1445,19 +1802,6 @@ export interface ReferenceWorkflow {
      * @memberof ReferenceWorkflow
      */
     link: string;
-}
-/**
- * An argo retry strategy
- * @export
- * @interface RetryStrategy
- */
-export interface RetryStrategy {
-    /**
-     * 
-     * @type {number}
-     * @memberof RetryStrategy
-     */
-    limit?: number;
 }
 /**
  * S3Location  An S3 bucket
@@ -1645,37 +1989,6 @@ export interface SensorGridOut {
     sensorsUrl: string;
 }
 /**
- * An argo workflow step sequence object
- * @export
- * @interface Sequence
- */
-export interface Sequence {
-    /**
-     * 
-     * @type {string}
-     * @memberof Sequence
-     */
-    count?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Sequence
-     */
-    start?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Sequence
-     */
-    end?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Sequence
-     */
-    format?: string;
-}
-/**
  * ShadeFace Schema
  * @export
  * @interface ShadeFace
@@ -1741,80 +2054,6 @@ export enum ShadeFaceTypeEnum {
 }
 
 /**
- * An argo workflow status object
- * @export
- * @interface Status
- */
-export interface Status {
-    /**
-     * 
-     * @type {{ [key: string]: Template; }}
-     * @memberof Status
-     */
-    storedTemplates: { [key: string]: Template; };
-    /**
-     * 
-     * @type {string}
-     * @memberof Status
-     */
-    phase?: string;
-    /**
-     * 
-     * @type {Date}
-     * @memberof Status
-     */
-    startedAt?: Date;
-    /**
-     * 
-     * @type {Date}
-     * @memberof Status
-     */
-    finishedAt?: Date;
-    /**
-     * 
-     * @type {string}
-     * @memberof Status
-     */
-    message?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Status
-     */
-    compressedNodes?: string;
-    /**
-     * 
-     * @type {{ [key: string]: NodeStatus; }}
-     * @memberof Status
-     */
-    nodes?: { [key: string]: NodeStatus; };
-    /**
-     * 
-     * @type {Array<object>}
-     * @memberof Status
-     */
-    persistentVolumeClaims?: Array<object>;
-    /**
-     * 
-     * @type {Outputs}
-     * @memberof Status
-     */
-    outputs?: Outputs;
-}
-/**
- * An argo template step
- * @export
- * @interface Step
- */
-export interface Step {
-    /**
-     * 
-     * @type {Array<WorkflowStep>}
-     * @memberof Step
-     */
-    steps: Array<WorkflowStep>;
-}
-/**
  * 
  * @export
  * @interface SubmitSimulation
@@ -1828,170 +2067,10 @@ export interface SubmitSimulation {
     workflow: string;
     /**
      * 
-     * @type {QueenbeeSchemaArgumentsArguments}
+     * @type {Arguments}
      * @memberof SubmitSimulation
      */
-    inputs?: QueenbeeSchemaArgumentsArguments;
-}
-/**
- * An argo template suspension object
- * @export
- * @interface Suspend
- */
-export interface Suspend {
-    /**
-     * 
-     * @type {number}
-     * @memberof Suspend
-     */
-    duration?: number;
-}
-/**
- * An argo task container object
- * @export
- * @interface TaskContainer
- */
-export interface TaskContainer {
-    /**
-     * 
-     * @type {string}
-     * @memberof TaskContainer
-     */
-    image: string;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof TaskContainer
-     */
-    command?: Array<string>;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof TaskContainer
-     */
-    args?: Array<string>;
-}
-/**
- * An argo workflow template object
- * @export
- * @interface Template
- */
-export interface Template {
-    /**
-     * 
-     * @type {string}
-     * @memberof Template
-     */
-    name?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Template
-     */
-    template?: string;
-    /**
-     * 
-     * @type {QueenbeeArgoSchemaArgumentsArguments}
-     * @memberof Template
-     */
-    arguments?: QueenbeeArgoSchemaArgumentsArguments;
-    /**
-     * 
-     * @type {TemplateRef}
-     * @memberof Template
-     */
-    templateRef?: TemplateRef;
-    /**
-     * 
-     * @type {QueenbeeArgoSchemaArgumentsArguments}
-     * @memberof Template
-     */
-    inputs?: QueenbeeArgoSchemaArgumentsArguments;
-    /**
-     * 
-     * @type {Outputs}
-     * @memberof Template
-     */
-    outputs?: Outputs;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof Template
-     */
-    daemon?: boolean;
-    /**
-     * 
-     * @type {Array<Step>}
-     * @memberof Template
-     */
-    steps?: Array<Step>;
-    /**
-     * 
-     * @type {TaskContainer}
-     * @memberof Template
-     */
-    container?: TaskContainer;
-    /**
-     * 
-     * @type {DAG}
-     * @memberof Template
-     */
-    dag?: DAG;
-    /**
-     * 
-     * @type {Suspend}
-     * @memberof Template
-     */
-    suspend?: Suspend;
-    /**
-     * 
-     * @type {number}
-     * @memberof Template
-     */
-    activeDeadlineSeconds?: number;
-    /**
-     * 
-     * @type {RetryStrategy}
-     * @memberof Template
-     */
-    retryStrategy?: RetryStrategy;
-    /**
-     * 
-     * @type {number}
-     * @memberof Template
-     */
-    parallelism?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof Template
-     */
-    serviceAccountName?: string;
-}
-/**
- * An argo template reference object
- * @export
- * @interface TemplateRef
- */
-export interface TemplateRef {
-    /**
-     * 
-     * @type {string}
-     * @memberof TemplateRef
-     */
-    name?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof TemplateRef
-     */
-    template?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof TemplateRef
-     */
-    runtimeResolution?: string;
+    inputs?: Arguments;
 }
 /**
  * 
@@ -2177,10 +2256,10 @@ export interface WorkflowListItem {
     workflowRef: ReferenceWorkflow;
     /**
      * 
-     * @type {QueenbeeSchemaArgumentsArguments}
+     * @type {Arguments}
      * @memberof WorkflowListItem
      */
-    inputs: QueenbeeSchemaArgumentsArguments;
+    inputs: Arguments;
     /**
      * 
      * @type {string}
@@ -2207,10 +2286,10 @@ export interface WorkflowListItem {
     selfLink: string;
     /**
      * 
-     * @type {Status}
+     * @type {ArgoStatus}
      * @memberof WorkflowListItem
      */
-    status?: Status;
+    status?: ArgoStatus;
     /**
      * 
      * @type {Date}
@@ -2219,65 +2298,23 @@ export interface WorkflowListItem {
     finishedAt?: Date;
 }
 /**
- * An argo template workflow step
+ * 
  * @export
- * @interface WorkflowStep
+ * @interface WorkflowTaskLog
  */
-export interface WorkflowStep {
+export interface WorkflowTaskLog {
+    /**
+     * 
+     * @type {ArgoNodeStatus}
+     * @memberof WorkflowTaskLog
+     */
+    task: ArgoNodeStatus;
     /**
      * 
      * @type {string}
-     * @memberof WorkflowStep
+     * @memberof WorkflowTaskLog
      */
-    name?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof WorkflowStep
-     */
-    template?: string;
-    /**
-     * 
-     * @type {QueenbeeArgoSchemaArgumentsArguments}
-     * @memberof WorkflowStep
-     */
-    arguments?: QueenbeeArgoSchemaArgumentsArguments;
-    /**
-     * 
-     * @type {TemplateRef}
-     * @memberof WorkflowStep
-     */
-    templateRef?: TemplateRef;
-    /**
-     * 
-     * @type {Array<object>}
-     * @memberof WorkflowStep
-     */
-    withItems?: Array<object>;
-    /**
-     * 
-     * @type {string}
-     * @memberof WorkflowStep
-     */
-    withParam?: string;
-    /**
-     * 
-     * @type {Sequence}
-     * @memberof WorkflowStep
-     */
-    withSequence?: Sequence;
-    /**
-     * 
-     * @type {string}
-     * @memberof WorkflowStep
-     */
-    when?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof WorkflowStep
-     */
-    continueOn?: string;
+    logs?: string;
 }
 
 /**
@@ -3988,6 +4025,109 @@ export const SimulationsApiAxiosParamCreator = function (configuration?: Configu
             };
         },
         /**
+         * get simulation logs
+         * @summary Get simulation logs
+         * @param {string} id 
+         * @param {string} templateName Name of a simulation task template.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getSimulationLogs(id: string, templateName: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling getSimulationLogs.');
+            }
+            // verify required parameter 'templateName' is not null or undefined
+            if (templateName === null || templateName === undefined) {
+                throw new RequiredError('templateName','Required parameter templateName was null or undefined when calling getSimulationLogs.');
+            }
+            const localVarPath = `/simulations/{id}/logs`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication JWT required
+            // http bearer authentication required
+            if (configuration && configuration.accessToken) {
+                const accessToken = typeof configuration.accessToken === 'function'
+                    ? configuration.accessToken()
+                    : configuration.accessToken;
+                localVarHeaderParameter["Authorization"] = "Bearer " + accessToken;
+            }
+
+            if (templateName !== undefined) {
+                localVarQueryParameter['template_name'] = templateName;
+            }
+
+
+    
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * get simulation task logs
+         * @summary Get a simulation task\'s logs
+         * @param {string} id 
+         * @param {string} taskId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getTaskLogs(id: string, taskId: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling getTaskLogs.');
+            }
+            // verify required parameter 'taskId' is not null or undefined
+            if (taskId === null || taskId === undefined) {
+                throw new RequiredError('taskId','Required parameter taskId was null or undefined when calling getTaskLogs.');
+            }
+            const localVarPath = `/simulations/{id}/task/{task_id}/logs`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)))
+                .replace(`{${"task_id"}}`, encodeURIComponent(String(taskId)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication JWT required
+            // http bearer authentication required
+            if (configuration && configuration.accessToken) {
+                const accessToken = typeof configuration.accessToken === 'function'
+                    ? configuration.accessToken()
+                    : configuration.accessToken;
+                localVarHeaderParameter["Authorization"] = "Bearer " + accessToken;
+            }
+
+
+    
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * Retrieve a list of simulations.
          * @summary List simulations
          * @param {number} [page] Page number starting from 1
@@ -4206,6 +4346,36 @@ export const SimulationsApiFp = function(configuration?: Configuration) {
             };
         },
         /**
+         * get simulation logs
+         * @summary Get simulation logs
+         * @param {string} id 
+         * @param {string} templateName Name of a simulation task template.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getSimulationLogs(id: string, templateName: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<WorkflowTaskLog>> {
+            const localVarAxiosArgs = SimulationsApiAxiosParamCreator(configuration).getSimulationLogs(id, templateName, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * get simulation task logs
+         * @summary Get a simulation task\'s logs
+         * @param {string} id 
+         * @param {string} taskId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getTaskLogs(id: string, taskId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkflowTaskLog> {
+            const localVarAxiosArgs = SimulationsApiAxiosParamCreator(configuration).getTaskLogs(id, taskId, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
          * Retrieve a list of simulations.
          * @summary List simulations
          * @param {number} [page] Page number starting from 1
@@ -4293,6 +4463,28 @@ export const SimulationsApiFactory = function (configuration?: Configuration, ba
             return SimulationsApiFp(configuration).get(id, options)(axios, basePath);
         },
         /**
+         * get simulation logs
+         * @summary Get simulation logs
+         * @param {string} id 
+         * @param {string} templateName Name of a simulation task template.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getSimulationLogs(id: string, templateName: string, options?: any) {
+            return SimulationsApiFp(configuration).getSimulationLogs(id, templateName, options)(axios, basePath);
+        },
+        /**
+         * get simulation task logs
+         * @summary Get a simulation task\'s logs
+         * @param {string} id 
+         * @param {string} taskId 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getTaskLogs(id: string, taskId: string, options?: any) {
+            return SimulationsApiFp(configuration).getTaskLogs(id, taskId, options)(axios, basePath);
+        },
+        /**
          * Retrieve a list of simulations.
          * @summary List simulations
          * @param {number} [page] Page number starting from 1
@@ -4361,6 +4553,28 @@ export interface SimulationsApiInterface {
      * @memberof SimulationsApiInterface
      */
     get(id: string, options?: any): AxiosPromise<WorkflowListItem>;
+
+    /**
+     * get simulation logs
+     * @summary Get simulation logs
+     * @param {string} id 
+     * @param {string} templateName Name of a simulation task template.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SimulationsApiInterface
+     */
+    getSimulationLogs(id: string, templateName: string, options?: any): AxiosPromise<Array<WorkflowTaskLog>>;
+
+    /**
+     * get simulation task logs
+     * @summary Get a simulation task\'s logs
+     * @param {string} id 
+     * @param {string} taskId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SimulationsApiInterface
+     */
+    getTaskLogs(id: string, taskId: string, options?: any): AxiosPromise<WorkflowTaskLog>;
 
     /**
      * Retrieve a list of simulations.
@@ -4434,6 +4648,32 @@ export class SimulationsApi extends BaseAPI implements SimulationsApiInterface {
      */
     public get(id: string, options?: any) {
         return SimulationsApiFp(this.configuration).get(id, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * get simulation logs
+     * @summary Get simulation logs
+     * @param {string} id 
+     * @param {string} templateName Name of a simulation task template.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SimulationsApi
+     */
+    public getSimulationLogs(id: string, templateName: string, options?: any) {
+        return SimulationsApiFp(this.configuration).getSimulationLogs(id, templateName, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * get simulation task logs
+     * @summary Get a simulation task\'s logs
+     * @param {string} id 
+     * @param {string} taskId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SimulationsApi
+     */
+    public getTaskLogs(id: string, taskId: string, options?: any) {
+        return SimulationsApiFp(this.configuration).getTaskLogs(id, taskId, options)(this.axios, this.basePath);
     }
 
     /**
