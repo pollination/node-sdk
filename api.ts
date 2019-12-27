@@ -141,690 +141,6 @@ export interface App {
     pattern?: string;
 }
 /**
- * A minimal argo Archive Location
- * @export
- * @interface ArgoArchiveLocation
- */
-export interface ArgoArchiveLocation {
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ArgoArchiveLocation
-     */
-    archiveLogs?: boolean;
-}
-/**
- * Arguments to a task or a workflow.  Queenbee accepts two types of arguments: parameters and artifacts. A ``parameter`` is a variable that can be passed to a task or a workflow. An ``artifact`` is a file or folder that can be identified by a url or a path.
- * @export
- * @interface ArgoArguments
- */
-export interface ArgoArguments {
-    /**
-     * Parameters is the list of input parameters to pass to the task or workflow. A parameter can have a default value which will be overwritten if an input value is provided.
-     * @type {Array<ArgoParameter>}
-     * @memberof ArgoArguments
-     */
-    parameters?: Array<ArgoParameter>;
-    /**
-     * Artifacts is the list of file and folder arguments to pass to the task or workflow.
-     * @type {Array<ArgoArtifact>}
-     * @memberof ArgoArguments
-     */
-    artifacts?: Array<ArgoArtifact>;
-}
-/**
- * Artifact indicates an artifact to place at a specified path
- * @export
- * @interface ArgoArtifact
- */
-export interface ArgoArtifact {
-    /**
-     * name of the artifact. must be unique within a task\'s inputs / outputs.
-     * @type {string}
-     * @memberof ArgoArtifact
-     */
-    name: string;
-    /**
-     * Path the artifact should be copied to in the temporary task folder.
-     * @type {string}
-     * @memberof ArgoArtifact
-     */
-    path?: string;
-    /**
-     * 
-     * @type {object}
-     * @memberof ArgoArtifact
-     */
-    archive?: object;
-    /**
-     * 
-     * @type {ArgoS3Location}
-     * @memberof ArgoArtifact
-     */
-    s3?: ArgoS3Location;
-}
-/**
- * An argo DAG object
- * @export
- * @interface ArgoDAG
- */
-export interface ArgoDAG {
-    /**
-     * 
-     * @type {Array<ArgoDAGTask>}
-     * @memberof ArgoDAG
-     */
-    tasks: Array<ArgoDAGTask>;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoDAG
-     */
-    target?: string;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ArgoDAG
-     */
-    failFast?: boolean;
-}
-/**
- * An argo Dag Task object
- * @export
- * @interface ArgoDAGTask
- */
-export interface ArgoDAGTask {
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoDAGTask
-     */
-    name: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoDAGTask
-     */
-    template: string;
-    /**
-     * 
-     * @type {ArgoArguments}
-     * @memberof ArgoDAGTask
-     */
-    arguments?: ArgoArguments;
-    /**
-     * 
-     * @type {Array<object>}
-     * @memberof ArgoDAGTask
-     */
-    withItems?: Array<object>;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoDAGTask
-     */
-    withParam?: string;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof ArgoDAGTask
-     */
-    dependencies?: Array<string>;
-}
-/**
- * An argo task node status object
- * @export
- * @interface ArgoNodeStatus
- */
-export interface ArgoNodeStatus {
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoNodeStatus
-     */
-    id?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoNodeStatus
-     */
-    name?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoNodeStatus
-     */
-    displayName?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoNodeStatus
-     */
-    type?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoNodeStatus
-     */
-    templateName?: string;
-    /**
-     * 
-     * @type {ArgoTemplateRef}
-     * @memberof ArgoNodeStatus
-     */
-    templateRef?: ArgoTemplateRef;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoNodeStatus
-     */
-    storedTemplateID?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoNodeStatus
-     */
-    workflowTemplateName?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoNodeStatus
-     */
-    phase?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoNodeStatus
-     */
-    boundaryID?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoNodeStatus
-     */
-    message?: string;
-    /**
-     * 
-     * @type {Date}
-     * @memberof ArgoNodeStatus
-     */
-    startedAt?: Date;
-    /**
-     * 
-     * @type {Date}
-     * @memberof ArgoNodeStatus
-     */
-    finishedAt?: Date;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoNodeStatus
-     */
-    podIP?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoNodeStatus
-     */
-    daemoned?: string;
-    /**
-     * 
-     * @type {ArgoArguments}
-     * @memberof ArgoNodeStatus
-     */
-    inputs?: ArgoArguments;
-    /**
-     * 
-     * @type {ArgoOutputs}
-     * @memberof ArgoNodeStatus
-     */
-    outputs?: ArgoOutputs;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof ArgoNodeStatus
-     */
-    children?: Array<string>;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof ArgoNodeStatus
-     */
-    outboundNodes?: Array<string>;
-}
-/**
- * Arguments to a task or a workflow.  Queenbee accepts two types of arguments: parameters and artifacts. A ``parameter`` is a variable that can be passed to a task or a workflow. An ``artifact`` is a file or folder that can be identified by a url or a path.
- * @export
- * @interface ArgoOutputs
- */
-export interface ArgoOutputs {
-    /**
-     * Parameters is the list of input parameters to pass to the task or workflow. A parameter can have a default value which will be overwritten if an input value is provided.
-     * @type {Array<ArgoParameter>}
-     * @memberof ArgoOutputs
-     */
-    parameters?: Array<ArgoParameter>;
-    /**
-     * Artifacts is the list of file and folder arguments to pass to the task or workflow.
-     * @type {Array<ArgoArtifact>}
-     * @memberof ArgoOutputs
-     */
-    artifacts?: Array<ArgoArtifact>;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoOutputs
-     */
-    result?: string;
-}
-/**
- * Parameter.  Parameter indicate a passed string parameter to a service template with an optional default value.
- * @export
- * @interface ArgoParameter
- */
-export interface ArgoParameter {
-    /**
-     * Name is the parameter name. must be unique within a task\'s inputs / outputs.
-     * @type {string}
-     * @memberof ArgoParameter
-     */
-    name: string;
-    /**
-     * Default value to use for an input parameter if a value was not supplied.
-     * @type {object}
-     * @memberof ArgoParameter
-     */
-    value?: object;
-}
-/**
- * An argo retry strategy
- * @export
- * @interface ArgoRetryStrategy
- */
-export interface ArgoRetryStrategy {
-    /**
-     * 
-     * @type {number}
-     * @memberof ArgoRetryStrategy
-     */
-    limit?: number;
-}
-/**
- * S3Location.  Location infromation to pull artifacts from S3
- * @export
- * @interface ArgoS3Location
- */
-export interface ArgoS3Location {
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoS3Location
-     */
-    endpoint: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoS3Location
-     */
-    bucket: string;
-    /**
-     * 
-     * @type {KeySecret}
-     * @memberof ArgoS3Location
-     */
-    accessKeySecret: KeySecret;
-    /**
-     * 
-     * @type {KeySecret}
-     * @memberof ArgoS3Location
-     */
-    secretKeySecret: KeySecret;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoS3Location
-     */
-    key: string;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ArgoS3Location
-     */
-    insecure?: boolean;
-}
-/**
- * An argo workflow step sequence object
- * @export
- * @interface ArgoSequence
- */
-export interface ArgoSequence {
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoSequence
-     */
-    count?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoSequence
-     */
-    start?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoSequence
-     */
-    end?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoSequence
-     */
-    format?: string;
-}
-/**
- * An argo workflow status object
- * @export
- * @interface ArgoStatus
- */
-export interface ArgoStatus {
-    /**
-     * 
-     * @type {{ [key: string]: ArgoTemplate; }}
-     * @memberof ArgoStatus
-     */
-    storedTemplates: { [key: string]: ArgoTemplate; };
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoStatus
-     */
-    phase?: string;
-    /**
-     * 
-     * @type {Date}
-     * @memberof ArgoStatus
-     */
-    startedAt?: Date;
-    /**
-     * 
-     * @type {Date}
-     * @memberof ArgoStatus
-     */
-    finishedAt?: Date;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoStatus
-     */
-    message?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoStatus
-     */
-    compressedNodes?: string;
-    /**
-     * 
-     * @type {{ [key: string]: ArgoNodeStatus; }}
-     * @memberof ArgoStatus
-     */
-    nodes?: { [key: string]: ArgoNodeStatus; };
-    /**
-     * 
-     * @type {Array<object>}
-     * @memberof ArgoStatus
-     */
-    persistentVolumeClaims?: Array<object>;
-    /**
-     * 
-     * @type {ArgoOutputs}
-     * @memberof ArgoStatus
-     */
-    outputs?: ArgoOutputs;
-}
-/**
- * An argo template step
- * @export
- * @interface ArgoStep
- */
-export interface ArgoStep {
-    /**
-     * 
-     * @type {Array<ArgoWorkflowStep>}
-     * @memberof ArgoStep
-     */
-    steps: Array<ArgoWorkflowStep>;
-}
-/**
- * An argo template suspension object
- * @export
- * @interface ArgoSuspend
- */
-export interface ArgoSuspend {
-    /**
-     * 
-     * @type {number}
-     * @memberof ArgoSuspend
-     */
-    duration?: number;
-}
-/**
- * An argo task container object
- * @export
- * @interface ArgoTaskContainer
- */
-export interface ArgoTaskContainer {
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoTaskContainer
-     */
-    image: string;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof ArgoTaskContainer
-     */
-    command?: Array<string>;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof ArgoTaskContainer
-     */
-    args?: Array<string>;
-}
-/**
- * An argo workflow template object
- * @export
- * @interface ArgoTemplate
- */
-export interface ArgoTemplate {
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoTemplate
-     */
-    name?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoTemplate
-     */
-    template?: string;
-    /**
-     * 
-     * @type {ArgoArguments}
-     * @memberof ArgoTemplate
-     */
-    arguments?: ArgoArguments;
-    /**
-     * 
-     * @type {ArgoTemplateRef}
-     * @memberof ArgoTemplate
-     */
-    templateRef?: ArgoTemplateRef;
-    /**
-     * 
-     * @type {ArgoArguments}
-     * @memberof ArgoTemplate
-     */
-    inputs?: ArgoArguments;
-    /**
-     * 
-     * @type {ArgoOutputs}
-     * @memberof ArgoTemplate
-     */
-    outputs?: ArgoOutputs;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof ArgoTemplate
-     */
-    daemon?: boolean;
-    /**
-     * 
-     * @type {Array<ArgoStep>}
-     * @memberof ArgoTemplate
-     */
-    steps?: Array<ArgoStep>;
-    /**
-     * 
-     * @type {ArgoTaskContainer}
-     * @memberof ArgoTemplate
-     */
-    container?: ArgoTaskContainer;
-    /**
-     * 
-     * @type {ArgoDAG}
-     * @memberof ArgoTemplate
-     */
-    dag?: ArgoDAG;
-    /**
-     * 
-     * @type {ArgoSuspend}
-     * @memberof ArgoTemplate
-     */
-    suspend?: ArgoSuspend;
-    /**
-     * 
-     * @type {ArgoArchiveLocation}
-     * @memberof ArgoTemplate
-     */
-    archiveLocation?: ArgoArchiveLocation;
-    /**
-     * 
-     * @type {number}
-     * @memberof ArgoTemplate
-     */
-    activeDeadlineSeconds?: number;
-    /**
-     * 
-     * @type {ArgoRetryStrategy}
-     * @memberof ArgoTemplate
-     */
-    retryStrategy?: ArgoRetryStrategy;
-    /**
-     * 
-     * @type {number}
-     * @memberof ArgoTemplate
-     */
-    parallelism?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoTemplate
-     */
-    serviceAccountName?: string;
-}
-/**
- * An argo template reference object
- * @export
- * @interface ArgoTemplateRef
- */
-export interface ArgoTemplateRef {
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoTemplateRef
-     */
-    name?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoTemplateRef
-     */
-    template?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoTemplateRef
-     */
-    runtimeResolution?: string;
-}
-/**
- * An argo template workflow step
- * @export
- * @interface ArgoWorkflowStep
- */
-export interface ArgoWorkflowStep {
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoWorkflowStep
-     */
-    name?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoWorkflowStep
-     */
-    template?: string;
-    /**
-     * 
-     * @type {ArgoArguments}
-     * @memberof ArgoWorkflowStep
-     */
-    arguments?: ArgoArguments;
-    /**
-     * 
-     * @type {ArgoTemplateRef}
-     * @memberof ArgoWorkflowStep
-     */
-    templateRef?: ArgoTemplateRef;
-    /**
-     * 
-     * @type {Array<object>}
-     * @memberof ArgoWorkflowStep
-     */
-    withItems?: Array<object>;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoWorkflowStep
-     */
-    withParam?: string;
-    /**
-     * 
-     * @type {ArgoSequence}
-     * @memberof ArgoWorkflowStep
-     */
-    withSequence?: ArgoSequence;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoWorkflowStep
-     */
-    when?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ArgoWorkflowStep
-     */
-    continueOn?: string;
-}
-/**
  * Arguments to a task or a workflow.  Queenbee accepts two types of arguments: parameters and artifacts. A ``parameter`` is a variable that can be passed to a task or a workflow. An ``artifact`` is a file or folder that can be identified by a url or a path.
  * @export
  * @interface Arguments
@@ -1105,6 +421,37 @@ export enum FaceTypeEnum {
 }
 
 /**
+ * 
+ * @export
+ * @interface FileMeta
+ */
+export interface FileMeta {
+    /**
+     * 
+     * @type {string}
+     * @memberof FileMeta
+     */
+    key: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof FileMeta
+     */
+    fileName: string;
+    /**
+     * 
+     * @type {Date}
+     * @memberof FileMeta
+     */
+    lastModified: Date;
+    /**
+     * 
+     * @type {number}
+     * @memberof FileMeta
+     */
+    size: number;
+}
+/**
  * A function with a single command.
  * @export
  * @interface Function
@@ -1281,21 +628,40 @@ export interface HTTPValidationError {
     detail?: Array<ValidationError>;
 }
 /**
- * KeySecret
+ * Input Folder Location  This is a folder that the workflow can use to pull input artifacts from. When running locally it can be any folder path on the machine\'s filesystem. When running on the Pollination platform the root 
  * @export
- * @interface KeySecret
+ * @interface InputFolderLocation
  */
-export interface KeySecret {
+export interface InputFolderLocation {
     /**
      * 
      * @type {string}
-     * @memberof KeySecret
+     * @memberof InputFolderLocation
+     */
+    type: string;
+    /**
+     * Name is a unique identifier for this particular Artifact Location
+     * @type {string}
+     * @memberof InputFolderLocation
      */
     name: string;
     /**
+     * For a local filesystem this can be \"C:\\Users\\me\\simulations\\test\".            Will be ignored when running on the Pollination platform.
+     * @type {string}
+     * @memberof InputFolderLocation
+     */
+    root?: string;
+}
+/**
+ * 
+ * @export
+ * @interface KeyRequest
+ */
+export interface KeyRequest {
+    /**
      * 
      * @type {string}
-     * @memberof KeySecret
+     * @memberof KeyRequest
      */
     key: string;
 }
@@ -1317,31 +683,6 @@ export interface Language {
      * @memberof Language
      */
     version?: string;
-}
-/**
- * Local Location  A folder on a machine\'s file system. This machine is the one where the workflow is running.
- * @export
- * @interface LocalLocation
- */
-export interface LocalLocation {
-    /**
-     * 
-     * @type {string}
-     * @memberof LocalLocation
-     */
-    type: string;
-    /**
-     * Name is a unique identifier for this particular Artifact Location
-     * @type {string}
-     * @memberof LocalLocation
-     */
-    name: string;
-    /**
-     * For a local filesystem this can be \"C:\\Users\\me\\simulations\\test\".
-     * @type {string}
-     * @memberof LocalLocation
-     */
-    root: string;
 }
 /**
  * Operator requirements for local runs.
@@ -1804,6 +1145,31 @@ export interface ReferenceWorkflow {
     link: string;
 }
 /**
+ * Run Folder Location  This is the folder a workflow will use as it\'s root path when running a simulation. When run on a local machine (using queenbee-luigi for example) the root path should be a path on the user\'s machine. If running on the Pollination platform the `root` value is ignored and the data is persisted to a run specific folder in S3 within the Pollination backend.
+ * @export
+ * @interface RunFolderLocation
+ */
+export interface RunFolderLocation {
+    /**
+     * 
+     * @type {string}
+     * @memberof RunFolderLocation
+     */
+    type: string;
+    /**
+     * Name is a unique identifier for this particular Artifact Location
+     * @type {string}
+     * @memberof RunFolderLocation
+     */
+    name: string;
+    /**
+     * For a local filesystem this can be \"C:\\Users\\me\\simulations\\test\".            Will be ignored when running on the Pollination platform.
+     * @type {string}
+     * @memberof RunFolderLocation
+     */
+    root?: string;
+}
+/**
  * S3Location  An S3 bucket
  * @export
  * @interface S3Location
@@ -1845,6 +1211,25 @@ export interface S3Location {
      * @memberof S3Location
      */
     credentialsPath: string;
+}
+/**
+ * 
+ * @export
+ * @interface S3UploadRequest
+ */
+export interface S3UploadRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof S3UploadRequest
+     */
+    url: string;
+    /**
+     * 
+     * @type {{ [key: string]: string; }}
+     * @memberof S3UploadRequest
+     */
+    fields: { [key: string]: string; };
 }
 /**
  * A single sensor.      The first 3 values indicate the location and the second 3 valuse indicate the     direction of the sensor.
@@ -2054,6 +1439,61 @@ export enum ShadeFaceTypeEnum {
 }
 
 /**
+ * Workflow Status
+ * @export
+ * @interface SimulationStatus
+ */
+export interface SimulationStatus {
+    /**
+     * The status of this task. Can be \"Running\", \"Succeeded\", \"Failed\" or \"Error\"
+     * @type {string}
+     * @memberof SimulationStatus
+     */
+    status: string;
+    /**
+     * Any message produced by the task. Usually error/debugging hints.
+     * @type {string}
+     * @memberof SimulationStatus
+     */
+    message?: string;
+    /**
+     * The time at which the task was started
+     * @type {Date}
+     * @memberof SimulationStatus
+     */
+    startedAt: Date;
+    /**
+     * The time at which the task was completed
+     * @type {Date}
+     * @memberof SimulationStatus
+     */
+    finishedAt?: Date;
+    /**
+     * The ID of the individual workflow run.
+     * @type {string}
+     * @memberof SimulationStatus
+     */
+    id: string;
+    /**
+     * 
+     * @type {{ [key: string]: TaskStatus; }}
+     * @memberof SimulationStatus
+     */
+    tasks?: { [key: string]: TaskStatus; };
+    /**
+     * 
+     * @type {ReferenceWorkflow}
+     * @memberof SimulationStatus
+     */
+    workflowRef?: ReferenceWorkflow;
+    /**
+     * 
+     * @type {Arguments}
+     * @memberof SimulationStatus
+     */
+    inputs?: Arguments;
+}
+/**
  * 
  * @export
  * @interface SubmitSimulation
@@ -2071,6 +1511,103 @@ export interface SubmitSimulation {
      * @memberof SubmitSimulation
      */
     inputs?: Arguments;
+}
+/**
+ * A Task Status
+ * @export
+ * @interface TaskStatus
+ */
+export interface TaskStatus {
+    /**
+     * The status of this task. Can be \"Running\", \"Succeeded\", \"Failed\" or \"Error\"
+     * @type {string}
+     * @memberof TaskStatus
+     */
+    status: string;
+    /**
+     * Any message produced by the task. Usually error/debugging hints.
+     * @type {string}
+     * @memberof TaskStatus
+     */
+    message?: string;
+    /**
+     * The time at which the task was started
+     * @type {Date}
+     * @memberof TaskStatus
+     */
+    startedAt: Date;
+    /**
+     * The time at which the task was completed
+     * @type {Date}
+     * @memberof TaskStatus
+     */
+    finishedAt?: Date;
+    /**
+     * The task unique ID
+     * @type {string}
+     * @memberof TaskStatus
+     */
+    id: string;
+    /**
+     * A human readable name for the task. Usually defined by the             DAG task name but can be extended if the task is part of a loop for example.             This name is unique within the boundary of the DAG/Workflow that generated it.
+     * @type {string}
+     * @memberof TaskStatus
+     */
+    name: string;
+    /**
+     * The type of task this status is for. Can be \"Function\", \"DAG\", \"Workflow\" or \"Loop\"
+     * @type {string}
+     * @memberof TaskStatus
+     */
+    type: string;
+    /**
+     * The name of the template that spawned this task
+     * @type {string}
+     * @memberof TaskStatus
+     */
+    templateRef: string;
+    /**
+     * The operator used to run this task. Only applies to Function tasks.
+     * @type {Operator}
+     * @memberof TaskStatus
+     */
+    operator?: Operator;
+    /**
+     * The command used to run this task. Only applies to Function tasks.
+     * @type {string}
+     * @memberof TaskStatus
+     */
+    command?: string;
+    /**
+     * The inputs used by this task
+     * @type {Arguments}
+     * @memberof TaskStatus
+     */
+    inputs: Arguments;
+    /**
+     * The outputs produced by this task
+     * @type {Arguments}
+     * @memberof TaskStatus
+     */
+    outputs: Arguments;
+    /**
+     * This indicates the task ID of the associated template root             task in which this task belongs to. A DAG task will have the id of the             parent DAG for example.
+     * @type {string}
+     * @memberof TaskStatus
+     */
+    boundaryId?: string;
+    /**
+     * A list of child task IDs
+     * @type {Array<string>}
+     * @memberof TaskStatus
+     */
+    children: Array<string>;
+    /**
+     * A list of the last tasks to ran in the context of this             task. In the case of a DAG or a workflow this will be the last task that has             been executed. It will remain empty for functions.
+     * @type {Array<string>}
+     * @memberof TaskStatus
+     */
+    outboundTasks: Array<string>;
 }
 /**
  * 
@@ -2236,86 +1773,245 @@ export interface Workflow {
      */
     artifactLocations?: Array<object>;
 }
+
 /**
- * 
+ * ArtifactsApi - axios parameter creator
  * @export
- * @interface WorkflowListItem
+ * @hidden
  */
-export interface WorkflowListItem {
-    /**
-     * 
-     * @type {string}
-     * @memberof WorkflowListItem
-     */
-    id: string;
-    /**
-     * 
-     * @type {ReferenceWorkflow}
-     * @memberof WorkflowListItem
-     */
-    workflowRef: ReferenceWorkflow;
-    /**
-     * 
-     * @type {Arguments}
-     * @memberof WorkflowListItem
-     */
-    inputs: Arguments;
-    /**
-     * 
-     * @type {string}
-     * @memberof WorkflowListItem
-     */
-    phase: string;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof WorkflowListItem
-     */
-    completed: boolean;
-    /**
-     * 
-     * @type {Date}
-     * @memberof WorkflowListItem
-     */
-    startedAt: Date;
-    /**
-     * 
-     * @type {string}
-     * @memberof WorkflowListItem
-     */
-    selfLink: string;
-    /**
-     * 
-     * @type {ArgoStatus}
-     * @memberof WorkflowListItem
-     */
-    status?: ArgoStatus;
-    /**
-     * 
-     * @type {Date}
-     * @memberof WorkflowListItem
-     */
-    finishedAt?: Date;
-}
+export const ArtifactsApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * Create a new workflow.
+         * @summary Get an Artifact upload link.
+         * @param {KeyRequest} keyRequest 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        create(keyRequest: KeyRequest, options: any = {}): RequestArgs {
+            // verify required parameter 'keyRequest' is not null or undefined
+            if (keyRequest === null || keyRequest === undefined) {
+                throw new RequiredError('keyRequest','Required parameter keyRequest was null or undefined when calling create.');
+            }
+            const localVarPath = `/artifacts`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication JWT required
+            // http bearer authentication required
+            if (configuration && configuration.accessToken) {
+                const accessToken = typeof configuration.accessToken === 'function'
+                    ? configuration.accessToken()
+                    : configuration.accessToken;
+                localVarHeaderParameter["Authorization"] = "Bearer " + accessToken;
+            }
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
+            const needsSerialization = (typeof keyRequest !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(keyRequest !== undefined ? keyRequest : {}) : (keyRequest || "");
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Retrieve a list of simulations.
+         * @summary List artifacts in user folder
+         * @param {number} [page] Page number starting from 1
+         * @param {number} [perPage] Number of items per page
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        list(page?: number, perPage?: number, options: any = {}): RequestArgs {
+            const localVarPath = `/artifacts`;
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication JWT required
+            // http bearer authentication required
+            if (configuration && configuration.accessToken) {
+                const accessToken = typeof configuration.accessToken === 'function'
+                    ? configuration.accessToken()
+                    : configuration.accessToken;
+                localVarHeaderParameter["Authorization"] = "Bearer " + accessToken;
+            }
+
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
+            }
+
+            if (perPage !== undefined) {
+                localVarQueryParameter['per-page'] = perPage;
+            }
+
+
+    
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
 /**
- * 
+ * ArtifactsApi - functional programming interface
  * @export
- * @interface WorkflowTaskLog
+ * @hidden
  */
-export interface WorkflowTaskLog {
+export const ArtifactsApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * Create a new workflow.
+         * @summary Get an Artifact upload link.
+         * @param {KeyRequest} keyRequest 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        create(keyRequest: KeyRequest, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<S3UploadRequest> {
+            const localVarAxiosArgs = ArtifactsApiAxiosParamCreator(configuration).create(keyRequest, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * Retrieve a list of simulations.
+         * @summary List artifacts in user folder
+         * @param {number} [page] Page number starting from 1
+         * @param {number} [perPage] Number of items per page
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        list(page?: number, perPage?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<FileMeta>> {
+            const localVarAxiosArgs = ArtifactsApiAxiosParamCreator(configuration).list(page, perPage, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+    }
+};
+
+/**
+ * ArtifactsApi - factory interface
+ * @export
+ * @hidden
+ */
+export const ArtifactsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    return {
+        /**
+         * Create a new workflow.
+         * @summary Get an Artifact upload link.
+         * @param {KeyRequest} keyRequest 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        create(keyRequest: KeyRequest, options?: any) {
+            return ArtifactsApiFp(configuration).create(keyRequest, options)(axios, basePath);
+        },
+        /**
+         * Retrieve a list of simulations.
+         * @summary List artifacts in user folder
+         * @param {number} [page] Page number starting from 1
+         * @param {number} [perPage] Number of items per page
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        list(page?: number, perPage?: number, options?: any) {
+            return ArtifactsApiFp(configuration).list(page, perPage, options)(axios, basePath);
+        },
+    };
+};
+
+/**
+ * ArtifactsApi - interface
+ * @export
+ * @interface ArtifactsApi
+ */
+export interface ArtifactsApiInterface {
     /**
-     * 
-     * @type {ArgoNodeStatus}
-     * @memberof WorkflowTaskLog
+     * Create a new workflow.
+     * @summary Get an Artifact upload link.
+     * @param {KeyRequest} keyRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ArtifactsApiInterface
      */
-    task: ArgoNodeStatus;
+    create(keyRequest: KeyRequest, options?: any): AxiosPromise<S3UploadRequest>;
+
     /**
-     * 
-     * @type {string}
-     * @memberof WorkflowTaskLog
+     * Retrieve a list of simulations.
+     * @summary List artifacts in user folder
+     * @param {number} [page] Page number starting from 1
+     * @param {number} [perPage] Number of items per page
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ArtifactsApiInterface
      */
-    logs?: string;
+    list(page?: number, perPage?: number, options?: any): AxiosPromise<Array<FileMeta>>;
+
 }
+
+/**
+ * ArtifactsApi - object-oriented interface
+ * @export
+ * @class ArtifactsApi
+ * @extends {BaseAPI}
+ */
+export class ArtifactsApi extends BaseAPI implements ArtifactsApiInterface {
+    /**
+     * Create a new workflow.
+     * @summary Get an Artifact upload link.
+     * @param {KeyRequest} keyRequest 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ArtifactsApi
+     */
+    public create(keyRequest: KeyRequest, options?: any) {
+        return ArtifactsApiFp(this.configuration).create(keyRequest, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * Retrieve a list of simulations.
+     * @summary List artifacts in user folder
+     * @param {number} [page] Page number starting from 1
+     * @param {number} [perPage] Number of items per page
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ArtifactsApi
+     */
+    public list(page?: number, perPage?: number, options?: any) {
+        return ArtifactsApiFp(this.configuration).list(page, perPage, options)(this.axios, this.basePath);
+    }
+
+}
+
 
 /**
  * AuthenticationApi - axios parameter creator
@@ -3934,7 +3630,7 @@ export class SensorGridApi extends BaseAPI implements SensorGridApiInterface {
 export const SimulationsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Create a new workflow.
+         * Create a new simulation.
          * @summary Schedule a simulation
          * @param {SubmitSimulation} submitSimulation 
          * @param {*} [options] Override http request option.
@@ -4025,21 +3721,60 @@ export const SimulationsApiAxiosParamCreator = function (configuration?: Configu
             };
         },
         /**
-         * get simulation logs
-         * @summary Get simulation logs
+         * get simulation inputs
+         * @summary Get simulation inputs
          * @param {string} id 
-         * @param {string} templateName Name of a simulation task template.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSimulationLogs(id: string, templateName: string, options: any = {}): RequestArgs {
+        getSimulationInputs(id: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling getSimulationInputs.');
+            }
+            const localVarPath = `/simulations/{id}/inputs`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication JWT required
+            // http bearer authentication required
+            if (configuration && configuration.accessToken) {
+                const accessToken = typeof configuration.accessToken === 'function'
+                    ? configuration.accessToken()
+                    : configuration.accessToken;
+                localVarHeaderParameter["Authorization"] = "Bearer " + accessToken;
+            }
+
+
+    
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * get simulation logs
+         * @summary Get simulation logs
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getSimulationLogs(id: string, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling getSimulationLogs.');
-            }
-            // verify required parameter 'templateName' is not null or undefined
-            if (templateName === null || templateName === undefined) {
-                throw new RequiredError('templateName','Required parameter templateName was null or undefined when calling getSimulationLogs.');
             }
             const localVarPath = `/simulations/{id}/logs`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -4061,8 +3796,48 @@ export const SimulationsApiAxiosParamCreator = function (configuration?: Configu
                 localVarHeaderParameter["Authorization"] = "Bearer " + accessToken;
             }
 
-            if (templateName !== undefined) {
-                localVarQueryParameter['template_name'] = templateName;
+
+    
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * get simulation outputs
+         * @summary Get simulation outputs
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getSimulationOutputs(id: string, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling getSimulationOutputs.');
+            }
+            const localVarPath = `/simulations/{id}/outputs`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication JWT required
+            // http bearer authentication required
+            if (configuration && configuration.accessToken) {
+                const accessToken = typeof configuration.accessToken === 'function'
+                    ? configuration.accessToken()
+                    : configuration.accessToken;
+                localVarHeaderParameter["Authorization"] = "Bearer " + accessToken;
             }
 
 
@@ -4318,7 +4093,7 @@ export const SimulationsApiAxiosParamCreator = function (configuration?: Configu
 export const SimulationsApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Create a new workflow.
+         * Create a new simulation.
          * @summary Schedule a simulation
          * @param {SubmitSimulation} submitSimulation 
          * @param {*} [options] Override http request option.
@@ -4338,8 +4113,22 @@ export const SimulationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkflowListItem> {
+        get(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SimulationStatus> {
             const localVarAxiosArgs = SimulationsApiAxiosParamCreator(configuration).get(id, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * get simulation inputs
+         * @summary Get simulation inputs
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getSimulationInputs(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
+            const localVarAxiosArgs = SimulationsApiAxiosParamCreator(configuration).getSimulationInputs(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4349,12 +4138,25 @@ export const SimulationsApiFp = function(configuration?: Configuration) {
          * get simulation logs
          * @summary Get simulation logs
          * @param {string} id 
-         * @param {string} templateName Name of a simulation task template.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSimulationLogs(id: string, templateName: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<WorkflowTaskLog>> {
-            const localVarAxiosArgs = SimulationsApiAxiosParamCreator(configuration).getSimulationLogs(id, templateName, options);
+        getSimulationLogs(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
+            const localVarAxiosArgs = SimulationsApiAxiosParamCreator(configuration).getSimulationLogs(id, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * get simulation outputs
+         * @summary Get simulation outputs
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getSimulationOutputs(id: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
+            const localVarAxiosArgs = SimulationsApiAxiosParamCreator(configuration).getSimulationOutputs(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -4368,7 +4170,7 @@ export const SimulationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getTaskLogs(id: string, taskId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<WorkflowTaskLog> {
+        getTaskLogs(id: string, taskId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<string> {
             const localVarAxiosArgs = SimulationsApiAxiosParamCreator(configuration).getTaskLogs(id, taskId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -4383,7 +4185,7 @@ export const SimulationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        list(page?: number, perPage?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<WorkflowListItem>> {
+        list(page?: number, perPage?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SimulationStatus>> {
             const localVarAxiosArgs = SimulationsApiAxiosParamCreator(configuration).list(page, perPage, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -4443,7 +4245,7 @@ export const SimulationsApiFp = function(configuration?: Configuration) {
 export const SimulationsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Create a new workflow.
+         * Create a new simulation.
          * @summary Schedule a simulation
          * @param {SubmitSimulation} submitSimulation 
          * @param {*} [options] Override http request option.
@@ -4463,15 +4265,34 @@ export const SimulationsApiFactory = function (configuration?: Configuration, ba
             return SimulationsApiFp(configuration).get(id, options)(axios, basePath);
         },
         /**
-         * get simulation logs
-         * @summary Get simulation logs
+         * get simulation inputs
+         * @summary Get simulation inputs
          * @param {string} id 
-         * @param {string} templateName Name of a simulation task template.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSimulationLogs(id: string, templateName: string, options?: any) {
-            return SimulationsApiFp(configuration).getSimulationLogs(id, templateName, options)(axios, basePath);
+        getSimulationInputs(id: string, options?: any) {
+            return SimulationsApiFp(configuration).getSimulationInputs(id, options)(axios, basePath);
+        },
+        /**
+         * get simulation logs
+         * @summary Get simulation logs
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getSimulationLogs(id: string, options?: any) {
+            return SimulationsApiFp(configuration).getSimulationLogs(id, options)(axios, basePath);
+        },
+        /**
+         * get simulation outputs
+         * @summary Get simulation outputs
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getSimulationOutputs(id: string, options?: any) {
+            return SimulationsApiFp(configuration).getSimulationOutputs(id, options)(axios, basePath);
         },
         /**
          * get simulation task logs
@@ -4535,7 +4356,7 @@ export const SimulationsApiFactory = function (configuration?: Configuration, ba
  */
 export interface SimulationsApiInterface {
     /**
-     * Create a new workflow.
+     * Create a new simulation.
      * @summary Schedule a simulation
      * @param {SubmitSimulation} submitSimulation 
      * @param {*} [options] Override http request option.
@@ -4552,18 +4373,37 @@ export interface SimulationsApiInterface {
      * @throws {RequiredError}
      * @memberof SimulationsApiInterface
      */
-    get(id: string, options?: any): AxiosPromise<WorkflowListItem>;
+    get(id: string, options?: any): AxiosPromise<SimulationStatus>;
+
+    /**
+     * get simulation inputs
+     * @summary Get simulation inputs
+     * @param {string} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SimulationsApiInterface
+     */
+    getSimulationInputs(id: string, options?: any): AxiosPromise<{}>;
 
     /**
      * get simulation logs
      * @summary Get simulation logs
      * @param {string} id 
-     * @param {string} templateName Name of a simulation task template.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SimulationsApiInterface
      */
-    getSimulationLogs(id: string, templateName: string, options?: any): AxiosPromise<Array<WorkflowTaskLog>>;
+    getSimulationLogs(id: string, options?: any): AxiosPromise<{}>;
+
+    /**
+     * get simulation outputs
+     * @summary Get simulation outputs
+     * @param {string} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SimulationsApiInterface
+     */
+    getSimulationOutputs(id: string, options?: any): AxiosPromise<{}>;
 
     /**
      * get simulation task logs
@@ -4574,7 +4414,7 @@ export interface SimulationsApiInterface {
      * @throws {RequiredError}
      * @memberof SimulationsApiInterface
      */
-    getTaskLogs(id: string, taskId: string, options?: any): AxiosPromise<WorkflowTaskLog>;
+    getTaskLogs(id: string, taskId: string, options?: any): AxiosPromise<string>;
 
     /**
      * Retrieve a list of simulations.
@@ -4585,7 +4425,7 @@ export interface SimulationsApiInterface {
      * @throws {RequiredError}
      * @memberof SimulationsApiInterface
      */
-    list(page?: number, perPage?: number, options?: any): AxiosPromise<Array<WorkflowListItem>>;
+    list(page?: number, perPage?: number, options?: any): AxiosPromise<Array<SimulationStatus>>;
 
     /**
      * re-submit a simulation
@@ -4627,7 +4467,7 @@ export interface SimulationsApiInterface {
  */
 export class SimulationsApi extends BaseAPI implements SimulationsApiInterface {
     /**
-     * Create a new workflow.
+     * Create a new simulation.
      * @summary Schedule a simulation
      * @param {SubmitSimulation} submitSimulation 
      * @param {*} [options] Override http request option.
@@ -4651,16 +4491,39 @@ export class SimulationsApi extends BaseAPI implements SimulationsApiInterface {
     }
 
     /**
-     * get simulation logs
-     * @summary Get simulation logs
+     * get simulation inputs
+     * @summary Get simulation inputs
      * @param {string} id 
-     * @param {string} templateName Name of a simulation task template.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SimulationsApi
      */
-    public getSimulationLogs(id: string, templateName: string, options?: any) {
-        return SimulationsApiFp(this.configuration).getSimulationLogs(id, templateName, options)(this.axios, this.basePath);
+    public getSimulationInputs(id: string, options?: any) {
+        return SimulationsApiFp(this.configuration).getSimulationInputs(id, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * get simulation logs
+     * @summary Get simulation logs
+     * @param {string} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SimulationsApi
+     */
+    public getSimulationLogs(id: string, options?: any) {
+        return SimulationsApiFp(this.configuration).getSimulationLogs(id, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * get simulation outputs
+     * @summary Get simulation outputs
+     * @param {string} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SimulationsApi
+     */
+    public getSimulationOutputs(id: string, options?: any) {
+        return SimulationsApiFp(this.configuration).getSimulationOutputs(id, options)(this.axios, this.basePath);
     }
 
     /**
