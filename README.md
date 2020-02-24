@@ -27,12 +27,12 @@ const pollinationSDK = require('@pollination-solutions/pollination-sdk');
 
 const auth = new pollinationSDK.AuthenticationApi();
 
-const apiToken = 'some-long-api-token';
+const APIToken = {
+  id: 'some-long-id-string',
+  secret: 'some-long-secret-string'
+}
 
-const owner = 'acme';
-const project = 'super-secret-project';
-
-auth.login( { api_token: apiToken} ).then(res => {
+auth.login(APIToken).then(res => {
   const { access_token } = res.data;
   
   const config = new pollinationSDK.Configuration({
@@ -42,7 +42,7 @@ auth.login( { api_token: apiToken} ).then(res => {
   const simulations = new pollinationSDK.SimulationsApi(config);
 
   const submitPayload = {
-    workflow_slug: 'ladybug-tools/daylight-factor',
+    workflow: 'some-long-workflow-uuid',
     inputs: {
       parameters: [
         {
@@ -64,7 +64,7 @@ auth.login( { api_token: apiToken} ).then(res => {
     }
   }
 
-  simulations.createSimulation(owner, project, submitPayload).then(res => {
+  simulations.create(submitPayload).then(res => {
     console.log(res.data);
   }).catch(err => {
     console.log(JSON.stringify(err.response.data, null, 2))
