@@ -18,7 +18,8 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "axios": "^0.18.0"
+    "axios": "^0.19.2",
+    "minimist": ">=0.2.1"
   },
   "devDependencies": {
     "@semantic-release/exec": "^3.3.8",
