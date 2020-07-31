@@ -7452,7 +7452,7 @@ export const RegistriesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPackage(owner: string, type: string, name: string, digest: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AnyType> {
+        getPackage(owner: string, type: string, name: string, digest: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
             const localVarAxiosArgs = RegistriesApiAxiosParamCreator(configuration).getPackage(owner, type, name, digest, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -7481,7 +7481,7 @@ export const RegistriesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postOperator(owner: string, _package: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AnyType> {
+        postOperator(owner: string, _package: any, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
             const localVarAxiosArgs = RegistriesApiAxiosParamCreator(configuration).postOperator(owner, _package, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -7497,7 +7497,7 @@ export const RegistriesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        postRecipe(owner: string, _package: any, authorization?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AnyType> {
+        postRecipe(owner: string, _package: any, authorization?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
             const localVarAxiosArgs = RegistriesApiAxiosParamCreator(configuration).postRecipe(owner, _package, authorization, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -7580,7 +7580,7 @@ export interface RegistriesApiInterface {
      * @throws {RequiredError}
      * @memberof RegistriesApiInterface
      */
-    getPackage(owner: string, type: string, name: string, digest: string, options?: any): AxiosPromise<AnyType>;
+    getPackage(owner: string, type: string, name: string, digest: string, options?: any): AxiosPromise<any>;
 
     /**
      * 
@@ -7601,7 +7601,7 @@ export interface RegistriesApiInterface {
      * @throws {RequiredError}
      * @memberof RegistriesApiInterface
      */
-    postOperator(owner: string, _package: any, options?: any): AxiosPromise<AnyType>;
+    postOperator(owner: string, _package: any, options?: any): AxiosPromise<any>;
 
     /**
      * 
@@ -7613,7 +7613,7 @@ export interface RegistriesApiInterface {
      * @throws {RequiredError}
      * @memberof RegistriesApiInterface
      */
-    postRecipe(owner: string, _package: any, authorization?: string, options?: any): AxiosPromise<AnyType>;
+    postRecipe(owner: string, _package: any, authorization?: string, options?: any): AxiosPromise<any>;
 
 }
 
@@ -8390,7 +8390,7 @@ export const SimulationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSimulationInputs(owner: string, name: string, simulationId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AnyType> {
+        getSimulationInputs(owner: string, name: string, simulationId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
             const localVarAxiosArgs = SimulationsApiAxiosParamCreator(configuration).getSimulationInputs(owner, name, simulationId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -8406,7 +8406,7 @@ export const SimulationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSimulationLogs(owner: string, name: string, simulationId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AnyType> {
+        getSimulationLogs(owner: string, name: string, simulationId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
             const localVarAxiosArgs = SimulationsApiAxiosParamCreator(configuration).getSimulationLogs(owner, name, simulationId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -8423,7 +8423,7 @@ export const SimulationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSimulationOutputArtifact(owner: string, name: string, simulationId: string, artifactName: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AnyType> {
+        getSimulationOutputArtifact(owner: string, name: string, simulationId: string, artifactName: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
             const localVarAxiosArgs = SimulationsApiAxiosParamCreator(configuration).getSimulationOutputArtifact(owner, name, simulationId, artifactName, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -8439,7 +8439,7 @@ export const SimulationsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSimulationOutputs(owner: string, name: string, simulationId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AnyType> {
+        getSimulationOutputs(owner: string, name: string, simulationId: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
             const localVarAxiosArgs = SimulationsApiAxiosParamCreator(configuration).getSimulationOutputs(owner, name, simulationId, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -8722,7 +8722,7 @@ export interface SimulationsApiInterface {
      * @throws {RequiredError}
      * @memberof SimulationsApiInterface
      */
-    getSimulationInputs(owner: string, name: string, simulationId: string, options?: any): AxiosPromise<AnyType>;
+    getSimulationInputs(owner: string, name: string, simulationId: string, options?: any): AxiosPromise<any>;
 
     /**
      * get simulation logs
@@ -8734,7 +8734,7 @@ export interface SimulationsApiInterface {
      * @throws {RequiredError}
      * @memberof SimulationsApiInterface
      */
-    getSimulationLogs(owner: string, name: string, simulationId: string, options?: any): AxiosPromise<AnyType>;
+    getSimulationLogs(owner: string, name: string, simulationId: string, options?: any): AxiosPromise<any>;
 
     /**
      * get simulation output artifact
@@ -8747,7 +8747,7 @@ export interface SimulationsApiInterface {
      * @throws {RequiredError}
      * @memberof SimulationsApiInterface
      */
-    getSimulationOutputArtifact(owner: string, name: string, simulationId: string, artifactName: string, options?: any): AxiosPromise<AnyType>;
+    getSimulationOutputArtifact(owner: string, name: string, simulationId: string, artifactName: string, options?: any): AxiosPromise<any>;
 
     /**
      * get simulation outputs
@@ -8759,7 +8759,7 @@ export interface SimulationsApiInterface {
      * @throws {RequiredError}
      * @memberof SimulationsApiInterface
      */
-    getSimulationOutputs(owner: string, name: string, simulationId: string, options?: any): AxiosPromise<AnyType>;
+    getSimulationOutputs(owner: string, name: string, simulationId: string, options?: any): AxiosPromise<any>;
 
     /**
      * get simulation task logs
@@ -10180,7 +10180,7 @@ export const UserApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        changePassword(emailRequest: EmailRequest, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AnyType> {
+        changePassword(emailRequest: EmailRequest, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
             const localVarAxiosArgs = UserApiAxiosParamCreator(configuration).changePassword(emailRequest, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -10247,7 +10247,7 @@ export const UserApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        signup(signUpDto: SignUpDto, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AnyType> {
+        signup(signUpDto: SignUpDto, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
             const localVarAxiosArgs = UserApiAxiosParamCreator(configuration).signup(signUpDto, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -10362,7 +10362,7 @@ export interface UserApiInterface {
      * @throws {RequiredError}
      * @memberof UserApiInterface
      */
-    changePassword(emailRequest: EmailRequest, options?: any): AxiosPromise<AnyType>;
+    changePassword(emailRequest: EmailRequest, options?: any): AxiosPromise<any>;
 
     /**
      * Get authenticated user profile
@@ -10409,7 +10409,7 @@ export interface UserApiInterface {
      * @throws {RequiredError}
      * @memberof UserApiInterface
      */
-    signup(signUpDto: SignUpDto, options?: any): AxiosPromise<AnyType>;
+    signup(signUpDto: SignUpDto, options?: any): AxiosPromise<any>;
 
     /**
      * Get refresh token and delete previous one if it exists
@@ -10662,7 +10662,7 @@ export const UsersApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        checkUsername(username: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<AnyType> {
+        checkUsername(username: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<any> {
             const localVarAxiosArgs = UsersApiAxiosParamCreator(configuration).checkUsername(username, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -10762,7 +10762,7 @@ export interface UsersApiInterface {
      * @throws {RequiredError}
      * @memberof UsersApiInterface
      */
-    checkUsername(username: string, options?: any): AxiosPromise<AnyType>;
+    checkUsername(username: string, options?: any): AxiosPromise<any>;
 
     /**
      * Get a specific user profile by name
