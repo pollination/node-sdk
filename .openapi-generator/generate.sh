@@ -7,3 +7,5 @@ npx @openapitools/openapi-generator-cli generate \
   -o . \
   --skip-validate-spec \
   -c .openapi-generator/config.json
+
+sed -i "s/AnyType/any/" ./api.ts
