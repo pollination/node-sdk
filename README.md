@@ -1,4 +1,4 @@
-# Pollination NodeJS SDK
+# Pollination Javacript SDK
 
 This generator creates TypeScript/JavaScript client that utilizes [axios](https://github.com/axios/axios). The generated Node module can be used in the following environments:
 
@@ -17,63 +17,6 @@ Module system
 
 It can be used in both TypeScript and JavaScript. In TypeScript, the definition should be automatically resolved via `package.json`. ([Reference](http://www.typescriptlang.org/docs/handbook/typings-for-npm-packages.html))
 
-## Look & Feel
-
-Here is a quick demonstration of how to use this library to interact with the Pollination cloud platform.
-
-```javascript
-
-const pollinationSDK = require('@pollination-solutions/pollination-sdk');
-
-const auth = new pollinationSDK.AuthenticationApi();
-
-const APIToken = {
-  id: 'some-long-id-string',
-  secret: 'some-long-secret-string'
-}
-
-auth.login(APIToken).then(res => {
-  const { access_token } = res.data;
-  
-  const config = new pollinationSDK.Configuration({
-    accessToken: access_token
-  });
-
-  const simulations = new pollinationSDK.SimulationsApi(config);
-
-  const submitPayload = {
-    workflow: 'some-long-workflow-uuid',
-    inputs: {
-      parameters: [
-        {
-          name: 'precision',
-          value: 11
-        },
-        {
-          name: 'hype',
-          value: 'overload'
-        }
-      ],
-      artifacts: [
-        {
-          name: 'big-data',
-          location: 'the-biggest-data-centre-ever',
-          path: '/data'
-        }
-      ]
-    }
-  }
-
-  simulations.create(submitPayload).then(res => {
-    console.log(res.data);
-  }).catch(err => {
-    console.log(JSON.stringify(err.response.data, null, 2))
-  })
-}).catch(err => {
-  console.log(JSON.stringify(err.response.data, null, 2))
-})
-
-```
 
 ## Documentation
 
@@ -98,7 +41,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install @pollination-solutions/pollination-sdk --save
+npm install @pollination-solutions/pollination-sdk@v0.9.0 --save
 ```
 
 _unPublished (not recommended):_
