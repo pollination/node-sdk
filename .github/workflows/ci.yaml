@@ -1,0 +1,59 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+
+  deploy:
+    name: "Push to NPM"
+    if: success() && github.ref == 'refs/heads/master' && github.base_ref == ''
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up NodeJS
+      uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+    - name: Install dependencies
+      run: npm install
+      env:
+        NPM_TOKEN: $
+    - name: Build Package
+      run: npm run build
+    - name: Publish Package
+      run: npm publish
+      env:
+        NPM_TOKEN: $
+
+  documentation:
+    name: Deploy Docs
+    needs: deploy
+    if: success() && github.ref == 'refs/heads/master' && github.base_ref == ''
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up NodeJS
+      uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+    - name: Install dependencies
+      run: npm install
+      env:
+        NPM_TOKEN: $
+
+    - name: Install typescript globally
+      run: npm install -g typescript
+    
+    - name: Build Docs
+      run: npx typedoc
+      env:
+        NPM_TOKEN: $
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: $
+        BASE_BRANCH: master
+        BRANCH: gh-pages
+        FOLDER: docs
