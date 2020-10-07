@@ -15,29 +15,23 @@
 
 
 /**
- * 
+ * A workflow Parameter Argument
  * @export
- * @interface ProjectCreate
+ * @interface SimulationInputParameter
  */
-export interface ProjectCreate {
+export interface SimulationInputParameter {
     /**
-     * A description of the project
+     * The name of the parameter
      * @type {string}
-     * @memberof ProjectCreate
-     */
-    description?: string;
-    /**
-     * The name of the project. Must be unique to a given owner
-     * @type {string}
-     * @memberof ProjectCreate
+     * @memberof SimulationInputParameter
      */
     name: string;
     /**
-     * Whether or not a project is publicly viewable
-     * @type {boolean}
-     * @memberof ProjectCreate
+     * The value of the parameter
+     * @type {string}
+     * @memberof SimulationInputParameter
      */
-    _public?: boolean;
+    value: string;
 }
 
 

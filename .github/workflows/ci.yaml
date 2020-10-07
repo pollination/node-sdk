@@ -18,15 +18,13 @@ jobs:
     - name: Install dependencies
       run: npm install
       env:
-        NPM_TOKEN: ${secrets.NPM_TOKEN}
+        NPM_TOKEN: $
     - name: Build Package
       run: npm run build
-      env:
-        NPM_TOKEN: ${secrets.NPM_TOKEN}
     - name: Publish Package
       run: npm publish
       env:
-        NPM_TOKEN: ${secrets.NPM_TOKEN}
+        NPM_TOKEN: $
 
   documentation:
     name: Deploy Docs
@@ -43,7 +41,7 @@ jobs:
     - name: Install dependencies
       run: npm install
       env:
-        NPM_TOKEN: ${secrets.NPM_TOKEN}
+        NPM_TOKEN: $
 
     - name: Install typescript globally
       run: npm install -g typescript
@@ -51,7 +49,7 @@ jobs:
     - name: Build Docs
       run: npx typedoc
       env:
-        NPM_TOKEN: ${secrets.NPM_TOKEN}
+        NPM_TOKEN: $
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:

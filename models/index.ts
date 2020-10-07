@@ -95,6 +95,7 @@ export * from './s3-source';
 export * from './s3-upload-request';
 export * from './sign-up';
 export * from './simulation-input-artifact';
+export * from './simulation-input-parameter';
 export * from './simulation-inputs';
 export * from './simulation-list';
 export * from './simulation-output-source';
