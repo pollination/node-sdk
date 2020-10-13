@@ -15,23 +15,23 @@
 
 
 /**
- * 
+ * A workflow Parameter Argument
  * @export
- * @interface UserMetadata
+ * @interface SimulationInputParameter
  */
-export interface UserMetadata {
+export interface SimulationInputParameter {
     /**
-     * The company the user works for
+     * The name of the parameter
      * @type {string}
-     * @memberof UserMetadata
+     * @memberof SimulationInputParameter
      */
-    company?: string;
+    name: string;
     /**
-     * A short description of the user
+     * The value of the parameter
      * @type {string}
-     * @memberof UserMetadata
+     * @memberof SimulationInputParameter
      */
-    description?: string;
+    value: string;
 }
 
 
