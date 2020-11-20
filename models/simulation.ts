@@ -13,54 +13,81 @@
  */
 
 
+import { AccountPublic } from './account-public';
+import { RecipeSelection } from './recipe-selection';
+import { SimulationInputs } from './simulation-inputs';
 import { TaskStatus } from './task-status';
 
 /**
  * Workflow Status
  * @export
- * @interface WorkflowStatus
+ * @interface Simulation
  */
-export interface WorkflowStatus {
+export interface Simulation {
     /**
      * The ID of the first task in the workflow
      * @type {string}
-     * @memberof WorkflowStatus
+     * @memberof Simulation
      */
     entrypoint?: string;
     /**
      * The time at which the task was completed
      * @type {string}
-     * @memberof WorkflowStatus
+     * @memberof Simulation
      */
     finished_at?: string;
     /**
      * The ID of the individual workflow run.
      * @type {string}
-     * @memberof WorkflowStatus
+     * @memberof Simulation
      */
     id: string;
     /**
+     * Simulation inputs
+     * @type {SimulationInputs}
+     * @memberof Simulation
+     */
+    inputs?: SimulationInputs;
+    /**
      * Any message produced by the task. Usually error/debugging hints.
      * @type {string}
-     * @memberof WorkflowStatus
+     * @memberof Simulation
      */
     message?: string;
     /**
+     * 
+     * @type {AccountPublic}
+     * @memberof Simulation
+     */
+    owner: AccountPublic;
+    /**
+     * The max number of parallel tasks allowed for this simulation
+     * @type {number}
+     * @memberof Simulation
+     */
+    parallelism?: number;
+    /**
+     * The recipe to use
+     * @type {RecipeSelection}
+     * @memberof Simulation
+     */
+    recipe: RecipeSelection;
+    /**
      * The time at which the task was started
      * @type {string}
-     * @memberof WorkflowStatus
+     * @memberof Simulation
      */
     started_at: string;
     /**
      * The status of this task. Can be \"Running\", \"Succeeded\", \"Failed\" or \"Error\"
      * @type {string}
-     * @memberof WorkflowStatus
+     * @memberof Simulation
      */
     status: string;
     /**
      * 
      * @type {{ [key: string]: TaskStatus; }}
-     * @memberof WorkflowStatus
+     * @memberof Simulation
      */
     tasks?: { [key: string]: TaskStatus; };
 }
