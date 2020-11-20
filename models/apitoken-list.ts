@@ -13,48 +13,48 @@
  */
 
 
-import { RepositoryPackageAbriged } from './repository-package-abriged';
+import { APIToken } from './apitoken';
 
 /**
  * A list response from a pagination request
  * @export
- * @interface RepositoryPackageList
+ * @interface APITokenList
  */
-export interface RepositoryPackageList {
+export interface APITokenList {
     /**
      * The next page, if this on is not the last
      * @type {number}
-     * @memberof RepositoryPackageList
+     * @memberof APITokenList
      */
     next_page?: number;
     /**
      * The current page the pagination request is on
      * @type {number}
-     * @memberof RepositoryPackageList
+     * @memberof APITokenList
      */
     page: number;
     /**
      * The total number of pages
      * @type {number}
-     * @memberof RepositoryPackageList
+     * @memberof APITokenList
      */
     page_count: number;
     /**
      * The number of pages per pagination request
      * @type {number}
-     * @memberof RepositoryPackageList
+     * @memberof APITokenList
      */
     per_page: number;
     /**
      * 
-     * @type {Array<RepositoryPackageAbriged>}
-     * @memberof RepositoryPackageList
+     * @type {Array<APIToken>}
+     * @memberof APITokenList
      */
-    resources: Array<RepositoryPackageAbriged>;
+    resources: Array<APIToken>;
     /**
      * The total number of resources matching the list request
      * @type {number}
-     * @memberof RepositoryPackageList
+     * @memberof APITokenList
      */
     total_count: number;
 }

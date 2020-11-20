@@ -17,27 +17,27 @@
 /**
  * 
  * @export
- * @interface ProjectCreate
+ * @interface APITokenPrivate
  */
-export interface ProjectCreate {
+export interface APITokenPrivate {
     /**
-     * A description of the project
-     * @type {string}
-     * @memberof ProjectCreate
+     * Key value pairs of auth claims the API token is entitled to
+     * @type {{ [key: string]: string; }}
+     * @memberof APITokenPrivate
      */
-    description?: string;
+    claims?: { [key: string]: string; };
     /**
-     * The name of the project. Must be unique to a given owner
+     * The user friendly name of the API token
      * @type {string}
-     * @memberof ProjectCreate
+     * @memberof APITokenPrivate
      */
     name: string;
     /**
-     * Whether or not a project is publicly viewable
-     * @type {boolean}
-     * @memberof ProjectCreate
+     * The decoded API token
+     * @type {string}
+     * @memberof APITokenPrivate
      */
-    _public?: boolean;
+    token: string;
 }
 
 

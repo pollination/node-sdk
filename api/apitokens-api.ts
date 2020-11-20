@@ -19,21 +19,91 @@ import { Configuration } from '../configuration';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base';
 // @ts-ignore
-import { UserPrivate } from '../models';
+import { APITokenCreate } from '../models';
+// @ts-ignore
+import { APITokenList } from '../models';
+// @ts-ignore
+import { APITokenPrivate } from '../models';
+// @ts-ignore
+import { HTTPValidationError } from '../models';
 /**
- * UserApi - axios parameter creator
+ * APITokensApi - axios parameter creator
  * @export
  */
-export const UserApiAxiosParamCreator = function (configuration?: Configuration) {
+export const APITokensApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Get authenticated user profile
-         * @summary Get authenticated user profile.
+         * Create a new API token
+         * @summary Create a new API token
+         * @param {APITokenCreate} aPITokenCreate 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getMe: async (options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/user`;
+        createToken: async (aPITokenCreate: APITokenCreate, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'aPITokenCreate' is not null or undefined
+            if (aPITokenCreate === null || aPITokenCreate === undefined) {
+                throw new RequiredError('aPITokenCreate','Required parameter aPITokenCreate was null or undefined when calling createToken.');
+            }
+            const localVarPath = `/tokens`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication APIKeyAuth required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("x-pollination-token")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["x-pollination-token"] = localVarApiKeyValue;
+            }
+
+            // authentication JWTAuth required
+            // http bearer authentication required
+            if (configuration && configuration.accessToken) {
+                const accessToken = typeof configuration.accessToken === 'function'
+                    ? await configuration.accessToken()
+                    : await configuration.accessToken;
+                localVarHeaderParameter["Authorization"] = "Bearer " + accessToken;
+            }
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            const query = new URLSearchParams(localVarUrlObj.search);
+            for (const key in localVarQueryParameter) {
+                query.set(key, localVarQueryParameter[key]);
+            }
+            for (const key in options.query) {
+                query.set(key, options.query[key]);
+            }
+            localVarUrlObj.search = (new URLSearchParams(query)).toString();
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const needsSerialization = (typeof aPITokenCreate !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(aPITokenCreate !== undefined ? aPITokenCreate : {}) : (aPITokenCreate || "");
+
+            return {
+                url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * List API tokens for the authenticated user
+         * @summary List user API tokens
+         * @param {number} [page] Page number starting from 1
+         * @param {number} [perPage] Number of items per page
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listTokens: async (page?: number, perPage?: number, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/tokens`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
             let baseOptions;
@@ -61,57 +131,12 @@ export const UserApiAxiosParamCreator = function (configuration?: Configuration)
                 localVarHeaderParameter["Authorization"] = "Bearer " + accessToken;
             }
 
-
-    
-            const query = new URLSearchParams(localVarUrlObj.search);
-            for (const key in localVarQueryParameter) {
-                query.set(key, localVarQueryParameter[key]);
-            }
-            for (const key in options.query) {
-                query.set(key, options.query[key]);
-            }
-            localVarUrlObj.search = (new URLSearchParams(query)).toString();
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @summary Get the authenticated user roles
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        getRoles: async (options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/user/roles`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication APIKeyAuth required
-            if (configuration && configuration.apiKey) {
-                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
-                    ? await configuration.apiKey("x-pollination-token")
-                    : await configuration.apiKey;
-                localVarHeaderParameter["x-pollination-token"] = localVarApiKeyValue;
+            if (page !== undefined) {
+                localVarQueryParameter['page'] = page;
             }
 
-            // authentication JWTAuth required
-            // http bearer authentication required
-            if (configuration && configuration.accessToken) {
-                const accessToken = typeof configuration.accessToken === 'function'
-                    ? await configuration.accessToken()
-                    : await configuration.accessToken;
-                localVarHeaderParameter["Authorization"] = "Bearer " + accessToken;
+            if (perPage !== undefined) {
+                localVarQueryParameter['per-page'] = perPage;
             }
 
 
@@ -136,32 +161,35 @@ export const UserApiAxiosParamCreator = function (configuration?: Configuration)
 };
 
 /**
- * UserApi - functional programming interface
+ * APITokensApi - functional programming interface
  * @export
  */
-export const UserApiFp = function(configuration?: Configuration) {
+export const APITokensApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Get authenticated user profile
-         * @summary Get authenticated user profile.
+         * Create a new API token
+         * @summary Create a new API token
+         * @param {APITokenCreate} aPITokenCreate 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getMe(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<UserPrivate>> {
-            const localVarAxiosArgs = await UserApiAxiosParamCreator(configuration).getMe(options);
+        async createToken(aPITokenCreate: APITokenCreate, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<APITokenPrivate>> {
+            const localVarAxiosArgs = await APITokensApiAxiosParamCreator(configuration).createToken(aPITokenCreate, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
             };
         },
         /**
-         * 
-         * @summary Get the authenticated user roles
+         * List API tokens for the authenticated user
+         * @summary List user API tokens
+         * @param {number} [page] Page number starting from 1
+         * @param {number} [perPage] Number of items per page
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getRoles(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>> {
-            const localVarAxiosArgs = await UserApiAxiosParamCreator(configuration).getRoles(options);
+        async listTokens(page?: number, perPage?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<APITokenList>> {
+            const localVarAxiosArgs = await APITokensApiAxiosParamCreator(configuration).listTokens(page, perPage, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -171,84 +199,93 @@ export const UserApiFp = function(configuration?: Configuration) {
 };
 
 /**
- * UserApi - factory interface
+ * APITokensApi - factory interface
  * @export
  */
-export const UserApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+export const APITokensApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Get authenticated user profile
-         * @summary Get authenticated user profile.
+         * Create a new API token
+         * @summary Create a new API token
+         * @param {APITokenCreate} aPITokenCreate 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getMe(options?: any): AxiosPromise<UserPrivate> {
-            return UserApiFp(configuration).getMe(options).then((request) => request(axios, basePath));
+        createToken(aPITokenCreate: APITokenCreate, options?: any): AxiosPromise<APITokenPrivate> {
+            return APITokensApiFp(configuration).createToken(aPITokenCreate, options).then((request) => request(axios, basePath));
         },
         /**
-         * 
-         * @summary Get the authenticated user roles
+         * List API tokens for the authenticated user
+         * @summary List user API tokens
+         * @param {number} [page] Page number starting from 1
+         * @param {number} [perPage] Number of items per page
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getRoles(options?: any): AxiosPromise<Array<string>> {
-            return UserApiFp(configuration).getRoles(options).then((request) => request(axios, basePath));
+        listTokens(page?: number, perPage?: number, options?: any): AxiosPromise<APITokenList> {
+            return APITokensApiFp(configuration).listTokens(page, perPage, options).then((request) => request(axios, basePath));
         },
     };
 };
 
 /**
- * UserApi - interface
+ * APITokensApi - interface
  * @export
- * @interface UserApi
+ * @interface APITokensApi
  */
-export interface UserApiInterface {
+export interface APITokensApiInterface {
     /**
-     * Get authenticated user profile
-     * @summary Get authenticated user profile.
+     * Create a new API token
+     * @summary Create a new API token
+     * @param {APITokenCreate} aPITokenCreate 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof UserApiInterface
+     * @memberof APITokensApiInterface
      */
-    getMe(options?: any): AxiosPromise<UserPrivate>;
+    createToken(aPITokenCreate: APITokenCreate, options?: any): AxiosPromise<APITokenPrivate>;
 
     /**
-     * 
-     * @summary Get the authenticated user roles
+     * List API tokens for the authenticated user
+     * @summary List user API tokens
+     * @param {number} [page] Page number starting from 1
+     * @param {number} [perPage] Number of items per page
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof UserApiInterface
+     * @memberof APITokensApiInterface
      */
-    getRoles(options?: any): AxiosPromise<Array<string>>;
+    listTokens(page?: number, perPage?: number, options?: any): AxiosPromise<APITokenList>;
 
 }
 
 /**
- * UserApi - object-oriented interface
+ * APITokensApi - object-oriented interface
  * @export
- * @class UserApi
+ * @class APITokensApi
  * @extends {BaseAPI}
  */
-export class UserApi extends BaseAPI implements UserApiInterface {
+export class APITokensApi extends BaseAPI implements APITokensApiInterface {
     /**
-     * Get authenticated user profile
-     * @summary Get authenticated user profile.
+     * Create a new API token
+     * @summary Create a new API token
+     * @param {APITokenCreate} aPITokenCreate 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof UserApi
+     * @memberof APITokensApi
      */
-    public getMe(options?: any) {
-        return UserApiFp(this.configuration).getMe(options).then((request) => request(this.axios, this.basePath));
+    public createToken(aPITokenCreate: APITokenCreate, options?: any) {
+        return APITokensApiFp(this.configuration).createToken(aPITokenCreate, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
-     * 
-     * @summary Get the authenticated user roles
+     * List API tokens for the authenticated user
+     * @summary List user API tokens
+     * @param {number} [page] Page number starting from 1
+     * @param {number} [perPage] Number of items per page
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof UserApi
+     * @memberof APITokensApi
      */
-    public getRoles(options?: any) {
-        return UserApiFp(this.configuration).getRoles(options).then((request) => request(this.axios, this.basePath));
+    public listTokens(page?: number, perPage?: number, options?: any) {
+        return APITokensApiFp(this.configuration).listTokens(page, perPage, options).then((request) => request(this.axios, this.basePath));
     }
 }
