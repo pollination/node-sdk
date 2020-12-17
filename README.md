@@ -41,7 +41,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install @pollination-solutions/pollination-sdk@0.10.12 --save
+npm install @pollination-solutions/pollination-sdk@0.10.13 --save
 ```
 
 _unPublished (not recommended):_
