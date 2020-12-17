@@ -13,48 +13,48 @@
  */
 
 
-import { ProjectRecipeFilter } from './project-recipe-filter';
+import { PluginPackage } from './plugin-package';
 
 /**
  * A list response from a pagination request
  * @export
- * @interface ProjectRecipeFilterList
+ * @interface PluginPackageList
  */
-export interface ProjectRecipeFilterList {
+export interface PluginPackageList {
     /**
      * The next page, if this on is not the last
      * @type {number}
-     * @memberof ProjectRecipeFilterList
+     * @memberof PluginPackageList
      */
     next_page?: number;
     /**
      * The current page the pagination request is on
      * @type {number}
-     * @memberof ProjectRecipeFilterList
+     * @memberof PluginPackageList
      */
     page: number;
     /**
      * The total number of pages
      * @type {number}
-     * @memberof ProjectRecipeFilterList
+     * @memberof PluginPackageList
      */
     page_count: number;
     /**
      * The number of pages per pagination request
      * @type {number}
-     * @memberof ProjectRecipeFilterList
+     * @memberof PluginPackageList
      */
     per_page: number;
     /**
      * 
-     * @type {Array<ProjectRecipeFilter>}
-     * @memberof ProjectRecipeFilterList
+     * @type {Array<PluginPackage>}
+     * @memberof PluginPackageList
      */
-    resources: Array<ProjectRecipeFilter>;
+    resources: Array<PluginPackage>;
     /**
      * The total number of resources matching the list request
      * @type {number}
-     * @memberof ProjectRecipeFilterList
+     * @memberof PluginPackageList
      */
     total_count: number;
 }

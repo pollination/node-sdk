@@ -130,7 +130,8 @@ models/organization.ts
 models/package-version.ts
 models/permission.ts
 models/plugin-config.ts
-models/plugin-list.ts
+models/plugin-package-list.ts
+models/plugin-package.ts
 models/plugin.ts
 models/policy-subject.ts
 models/project-access-policy-list.ts
@@ -147,6 +148,8 @@ models/project.ts
 models/public-account-list.ts
 models/recipe-interface-list.ts
 models/recipe-interface.ts
+models/recipe-package-list.ts
+models/recipe-package.ts
 models/recipe.ts
 models/repository-access-policy-list.ts
 models/repository-access-policy.ts
