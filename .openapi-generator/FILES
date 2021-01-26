@@ -202,10 +202,11 @@ models/team-role-enum.ts
 models/team-update.ts
 models/team.ts
 models/update-accepted.ts
-models/user-metadata.ts
+models/user-create.ts
 models/user-private.ts
 models/user-public-list.ts
 models/user-public.ts
+models/user-update.ts
 models/validation-error.ts
 models/value-file-reference.ts
 models/value-folder-reference.ts

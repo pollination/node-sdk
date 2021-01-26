@@ -17,39 +17,45 @@
 /**
  * 
  * @export
- * @interface OrganizationCreate
+ * @interface UserCreate
  */
-export interface OrganizationCreate {
+export interface UserCreate {
     /**
-     * The unique name of the org in small case without spaces
+     * A description of the user
      * @type {string}
-     * @memberof OrganizationCreate
-     */
-    account_name: string;
-    /**
-     * The contact email for the Organization
-     * @type {string}
-     * @memberof OrganizationCreate
-     */
-    contact_email: string;
-    /**
-     * A description of the org
-     * @type {string}
-     * @memberof OrganizationCreate
+     * @memberof UserCreate
      */
     description?: string;
     /**
-     * The display name for this org
+     * The contact email for the Organization
      * @type {string}
-     * @memberof OrganizationCreate
+     * @memberof UserCreate
+     */
+    email: string;
+    /**
+     * The display name for this user
+     * @type {string}
+     * @memberof UserCreate
      */
     name: string;
     /**
-     * URL to the picture associated with this org
+     * A password for this new user to authenticate with
      * @type {string}
-     * @memberof OrganizationCreate
+     * @memberof UserCreate
+     */
+    password: string;
+    /**
+     * URL to the picture associated with this user
+     * @type {string}
+     * @memberof UserCreate
      */
     picture_url: string;
+    /**
+     * The unique name of the user in small case without spaces
+     * @type {string}
+     * @memberof UserCreate
+     */
+    username: string;
 }
 
 
