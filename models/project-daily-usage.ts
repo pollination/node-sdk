@@ -17,27 +17,39 @@
 /**
  * 
  * @export
- * @interface ValidationError
+ * @interface ProjectDailyUsage
  */
-export interface ValidationError {
+export interface ProjectDailyUsage {
     /**
      * 
-     * @type {Array<string>}
-     * @memberof ValidationError
+     * @type {number}
+     * @memberof ProjectDailyUsage
      */
-    loc: Array<string>;
-    /**
-     * 
-     * @type {string}
-     * @memberof ValidationError
-     */
-    msg: string;
+    cpu?: number;
     /**
      * 
      * @type {string}
-     * @memberof ValidationError
+     * @memberof ProjectDailyUsage
      */
-    type: string;
+    date: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof ProjectDailyUsage
+     */
+    failed?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof ProjectDailyUsage
+     */
+    memory?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof ProjectDailyUsage
+     */
+    succeeded?: number;
 }
 
 

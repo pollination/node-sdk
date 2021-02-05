@@ -136,12 +136,14 @@ models/policy-subject.ts
 models/project-access-policy-list.ts
 models/project-access-policy.ts
 models/project-create.ts
+models/project-daily-usage.ts
 models/project-folder.ts
 models/project-list.ts
 models/project-policy-subject.ts
 models/project-recipe-filter-list.ts
 models/project-recipe-filter.ts
 models/project-update.ts
+models/project-usage.ts
 models/project-user-permissions.ts
 models/project.ts
 models/public-account-list.ts
