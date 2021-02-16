@@ -6,6 +6,7 @@ api.ts
 api/accounts-api.ts
 api/apitokens-api.ts
 api/artifacts-api.ts
+api/jobs-api.ts
 api/orgs-api.ts
 api/plugins-api.ts
 api/projects-api.ts
@@ -27,6 +28,8 @@ models/apitoken-private.ts
 models/apitoken.ts
 models/body-post-plugin-registries-owner-plugins-post.ts
 models/body-post-recipe-registries-owner-recipes-post.ts
+models/cloud-job-list.ts
+models/cloud-job.ts
 models/created-content.ts
 models/dag.ts
 models/dagarray-input-alias.ts
@@ -163,6 +166,8 @@ models/repository-update.ts
 models/repository-user-permissions.ts
 models/repository.ts
 models/run-list.ts
+models/run-result-list.ts
+models/run-status.ts
 models/run.ts
 models/s3-upload-request.ts
 models/s3.ts
