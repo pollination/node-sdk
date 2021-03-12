@@ -20,7 +20,6 @@ base.ts
 configuration.ts
 git_push.sh
 index.ts
-models/accepted.ts
 models/account-public.ts
 models/apitoken-create.ts
 models/apitoken-list.ts
@@ -113,6 +112,7 @@ models/item-reference.ts
 models/item-type.ts
 models/job-argument.ts
 models/job-path-argument.ts
+models/job-status-enum.ts
 models/job-status.ts
 models/job.ts
 models/key-request.ts
@@ -167,6 +167,7 @@ models/repository-user-permissions.ts
 models/repository.ts
 models/run-list.ts
 models/run-result-list.ts
+models/run-status-enum.ts
 models/run-status.ts
 models/run.ts
 models/s3-upload-request.ts
@@ -189,6 +190,7 @@ models/step-number-input.ts
 models/step-number-output.ts
 models/step-path-input.ts
 models/step-path-output.ts
+models/step-status-enum.ts
 models/step-status.ts
 models/step-string-input.ts
 models/step-string-output.ts
