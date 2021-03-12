@@ -15,13 +15,17 @@
 
 
 /**
- * Dependency kind.
+ * Enumaration of allowable status strings
  * @export
  * @enum {string}
  */
-export enum DependencyKind {
-    Recipe = 'recipe',
-    Plugin = 'plugin'
+export enum StepStatusEnum {
+    Scheduled = 'Scheduled',
+    Running = 'Running',
+    Failed = 'Failed',
+    Succeeded = 'Succeeded',
+    Skipped = 'Skipped',
+    Unknown = 'Unknown'
 }
 
 
