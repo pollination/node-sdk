@@ -15,23 +15,14 @@
 
 
 /**
- * 
+ * An enumeration.
  * @export
- * @interface TeamCreate
+ * @enum {string}
  */
-export interface TeamCreate {
-    /**
-     * 
-     * @type {string}
-     * @memberof TeamCreate
-     */
-    description?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof TeamCreate
-     */
-    name: string;
+export enum RoleEnum {
+    Owner = 'owner',
+    Member = 'member'
 }
+
 
 
