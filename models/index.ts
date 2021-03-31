@@ -142,6 +142,7 @@ export * from './repository-metadata';
 export * from './repository-policy-subject';
 export * from './repository-update';
 export * from './repository-user-permissions';
+export * from './role-enum';
 export * from './run';
 export * from './run-list';
 export * from './run-result-list';

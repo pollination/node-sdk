@@ -165,6 +165,7 @@ models/repository-policy-subject.ts
 models/repository-update.ts
 models/repository-user-permissions.ts
 models/repository.ts
+models/role-enum.ts
 models/run-list.ts
 models/run-result-list.ts
 models/run-status-enum.ts
