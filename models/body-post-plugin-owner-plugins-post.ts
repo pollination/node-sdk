@@ -15,19 +15,17 @@
 
 
 /**
- * Enumaration of allowable status strings
+ * 
  * @export
- * @enum {string}
+ * @interface BodyPostPluginOwnerPluginsPost
  */
-export enum JobStatusEnum {
-    Created = 'Created',
-    PreProcessing = 'Pre-Processing',
-    Running = 'Running',
-    Failed = 'Failed',
-    Cancelled = 'Cancelled',
-    Completed = 'Completed',
-    Unknown = 'Unknown'
+export interface BodyPostPluginOwnerPluginsPost {
+    /**
+     * 
+     * @type {any}
+     * @memberof BodyPostPluginOwnerPluginsPost
+     */
+    _package: any;
 }
-
 
 

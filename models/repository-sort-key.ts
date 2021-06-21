@@ -15,18 +15,15 @@
 
 
 /**
- * Enumaration of allowable status strings
+ * An enumeration.
  * @export
  * @enum {string}
  */
-export enum JobStatusEnum {
-    Created = 'Created',
-    PreProcessing = 'Pre-Processing',
-    Running = 'Running',
-    Failed = 'Failed',
-    Cancelled = 'Cancelled',
-    Completed = 'Completed',
-    Unknown = 'Unknown'
+export enum RepositorySortKey {
+    CreatedAt = 'created_at',
+    UpdatedAt = 'updated_at',
+    Name = 'name',
+    LatestTag = 'latest_tag'
 }
 
 
