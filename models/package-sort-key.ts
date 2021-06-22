@@ -13,26 +13,17 @@
  */
 
 
-import { SubjectType } from './subject-type';
 
 /**
- * 
+ * An enumeration.
  * @export
- * @interface PolicySubject
+ * @enum {string}
  */
-export interface PolicySubject {
-    /**
-     * The name of the policy subject
-     * @type {string}
-     * @memberof PolicySubject
-     */
-    name: string;
-    /**
-     * 
-     * @type {SubjectType}
-     * @memberof PolicySubject
-     */
-    subject_type: SubjectType;
+export enum PackageSortKey {
+    CreatedAt = 'created_at',
+    UpdatedAt = 'updated_at',
+    Tag = 'tag'
 }
+
 
 

@@ -107,6 +107,7 @@ export * from './organization-member';
 export * from './organization-member-list';
 export * from './organization-role-enum';
 export * from './organization-update';
+export * from './package-sort-key';
 export * from './package-version';
 export * from './permission';
 export * from './plugin';
