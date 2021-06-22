@@ -130,6 +130,7 @@ models/organization-member.ts
 models/organization-role-enum.ts
 models/organization-update.ts
 models/organization.ts
+models/package-sort-key.ts
 models/package-version.ts
 models/permission.ts
 models/plugin-config.ts
