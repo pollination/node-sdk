@@ -13,5 +13,11 @@
   "exclude": [
     "dist",
     "node_modules"
-  ]
+  ],
+  "typedocOptions": {
+    "entryPoints": [
+      "index.ts"
+    ],
+    "out": "docs"
+  }
 }
