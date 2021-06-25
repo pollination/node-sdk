@@ -89,12 +89,6 @@
 					</li>
 				</ul>
 			</section>
-			<section class="tsd-panel">
-				<h3>Implements</h3>
-				<ul class="tsd-hierarchy">
-					<li><a href="../interfaces/pluginsapiinterface.html" class="tsd-signature-type" data-tsd-kind="Interface">PluginsApiInterface</a></li>
-				</ul>
-			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -145,7 +139,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from BaseAPI.constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/base.ts#L50">base.ts:50</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/base.ts#L50">base.ts:50</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -190,7 +184,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from BaseAPI.configuration</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/base.ts#L50">base.ts:50</a></li>
+							<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/base.ts#L50">base.ts:50</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -201,14 +195,13 @@
 					<a name="createplugin" class="tsd-anchor"></a>
 					<h3>create<wbr>Plugin</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Plugin<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, repositoryCreate<span class="tsd-signature-symbol">: </span><a href="../interfaces/repositorycreate.html" class="tsd-signature-type" data-tsd-kind="Interface">RepositoryCreate</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/createdcontent.html" class="tsd-signature-type" data-tsd-kind="Interface">CreatedContent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Plugin<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/pluginsapicreatepluginrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">PluginsApiCreatePluginRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/createdcontent.html" class="tsd-signature-type" data-tsd-kind="Interface">CreatedContent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/pluginsapiinterface.html">PluginsApiInterface</a>.<a href="../interfaces/pluginsapiinterface.html#createplugin">createPlugin</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/plugins-api.ts#L1412">api/plugins-api.ts:1412</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/plugins-api.ts#L1639">api/plugins-api.ts:1639</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -230,10 +223,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>repositoryCreate: <a href="../interfaces/repositorycreate.html" class="tsd-signature-type" data-tsd-kind="Interface">RepositoryCreate</a></h5>
+									<h5>requestParameters: <a href="../interfaces/pluginsapicreatepluginrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">PluginsApiCreatePluginRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -247,14 +240,13 @@
 					<a name="createpluginpackage" class="tsd-anchor"></a>
 					<h3>create<wbr>Plugin<wbr>Package</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Plugin<wbr>Package<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, newPluginPackage<span class="tsd-signature-symbol">: </span><a href="../interfaces/newpluginpackage.html" class="tsd-signature-type" data-tsd-kind="Interface">NewPluginPackage</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/createdcontent.html" class="tsd-signature-type" data-tsd-kind="Interface">CreatedContent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Plugin<wbr>Package<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/pluginsapicreatepluginpackagerequest.html" class="tsd-signature-type" data-tsd-kind="Interface">PluginsApiCreatePluginPackageRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/createdcontent.html" class="tsd-signature-type" data-tsd-kind="Interface">CreatedContent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/pluginsapiinterface.html">PluginsApiInterface</a>.<a href="../interfaces/pluginsapiinterface.html#createpluginpackage">createPluginPackage</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/plugins-api.ts#L1426">api/plugins-api.ts:1426</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/plugins-api.ts#L1651">api/plugins-api.ts:1651</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -276,13 +268,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>newPluginPackage: <a href="../interfaces/newpluginpackage.html" class="tsd-signature-type" data-tsd-kind="Interface">NewPluginPackage</a></h5>
+									<h5>requestParameters: <a href="../interfaces/pluginsapicreatepluginpackagerequest.html" class="tsd-signature-type" data-tsd-kind="Interface">PluginsApiCreatePluginPackageRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -296,14 +285,13 @@
 					<a name="deleteplugin" class="tsd-anchor"></a>
 					<h3>delete<wbr>Plugin</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">delete<wbr>Plugin<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>Plugin<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/pluginsapideletepluginrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">PluginsApiDeletePluginRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/pluginsapiinterface.html">PluginsApiInterface</a>.<a href="../interfaces/pluginsapiinterface.html#deleteplugin">deletePlugin</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/plugins-api.ts#L1439">api/plugins-api.ts:1439</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/plugins-api.ts#L1663">api/plugins-api.ts:1663</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -325,10 +313,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<h5>requestParameters: <a href="../interfaces/pluginsapideletepluginrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">PluginsApiDeletePluginRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -342,14 +330,13 @@
 					<a name="deletepluginorgpermission" class="tsd-anchor"></a>
 					<h3>delete<wbr>Plugin<wbr>Org<wbr>Permission</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">delete<wbr>Plugin<wbr>Org<wbr>Permission<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, repositoryPolicySubject<span class="tsd-signature-symbol">: </span><a href="../interfaces/repositorypolicysubject.html" class="tsd-signature-type" data-tsd-kind="Interface">RepositoryPolicySubject</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>Plugin<wbr>Org<wbr>Permission<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/pluginsapideletepluginorgpermissionrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">PluginsApiDeletePluginOrgPermissionRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/pluginsapiinterface.html">PluginsApiInterface</a>.<a href="../interfaces/pluginsapiinterface.html#deletepluginorgpermission">deletePluginOrgPermission</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/plugins-api.ts#L1453">api/plugins-api.ts:1453</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/plugins-api.ts#L1675">api/plugins-api.ts:1675</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -371,13 +358,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>repositoryPolicySubject: <a href="../interfaces/repositorypolicysubject.html" class="tsd-signature-type" data-tsd-kind="Interface">RepositoryPolicySubject</a></h5>
+									<h5>requestParameters: <a href="../interfaces/pluginsapideletepluginorgpermissionrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">PluginsApiDeletePluginOrgPermissionRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -391,14 +375,13 @@
 					<a name="getplugin" class="tsd-anchor"></a>
 					<h3>get<wbr>Plugin</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Plugin<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/repository.html" class="tsd-signature-type" data-tsd-kind="Interface">Repository</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Plugin<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/pluginsapigetpluginrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">PluginsApiGetPluginRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/repository.html" class="tsd-signature-type" data-tsd-kind="Interface">Repository</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/pluginsapiinterface.html">PluginsApiInterface</a>.<a href="../interfaces/pluginsapiinterface.html#getplugin">getPlugin</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/plugins-api.ts#L1466">api/plugins-api.ts:1466</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/plugins-api.ts#L1687">api/plugins-api.ts:1687</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -420,10 +403,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<h5>requestParameters: <a href="../interfaces/pluginsapigetpluginrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">PluginsApiGetPluginRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -437,14 +420,13 @@
 					<a name="getpluginaccesspermissions" class="tsd-anchor"></a>
 					<h3>get<wbr>Plugin<wbr>Access<wbr>Permissions</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Plugin<wbr>Access<wbr>Permissions<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, perPage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, subjectType<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, permission<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/repositoryaccesspolicylist.html" class="tsd-signature-type" data-tsd-kind="Interface">RepositoryAccessPolicyList</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Plugin<wbr>Access<wbr>Permissions<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/pluginsapigetpluginaccesspermissionsrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">PluginsApiGetPluginAccessPermissionsRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/repositoryaccesspolicylist.html" class="tsd-signature-type" data-tsd-kind="Interface">RepositoryAccessPolicyList</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/pluginsapiinterface.html">PluginsApiInterface</a>.<a href="../interfaces/pluginsapiinterface.html#getpluginaccesspermissions">getPluginAccessPermissions</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/plugins-api.ts#L1483">api/plugins-api.ts:1483</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/plugins-api.ts#L1699">api/plugins-api.ts:1699</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -466,22 +448,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> page: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> perPage: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> subjectType: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> permission: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>requestParameters: <a href="../interfaces/pluginsapigetpluginaccesspermissionsrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">PluginsApiGetPluginAccessPermissionsRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -495,14 +465,13 @@
 					<a name="getpluginbytag" class="tsd-anchor"></a>
 					<h3>get<wbr>Plugin<wbr>ByTag</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Plugin<wbr>ByTag<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, tag<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/pluginpackage.html" class="tsd-signature-type" data-tsd-kind="Interface">PluginPackage</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Plugin<wbr>ByTag<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/pluginsapigetpluginbytagrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">PluginsApiGetPluginByTagRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/pluginpackage.html" class="tsd-signature-type" data-tsd-kind="Interface">PluginPackage</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/pluginsapiinterface.html">PluginsApiInterface</a>.<a href="../interfaces/pluginsapiinterface.html#getpluginbytag">getPluginByTag</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/plugins-api.ts#L1497">api/plugins-api.ts:1497</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/plugins-api.ts#L1711">api/plugins-api.ts:1711</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -524,13 +493,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>tag: <span class="tsd-signature-type">string</span></h5>
+									<h5>requestParameters: <a href="../interfaces/pluginsapigetpluginbytagrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">PluginsApiGetPluginByTagRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -544,14 +510,13 @@
 					<a name="listplugintags" class="tsd-anchor"></a>
 					<h3>list<wbr>Plugin<wbr>Tags</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">list<wbr>Plugin<wbr>Tags<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, perPage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, sortBy<span class="tsd-signature-symbol">?: </span><a href="../enums/packagesortkey.html" class="tsd-signature-type" data-tsd-kind="Enumeration">PackageSortKey</a>, sortOrder<span class="tsd-signature-symbol">?: </span><a href="../enums/sortenum.html" class="tsd-signature-type" data-tsd-kind="Enumeration">SortEnum</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/pluginpackagelist.html" class="tsd-signature-type" data-tsd-kind="Interface">PluginPackageList</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">list<wbr>Plugin<wbr>Tags<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/pluginsapilistplugintagsrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">PluginsApiListPluginTagsRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/pluginpackagelist.html" class="tsd-signature-type" data-tsd-kind="Interface">PluginPackageList</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/pluginsapiinterface.html">PluginsApiInterface</a>.<a href="../interfaces/pluginsapiinterface.html#listplugintags">listPluginTags</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/plugins-api.ts#L1514">api/plugins-api.ts:1514</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/plugins-api.ts#L1723">api/plugins-api.ts:1723</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -573,22 +538,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> page: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> perPage: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> sortBy: <a href="../enums/packagesortkey.html" class="tsd-signature-type" data-tsd-kind="Enumeration">PackageSortKey</a></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> sortOrder: <a href="../enums/sortenum.html" class="tsd-signature-type" data-tsd-kind="Enumeration">SortEnum</a></h5>
+									<h5>requestParameters: <a href="../interfaces/pluginsapilistplugintagsrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">PluginsApiListPluginTagsRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -602,14 +555,13 @@
 					<a name="listplugins" class="tsd-anchor"></a>
 					<h3>list<wbr>Plugins</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">list<wbr>Plugins<span class="tsd-signature-symbol">(</span>page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, perPage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, search<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, owner<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, _public<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, keyword<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, permission<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, sortBy<span class="tsd-signature-symbol">?: </span><a href="../enums/repositorysortkey.html" class="tsd-signature-type" data-tsd-kind="Enumeration">RepositorySortKey</a>, sortOrder<span class="tsd-signature-symbol">?: </span><a href="../enums/sortenum.html" class="tsd-signature-type" data-tsd-kind="Enumeration">SortEnum</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/repositorylist.html" class="tsd-signature-type" data-tsd-kind="Interface">RepositoryList</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">list<wbr>Plugins<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">?: </span><a href="../interfaces/pluginsapilistpluginsrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">PluginsApiListPluginsRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/repositorylist.html" class="tsd-signature-type" data-tsd-kind="Interface">RepositoryList</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/pluginsapiinterface.html">PluginsApiInterface</a>.<a href="../interfaces/pluginsapiinterface.html#listplugins">listPlugins</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/plugins-api.ts#L1535">api/plugins-api.ts:1535</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/plugins-api.ts#L1735">api/plugins-api.ts:1735</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -628,34 +580,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> page: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> perPage: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> search: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> name: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> owner: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> _public: <span class="tsd-signature-type">boolean</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> keyword: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> permission: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> sortBy: <a href="../enums/repositorysortkey.html" class="tsd-signature-type" data-tsd-kind="Enumeration">RepositorySortKey</a></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> sortOrder: <a href="../enums/sortenum.html" class="tsd-signature-type" data-tsd-kind="Enumeration">SortEnum</a></h5>
+									<h5>requestParameters: <a href="../interfaces/pluginsapilistpluginsrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">PluginsApiListPluginsRequest</a><span class="tsd-signature-symbol"> = {}</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -669,14 +597,13 @@
 					<a name="updateplugin" class="tsd-anchor"></a>
 					<h3>update<wbr>Plugin</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">update<wbr>Plugin<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, repositoryUpdate<span class="tsd-signature-symbol">: </span><a href="../interfaces/repositoryupdate.html" class="tsd-signature-type" data-tsd-kind="Interface">RepositoryUpdate</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/updateaccepted.html" class="tsd-signature-type" data-tsd-kind="Interface">UpdateAccepted</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Plugin<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/pluginsapiupdatepluginrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">PluginsApiUpdatePluginRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/updateaccepted.html" class="tsd-signature-type" data-tsd-kind="Interface">UpdateAccepted</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/pluginsapiinterface.html">PluginsApiInterface</a>.<a href="../interfaces/pluginsapiinterface.html#updateplugin">updatePlugin</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/plugins-api.ts#L1549">api/plugins-api.ts:1549</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/plugins-api.ts#L1747">api/plugins-api.ts:1747</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -698,13 +625,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>repositoryUpdate: <a href="../interfaces/repositoryupdate.html" class="tsd-signature-type" data-tsd-kind="Interface">RepositoryUpdate</a></h5>
+									<h5>requestParameters: <a href="../interfaces/pluginsapiupdatepluginrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">PluginsApiUpdatePluginRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -718,14 +642,13 @@
 					<a name="upsertpluginpermission" class="tsd-anchor"></a>
 					<h3>upsert<wbr>Plugin<wbr>Permission</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">upsert<wbr>Plugin<wbr>Permission<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, repositoryAccessPolicy<span class="tsd-signature-symbol">: </span><a href="../interfaces/repositoryaccesspolicy.html" class="tsd-signature-type" data-tsd-kind="Interface">RepositoryAccessPolicy</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/updateaccepted.html" class="tsd-signature-type" data-tsd-kind="Interface">UpdateAccepted</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">upsert<wbr>Plugin<wbr>Permission<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/pluginsapiupsertpluginpermissionrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">PluginsApiUpsertPluginPermissionRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/updateaccepted.html" class="tsd-signature-type" data-tsd-kind="Interface">UpdateAccepted</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/pluginsapiinterface.html">PluginsApiInterface</a>.<a href="../interfaces/pluginsapiinterface.html#upsertpluginpermission">upsertPluginPermission</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/plugins-api.ts#L1563">api/plugins-api.ts:1563</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/plugins-api.ts#L1759">api/plugins-api.ts:1759</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -747,13 +670,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>repositoryAccessPolicy: <a href="../interfaces/repositoryaccesspolicy.html" class="tsd-signature-type" data-tsd-kind="Interface">RepositoryAccessPolicy</a></h5>
+									<h5>requestParameters: <a href="../interfaces/pluginsapiupsertpluginpermissionrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">PluginsApiUpsertPluginPermissionRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -845,7 +765,6 @@
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>

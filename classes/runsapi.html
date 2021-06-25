@@ -89,12 +89,6 @@
 					</li>
 				</ul>
 			</section>
-			<section class="tsd-panel">
-				<h3>Implements</h3>
-				<ul class="tsd-hierarchy">
-					<li><a href="../interfaces/runsapiinterface.html" class="tsd-signature-type" data-tsd-kind="Interface">RunsApiInterface</a></li>
-				</ul>
-			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -143,7 +137,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from BaseAPI.constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/base.ts#L50">base.ts:50</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/base.ts#L50">base.ts:50</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -188,7 +182,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from BaseAPI.configuration</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/base.ts#L50">base.ts:50</a></li>
+							<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/base.ts#L50">base.ts:50</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -199,14 +193,13 @@
 					<a name="cancelrun" class="tsd-anchor"></a>
 					<h3>cancel<wbr>Run</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">cancel<wbr>Run<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, runId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">cancel<wbr>Run<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/runsapicancelrunrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RunsApiCancelRunRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/runsapiinterface.html">RunsApiInterface</a>.<a href="../interfaces/runsapiinterface.html#cancelrun">cancelRun</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/runs-api.ts#L1232">api/runs-api.ts:1232</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/runs-api.ts#L1474">api/runs-api.ts:1474</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -228,13 +221,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>runId: <span class="tsd-signature-type">string</span></h5>
+									<h5>requestParameters: <a href="../interfaces/runsapicancelrunrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RunsApiCancelRunRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -248,14 +238,13 @@
 					<a name="downloadrunartifact" class="tsd-anchor"></a>
 					<h3>download<wbr>Run<wbr>Artifact</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">download<wbr>Run<wbr>Artifact<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, runId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, path<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">download<wbr>Run<wbr>Artifact<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/runsapidownloadrunartifactrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RunsApiDownloadRunArtifactRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/runsapiinterface.html">RunsApiInterface</a>.<a href="../interfaces/runsapiinterface.html#downloadrunartifact">downloadRunArtifact</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/runs-api.ts#L1247">api/runs-api.ts:1247</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/runs-api.ts#L1486">api/runs-api.ts:1486</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -277,16 +266,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>runId: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> path: <span class="tsd-signature-type">string</span></h5>
+									<h5>requestParameters: <a href="../interfaces/runsapidownloadrunartifactrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RunsApiDownloadRunArtifactRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -300,14 +283,13 @@
 					<a name="getrun" class="tsd-anchor"></a>
 					<h3>get<wbr>Run</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Run<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, runId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/run.html" class="tsd-signature-type" data-tsd-kind="Interface">Run</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Run<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/runsapigetrunrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RunsApiGetRunRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/run.html" class="tsd-signature-type" data-tsd-kind="Interface">Run</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/runsapiinterface.html">RunsApiInterface</a>.<a href="../interfaces/runsapiinterface.html#getrun">getRun</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/runs-api.ts#L1261">api/runs-api.ts:1261</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/runs-api.ts#L1498">api/runs-api.ts:1498</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -329,13 +311,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>runId: <span class="tsd-signature-type">string</span></h5>
+									<h5>requestParameters: <a href="../interfaces/runsapigetrunrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RunsApiGetRunRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -349,14 +328,13 @@
 					<a name="getrunoutput" class="tsd-anchor"></a>
 					<h3>get<wbr>Run<wbr>Output</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Run<wbr>Output<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, runId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, outputName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Run<wbr>Output<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/runsapigetrunoutputrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RunsApiGetRunOutputRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/runsapiinterface.html">RunsApiInterface</a>.<a href="../interfaces/runsapiinterface.html#getrunoutput">getRunOutput</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/runs-api.ts#L1276">api/runs-api.ts:1276</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/runs-api.ts#L1510">api/runs-api.ts:1510</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -378,16 +356,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>runId: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>outputName: <span class="tsd-signature-type">string</span></h5>
+									<h5>requestParameters: <a href="../interfaces/runsapigetrunoutputrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RunsApiGetRunOutputRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -401,14 +373,13 @@
 					<a name="getrunsteplogs" class="tsd-anchor"></a>
 					<h3>get<wbr>Run<wbr>Step<wbr>Logs</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Run<wbr>Step<wbr>Logs<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, runId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, stepId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Run<wbr>Step<wbr>Logs<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/runsapigetrunsteplogsrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RunsApiGetRunStepLogsRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/runsapiinterface.html">RunsApiInterface</a>.<a href="../interfaces/runsapiinterface.html#getrunsteplogs">getRunStepLogs</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/runs-api.ts#L1291">api/runs-api.ts:1291</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/runs-api.ts#L1522">api/runs-api.ts:1522</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -430,16 +401,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>runId: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>stepId: <span class="tsd-signature-type">string</span></h5>
+									<h5>requestParameters: <a href="../interfaces/runsapigetrunsteplogsrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RunsApiGetRunStepLogsRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -453,14 +418,13 @@
 					<a name="getrunsteps" class="tsd-anchor"></a>
 					<h3>get<wbr>Run<wbr>Steps</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Run<wbr>Steps<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, runId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, status<span class="tsd-signature-symbol">?: </span><a href="../enums/stepstatusenum.html" class="tsd-signature-type" data-tsd-kind="Enumeration">StepStatusEnum</a>, stepId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, untilGeneration<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, sinceGeneration<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, perPage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/steplist.html" class="tsd-signature-type" data-tsd-kind="Interface">StepList</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Run<wbr>Steps<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/runsapigetrunstepsrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RunsApiGetRunStepsRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/steplist.html" class="tsd-signature-type" data-tsd-kind="Interface">StepList</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/runsapiinterface.html">RunsApiInterface</a>.<a href="../interfaces/runsapiinterface.html#getrunsteps">getRunSteps</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/runs-api.ts#L1311">api/runs-api.ts:1311</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/runs-api.ts#L1534">api/runs-api.ts:1534</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -482,31 +446,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>runId: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> status: <a href="../enums/stepstatusenum.html" class="tsd-signature-type" data-tsd-kind="Enumeration">StepStatusEnum</a></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> stepId: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> untilGeneration: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> sinceGeneration: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> page: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> perPage: <span class="tsd-signature-type">number</span></h5>
+									<h5>requestParameters: <a href="../interfaces/runsapigetrunstepsrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RunsApiGetRunStepsRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -520,14 +463,13 @@
 					<a name="listrunartifacts" class="tsd-anchor"></a>
 					<h3>list<wbr>Run<wbr>Artifacts</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">list<wbr>Run<wbr>Artifacts<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, runId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, perPage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, path<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/filemeta.html" class="tsd-signature-type" data-tsd-kind="Interface">FileMeta</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">list<wbr>Run<wbr>Artifacts<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/runsapilistrunartifactsrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RunsApiListRunArtifactsRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/filemeta.html" class="tsd-signature-type" data-tsd-kind="Interface">FileMeta</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/runsapiinterface.html">RunsApiInterface</a>.<a href="../interfaces/runsapiinterface.html#listrunartifacts">listRunArtifacts</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/runs-api.ts#L1328">api/runs-api.ts:1328</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/runs-api.ts#L1546">api/runs-api.ts:1546</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -549,22 +491,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>runId: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> page: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> perPage: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> path: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>requestParameters: <a href="../interfaces/runsapilistrunartifactsrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RunsApiListRunArtifactsRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -578,14 +508,13 @@
 					<a name="listruns" class="tsd-anchor"></a>
 					<h3>list<wbr>Runs</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">list<wbr>Runs<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, status<span class="tsd-signature-symbol">?: </span><a href="../enums/runstatusenum.html" class="tsd-signature-type" data-tsd-kind="Enumeration">RunStatusEnum</a>, jobId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, perPage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/runlist.html" class="tsd-signature-type" data-tsd-kind="Interface">RunList</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">list<wbr>Runs<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/runsapilistrunsrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RunsApiListRunsRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/runlist.html" class="tsd-signature-type" data-tsd-kind="Interface">RunList</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/runsapiinterface.html">RunsApiInterface</a>.<a href="../interfaces/runsapiinterface.html#listruns">listRuns</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/runs-api.ts#L1345">api/runs-api.ts:1345</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/runs-api.ts#L1558">api/runs-api.ts:1558</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -607,22 +536,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> status: <a href="../enums/runstatusenum.html" class="tsd-signature-type" data-tsd-kind="Enumeration">RunStatusEnum</a></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> jobId: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> page: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> perPage: <span class="tsd-signature-type">number</span></h5>
+									<h5>requestParameters: <a href="../interfaces/runsapilistrunsrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RunsApiListRunsRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -636,14 +553,13 @@
 					<a name="queryresults" class="tsd-anchor"></a>
 					<h3>query<wbr>Results</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">query<wbr>Results<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, status<span class="tsd-signature-symbol">?: </span><a href="../enums/runstatusenum.html" class="tsd-signature-type" data-tsd-kind="Enumeration">RunStatusEnum</a>, jobId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, perPage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/runresultlist.html" class="tsd-signature-type" data-tsd-kind="Interface">RunResultList</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">query<wbr>Results<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/runsapiqueryresultsrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RunsApiQueryResultsRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/runresultlist.html" class="tsd-signature-type" data-tsd-kind="Interface">RunResultList</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/runsapiinterface.html">RunsApiInterface</a>.<a href="../interfaces/runsapiinterface.html#queryresults">queryResults</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/runs-api.ts#L1362">api/runs-api.ts:1362</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/runs-api.ts#L1570">api/runs-api.ts:1570</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -665,22 +581,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> status: <a href="../enums/runstatusenum.html" class="tsd-signature-type" data-tsd-kind="Enumeration">RunStatusEnum</a></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> jobId: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> page: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> perPage: <span class="tsd-signature-type">number</span></h5>
+									<h5>requestParameters: <a href="../interfaces/runsapiqueryresultsrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RunsApiQueryResultsRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -766,7 +670,6 @@
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>

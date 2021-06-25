@@ -89,12 +89,6 @@
 					</li>
 				</ul>
 			</section>
-			<section class="tsd-panel">
-				<h3>Implements</h3>
-				<ul class="tsd-hierarchy">
-					<li><a href="../interfaces/artifactsapiinterface.html" class="tsd-signature-type" data-tsd-kind="Interface">ArtifactsApiInterface</a></li>
-				</ul>
-			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -138,7 +132,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from BaseAPI.constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/base.ts#L50">base.ts:50</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/base.ts#L50">base.ts:50</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -183,7 +177,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from BaseAPI.configuration</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/base.ts#L50">base.ts:50</a></li>
+							<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/base.ts#L50">base.ts:50</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -194,14 +188,13 @@
 					<a name="createartifact" class="tsd-anchor"></a>
 					<h3>create<wbr>Artifact</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Artifact<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, keyRequest<span class="tsd-signature-symbol">: </span><a href="../interfaces/keyrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">KeyRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/s3uploadrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">S3UploadRequest</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Artifact<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/artifactsapicreateartifactrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">ArtifactsApiCreateArtifactRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/s3uploadrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">S3UploadRequest</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/artifactsapiinterface.html">ArtifactsApiInterface</a>.<a href="../interfaces/artifactsapiinterface.html#createartifact">createArtifact</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/artifacts-api.ts#L557">api/artifacts-api.ts:557</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/artifacts-api.ts#L635">api/artifacts-api.ts:635</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -220,13 +213,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>keyRequest: <a href="../interfaces/keyrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">KeyRequest</a></h5>
+									<h5>requestParameters: <a href="../interfaces/artifactsapicreateartifactrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">ArtifactsApiCreateArtifactRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -240,14 +230,13 @@
 					<a name="deleteartifact" class="tsd-anchor"></a>
 					<h3>delete<wbr>Artifact</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">delete<wbr>Artifact<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, path<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, perPage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>Artifact<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/artifactsapideleteartifactrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">ArtifactsApiDeleteArtifactRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/artifactsapiinterface.html">ArtifactsApiInterface</a>.<a href="../interfaces/artifactsapiinterface.html#deleteartifact">deleteArtifact</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/artifacts-api.ts#L573">api/artifacts-api.ts:573</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/artifacts-api.ts#L647">api/artifacts-api.ts:647</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -266,19 +255,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> path: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> page: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> perPage: <span class="tsd-signature-type">number</span></h5>
+									<h5>requestParameters: <a href="../interfaces/artifactsapideleteartifactrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">ArtifactsApiDeleteArtifactRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -292,14 +272,13 @@
 					<a name="downloadartifact" class="tsd-anchor"></a>
 					<h3>download<wbr>Artifact</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">download<wbr>Artifact<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, path<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">download<wbr>Artifact<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/artifactsapidownloadartifactrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">ArtifactsApiDownloadArtifactRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/artifactsapiinterface.html">ArtifactsApiInterface</a>.<a href="../interfaces/artifactsapiinterface.html#downloadartifact">downloadArtifact</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/artifacts-api.ts#L587">api/artifacts-api.ts:587</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/artifacts-api.ts#L659">api/artifacts-api.ts:659</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -318,13 +297,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> path: <span class="tsd-signature-type">string</span></h5>
+									<h5>requestParameters: <a href="../interfaces/artifactsapidownloadartifactrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">ArtifactsApiDownloadArtifactRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -338,14 +314,13 @@
 					<a name="listartifacts" class="tsd-anchor"></a>
 					<h3>list<wbr>Artifacts</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">list<wbr>Artifacts<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, perPage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, path<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/filemeta.html" class="tsd-signature-type" data-tsd-kind="Interface">FileMeta</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">list<wbr>Artifacts<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/artifactsapilistartifactsrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">ArtifactsApiListArtifactsRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/filemeta.html" class="tsd-signature-type" data-tsd-kind="Interface">FileMeta</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/artifactsapiinterface.html">ArtifactsApiInterface</a>.<a href="../interfaces/artifactsapiinterface.html#listartifacts">listArtifacts</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/artifacts-api.ts#L603">api/artifacts-api.ts:603</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/artifacts-api.ts#L671">api/artifacts-api.ts:671</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -364,19 +339,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> page: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> perPage: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> path: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>requestParameters: <a href="../interfaces/artifactsapilistartifactsrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">ArtifactsApiListArtifactsRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -447,7 +413,6 @@
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>

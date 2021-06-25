@@ -89,12 +89,6 @@
 					</li>
 				</ul>
 			</section>
-			<section class="tsd-panel">
-				<h3>Implements</h3>
-				<ul class="tsd-hierarchy">
-					<li><a href="../interfaces/teamsapiinterface.html" class="tsd-signature-type" data-tsd-kind="Interface">TeamsApiInterface</a></li>
-				</ul>
-			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -142,7 +136,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from BaseAPI.constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/base.ts#L50">base.ts:50</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/base.ts#L50">base.ts:50</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -187,7 +181,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from BaseAPI.configuration</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/base.ts#L50">base.ts:50</a></li>
+							<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/base.ts#L50">base.ts:50</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -198,14 +192,13 @@
 					<a name="createteam" class="tsd-anchor"></a>
 					<h3>create<wbr>Team</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Team<span class="tsd-signature-symbol">(</span>orgName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, teamCreate<span class="tsd-signature-symbol">: </span><a href="../interfaces/teamcreate.html" class="tsd-signature-type" data-tsd-kind="Interface">TeamCreate</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/createdcontent.html" class="tsd-signature-type" data-tsd-kind="Interface">CreatedContent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Team<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/teamsapicreateteamrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">TeamsApiCreateTeamRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/createdcontent.html" class="tsd-signature-type" data-tsd-kind="Interface">CreatedContent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/teamsapiinterface.html">TeamsApiInterface</a>.<a href="../interfaces/teamsapiinterface.html#createteam">createTeam</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/teams-api.ts#L928">api/teams-api.ts:928</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/teams-api.ts#L1047">api/teams-api.ts:1047</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -227,10 +220,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>orgName: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>teamCreate: <a href="../interfaces/teamcreate.html" class="tsd-signature-type" data-tsd-kind="Interface">TeamCreate</a></h5>
+									<h5>requestParameters: <a href="../interfaces/teamsapicreateteamrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">TeamsApiCreateTeamRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -244,14 +237,13 @@
 					<a name="deleteorgteammember" class="tsd-anchor"></a>
 					<h3>delete<wbr>Org<wbr>Team<wbr>Member</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">delete<wbr>Org<wbr>Team<wbr>Member<span class="tsd-signature-symbol">(</span>orgName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, teamSlug<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, username<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>Org<wbr>Team<wbr>Member<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/teamsapideleteorgteammemberrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">TeamsApiDeleteOrgTeamMemberRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/teamsapiinterface.html">TeamsApiInterface</a>.<a href="../interfaces/teamsapiinterface.html#deleteorgteammember">deleteOrgTeamMember</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/teams-api.ts#L942">api/teams-api.ts:942</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/teams-api.ts#L1059">api/teams-api.ts:1059</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -273,13 +265,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>orgName: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>teamSlug: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>username: <span class="tsd-signature-type">string</span></h5>
+									<h5>requestParameters: <a href="../interfaces/teamsapideleteorgteammemberrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">TeamsApiDeleteOrgTeamMemberRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -293,14 +282,13 @@
 					<a name="deleteteam" class="tsd-anchor"></a>
 					<h3>delete<wbr>Team</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">delete<wbr>Team<span class="tsd-signature-symbol">(</span>orgName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, teamSlug<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>Team<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/teamsapideleteteamrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">TeamsApiDeleteTeamRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/teamsapiinterface.html">TeamsApiInterface</a>.<a href="../interfaces/teamsapiinterface.html#deleteteam">deleteTeam</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/teams-api.ts#L955">api/teams-api.ts:955</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/teams-api.ts#L1071">api/teams-api.ts:1071</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -322,10 +310,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>orgName: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>teamSlug: <span class="tsd-signature-type">string</span></h5>
+									<h5>requestParameters: <a href="../interfaces/teamsapideleteteamrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">TeamsApiDeleteTeamRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -339,14 +327,13 @@
 					<a name="getorgteammembers" class="tsd-anchor"></a>
 					<h3>get<wbr>Org<wbr>Team<wbr>Members</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Org<wbr>Team<wbr>Members<span class="tsd-signature-symbol">(</span>orgName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, teamSlug<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/teammemberlist.html" class="tsd-signature-type" data-tsd-kind="Interface">TeamMemberList</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Org<wbr>Team<wbr>Members<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/teamsapigetorgteammembersrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">TeamsApiGetOrgTeamMembersRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/teammemberlist.html" class="tsd-signature-type" data-tsd-kind="Interface">TeamMemberList</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/teamsapiinterface.html">TeamsApiInterface</a>.<a href="../interfaces/teamsapiinterface.html#getorgteammembers">getOrgTeamMembers</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/teams-api.ts#L968">api/teams-api.ts:968</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/teams-api.ts#L1083">api/teams-api.ts:1083</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -368,10 +355,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>orgName: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>teamSlug: <span class="tsd-signature-type">string</span></h5>
+									<h5>requestParameters: <a href="../interfaces/teamsapigetorgteammembersrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">TeamsApiGetOrgTeamMembersRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -385,14 +372,13 @@
 					<a name="getteam" class="tsd-anchor"></a>
 					<h3>get<wbr>Team</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Team<span class="tsd-signature-symbol">(</span>orgName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, teamSlug<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/team.html" class="tsd-signature-type" data-tsd-kind="Interface">Team</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Team<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/teamsapigetteamrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">TeamsApiGetTeamRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/team.html" class="tsd-signature-type" data-tsd-kind="Interface">Team</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/teamsapiinterface.html">TeamsApiInterface</a>.<a href="../interfaces/teamsapiinterface.html#getteam">getTeam</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/teams-api.ts#L981">api/teams-api.ts:981</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/teams-api.ts#L1095">api/teams-api.ts:1095</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -414,10 +400,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>orgName: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>teamSlug: <span class="tsd-signature-type">string</span></h5>
+									<h5>requestParameters: <a href="../interfaces/teamsapigetteamrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">TeamsApiGetTeamRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -431,14 +417,13 @@
 					<a name="listorgteams" class="tsd-anchor"></a>
 					<h3>list<wbr>Org<wbr>Teams</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">list<wbr>Org<wbr>Teams<span class="tsd-signature-symbol">(</span>orgName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, perPage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, search<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, member<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/teamlist.html" class="tsd-signature-type" data-tsd-kind="Interface">TeamList</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">list<wbr>Org<wbr>Teams<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/teamsapilistorgteamsrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">TeamsApiListOrgTeamsRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/teamlist.html" class="tsd-signature-type" data-tsd-kind="Interface">TeamList</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/teamsapiinterface.html">TeamsApiInterface</a>.<a href="../interfaces/teamsapiinterface.html#listorgteams">listOrgTeams</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/teams-api.ts#L998">api/teams-api.ts:998</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/teams-api.ts#L1107">api/teams-api.ts:1107</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -460,22 +445,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>orgName: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> page: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> perPage: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> search: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> name: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> member: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>requestParameters: <a href="../interfaces/teamsapilistorgteamsrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">TeamsApiListOrgTeamsRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -489,14 +462,13 @@
 					<a name="updateteam" class="tsd-anchor"></a>
 					<h3>update<wbr>Team</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">update<wbr>Team<span class="tsd-signature-symbol">(</span>orgName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, teamSlug<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, teamUpdate<span class="tsd-signature-symbol">: </span><a href="../interfaces/teamupdate.html" class="tsd-signature-type" data-tsd-kind="Interface">TeamUpdate</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/updateaccepted.html" class="tsd-signature-type" data-tsd-kind="Interface">UpdateAccepted</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Team<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/teamsapiupdateteamrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">TeamsApiUpdateTeamRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/updateaccepted.html" class="tsd-signature-type" data-tsd-kind="Interface">UpdateAccepted</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/teamsapiinterface.html">TeamsApiInterface</a>.<a href="../interfaces/teamsapiinterface.html#updateteam">updateTeam</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/teams-api.ts#L1012">api/teams-api.ts:1012</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/teams-api.ts#L1119">api/teams-api.ts:1119</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -518,13 +490,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>orgName: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>teamSlug: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>teamUpdate: <a href="../interfaces/teamupdate.html" class="tsd-signature-type" data-tsd-kind="Interface">TeamUpdate</a></h5>
+									<h5>requestParameters: <a href="../interfaces/teamsapiupdateteamrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">TeamsApiUpdateTeamRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -538,14 +507,13 @@
 					<a name="upsertorgteammember" class="tsd-anchor"></a>
 					<h3>upsert<wbr>Org<wbr>Team<wbr>Member</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">upsert<wbr>Org<wbr>Team<wbr>Member<span class="tsd-signature-symbol">(</span>orgName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, teamSlug<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, username<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, role<span class="tsd-signature-symbol">: </span><a href="../enums/teamroleenum.html" class="tsd-signature-type" data-tsd-kind="Enumeration">TeamRoleEnum</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/updateaccepted.html" class="tsd-signature-type" data-tsd-kind="Interface">UpdateAccepted</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">upsert<wbr>Org<wbr>Team<wbr>Member<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/teamsapiupsertorgteammemberrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">TeamsApiUpsertOrgTeamMemberRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/updateaccepted.html" class="tsd-signature-type" data-tsd-kind="Interface">UpdateAccepted</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/teamsapiinterface.html">TeamsApiInterface</a>.<a href="../interfaces/teamsapiinterface.html#upsertorgteammember">upsertOrgTeamMember</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/teams-api.ts#L1027">api/teams-api.ts:1027</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/teams-api.ts#L1131">api/teams-api.ts:1131</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -567,16 +535,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>orgName: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>teamSlug: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>username: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>role: <a href="../enums/teamroleenum.html" class="tsd-signature-type" data-tsd-kind="Enumeration">TeamRoleEnum</a></h5>
+									<h5>requestParameters: <a href="../interfaces/teamsapiupsertorgteammemberrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">TeamsApiUpsertOrgTeamMemberRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -659,7 +621,6 @@
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>

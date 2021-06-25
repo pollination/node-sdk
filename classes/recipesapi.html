@@ -89,12 +89,6 @@
 					</li>
 				</ul>
 			</section>
-			<section class="tsd-panel">
-				<h3>Implements</h3>
-				<ul class="tsd-hierarchy">
-					<li><a href="../interfaces/recipesapiinterface.html" class="tsd-signature-type" data-tsd-kind="Interface">RecipesApiInterface</a></li>
-				</ul>
-			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -145,7 +139,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from BaseAPI.constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/base.ts#L50">base.ts:50</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/base.ts#L50">base.ts:50</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -190,7 +184,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from BaseAPI.configuration</p>
 						<ul>
-							<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/base.ts#L50">base.ts:50</a></li>
+							<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/base.ts#L50">base.ts:50</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -201,14 +195,13 @@
 					<a name="createrecipe" class="tsd-anchor"></a>
 					<h3>create<wbr>Recipe</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Recipe<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, repositoryCreate<span class="tsd-signature-symbol">: </span><a href="../interfaces/repositorycreate.html" class="tsd-signature-type" data-tsd-kind="Interface">RepositoryCreate</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/createdcontent.html" class="tsd-signature-type" data-tsd-kind="Interface">CreatedContent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Recipe<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/recipesapicreatereciperequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RecipesApiCreateRecipeRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/createdcontent.html" class="tsd-signature-type" data-tsd-kind="Interface">CreatedContent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/recipesapiinterface.html">RecipesApiInterface</a>.<a href="../interfaces/recipesapiinterface.html#createrecipe">createRecipe</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/recipes-api.ts#L1412">api/recipes-api.ts:1412</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/recipes-api.ts#L1639">api/recipes-api.ts:1639</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -230,10 +223,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>repositoryCreate: <a href="../interfaces/repositorycreate.html" class="tsd-signature-type" data-tsd-kind="Interface">RepositoryCreate</a></h5>
+									<h5>requestParameters: <a href="../interfaces/recipesapicreatereciperequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RecipesApiCreateRecipeRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -247,14 +240,13 @@
 					<a name="createrecipepackage" class="tsd-anchor"></a>
 					<h3>create<wbr>Recipe<wbr>Package</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Recipe<wbr>Package<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, newRecipePackage<span class="tsd-signature-symbol">: </span><a href="../interfaces/newrecipepackage.html" class="tsd-signature-type" data-tsd-kind="Interface">NewRecipePackage</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/createdcontent.html" class="tsd-signature-type" data-tsd-kind="Interface">CreatedContent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Recipe<wbr>Package<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/recipesapicreaterecipepackagerequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RecipesApiCreateRecipePackageRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/createdcontent.html" class="tsd-signature-type" data-tsd-kind="Interface">CreatedContent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/recipesapiinterface.html">RecipesApiInterface</a>.<a href="../interfaces/recipesapiinterface.html#createrecipepackage">createRecipePackage</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/recipes-api.ts#L1426">api/recipes-api.ts:1426</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/recipes-api.ts#L1651">api/recipes-api.ts:1651</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -276,13 +268,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>newRecipePackage: <a href="../interfaces/newrecipepackage.html" class="tsd-signature-type" data-tsd-kind="Interface">NewRecipePackage</a></h5>
+									<h5>requestParameters: <a href="../interfaces/recipesapicreaterecipepackagerequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RecipesApiCreateRecipePackageRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -296,14 +285,13 @@
 					<a name="deleterecipe" class="tsd-anchor"></a>
 					<h3>delete<wbr>Recipe</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">delete<wbr>Recipe<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>Recipe<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/recipesapideletereciperequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RecipesApiDeleteRecipeRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/recipesapiinterface.html">RecipesApiInterface</a>.<a href="../interfaces/recipesapiinterface.html#deleterecipe">deleteRecipe</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/recipes-api.ts#L1439">api/recipes-api.ts:1439</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/recipes-api.ts#L1663">api/recipes-api.ts:1663</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -325,10 +313,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<h5>requestParameters: <a href="../interfaces/recipesapideletereciperequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RecipesApiDeleteRecipeRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -342,14 +330,13 @@
 					<a name="deleterecipeorgpermission" class="tsd-anchor"></a>
 					<h3>delete<wbr>Recipe<wbr>Org<wbr>Permission</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">delete<wbr>Recipe<wbr>Org<wbr>Permission<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, repositoryPolicySubject<span class="tsd-signature-symbol">: </span><a href="../interfaces/repositorypolicysubject.html" class="tsd-signature-type" data-tsd-kind="Interface">RepositoryPolicySubject</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>Recipe<wbr>Org<wbr>Permission<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/recipesapideleterecipeorgpermissionrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RecipesApiDeleteRecipeOrgPermissionRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/recipesapiinterface.html">RecipesApiInterface</a>.<a href="../interfaces/recipesapiinterface.html#deleterecipeorgpermission">deleteRecipeOrgPermission</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/recipes-api.ts#L1453">api/recipes-api.ts:1453</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/recipes-api.ts#L1675">api/recipes-api.ts:1675</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -371,13 +358,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>repositoryPolicySubject: <a href="../interfaces/repositorypolicysubject.html" class="tsd-signature-type" data-tsd-kind="Interface">RepositoryPolicySubject</a></h5>
+									<h5>requestParameters: <a href="../interfaces/recipesapideleterecipeorgpermissionrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RecipesApiDeleteRecipeOrgPermissionRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -391,14 +375,13 @@
 					<a name="getrecipe" class="tsd-anchor"></a>
 					<h3>get<wbr>Recipe</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Recipe<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/repository.html" class="tsd-signature-type" data-tsd-kind="Interface">Repository</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Recipe<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/recipesapigetreciperequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RecipesApiGetRecipeRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/repository.html" class="tsd-signature-type" data-tsd-kind="Interface">Repository</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/recipesapiinterface.html">RecipesApiInterface</a>.<a href="../interfaces/recipesapiinterface.html#getrecipe">getRecipe</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/recipes-api.ts#L1466">api/recipes-api.ts:1466</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/recipes-api.ts#L1687">api/recipes-api.ts:1687</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -420,10 +403,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<h5>requestParameters: <a href="../interfaces/recipesapigetreciperequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RecipesApiGetRecipeRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -437,14 +420,13 @@
 					<a name="getrecipeaccesspermissions" class="tsd-anchor"></a>
 					<h3>get<wbr>Recipe<wbr>Access<wbr>Permissions</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Recipe<wbr>Access<wbr>Permissions<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, perPage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, subjectType<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, permission<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/repositoryaccesspolicylist.html" class="tsd-signature-type" data-tsd-kind="Interface">RepositoryAccessPolicyList</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Recipe<wbr>Access<wbr>Permissions<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/recipesapigetrecipeaccesspermissionsrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RecipesApiGetRecipeAccessPermissionsRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/repositoryaccesspolicylist.html" class="tsd-signature-type" data-tsd-kind="Interface">RepositoryAccessPolicyList</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/recipesapiinterface.html">RecipesApiInterface</a>.<a href="../interfaces/recipesapiinterface.html#getrecipeaccesspermissions">getRecipeAccessPermissions</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/recipes-api.ts#L1483">api/recipes-api.ts:1483</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/recipes-api.ts#L1699">api/recipes-api.ts:1699</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -466,22 +448,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> page: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> perPage: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> subjectType: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> permission: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>requestParameters: <a href="../interfaces/recipesapigetrecipeaccesspermissionsrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RecipesApiGetRecipeAccessPermissionsRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -495,14 +465,13 @@
 					<a name="getrecipebytag" class="tsd-anchor"></a>
 					<h3>get<wbr>Recipe<wbr>ByTag</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Recipe<wbr>ByTag<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, tag<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/recipepackage.html" class="tsd-signature-type" data-tsd-kind="Interface">RecipePackage</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Recipe<wbr>ByTag<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/recipesapigetrecipebytagrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RecipesApiGetRecipeByTagRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/recipepackage.html" class="tsd-signature-type" data-tsd-kind="Interface">RecipePackage</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/recipesapiinterface.html">RecipesApiInterface</a>.<a href="../interfaces/recipesapiinterface.html#getrecipebytag">getRecipeByTag</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/recipes-api.ts#L1497">api/recipes-api.ts:1497</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/recipes-api.ts#L1711">api/recipes-api.ts:1711</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -524,13 +493,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>tag: <span class="tsd-signature-type">string</span></h5>
+									<h5>requestParameters: <a href="../interfaces/recipesapigetrecipebytagrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RecipesApiGetRecipeByTagRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -544,14 +510,13 @@
 					<a name="listrecipetags" class="tsd-anchor"></a>
 					<h3>list<wbr>Recipe<wbr>Tags</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">list<wbr>Recipe<wbr>Tags<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, perPage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, sortBy<span class="tsd-signature-symbol">?: </span><a href="../enums/packagesortkey.html" class="tsd-signature-type" data-tsd-kind="Enumeration">PackageSortKey</a>, sortOrder<span class="tsd-signature-symbol">?: </span><a href="../enums/sortenum.html" class="tsd-signature-type" data-tsd-kind="Enumeration">SortEnum</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/recipepackagelist.html" class="tsd-signature-type" data-tsd-kind="Interface">RecipePackageList</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">list<wbr>Recipe<wbr>Tags<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/recipesapilistrecipetagsrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RecipesApiListRecipeTagsRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/recipepackagelist.html" class="tsd-signature-type" data-tsd-kind="Interface">RecipePackageList</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/recipesapiinterface.html">RecipesApiInterface</a>.<a href="../interfaces/recipesapiinterface.html#listrecipetags">listRecipeTags</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/recipes-api.ts#L1514">api/recipes-api.ts:1514</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/recipes-api.ts#L1723">api/recipes-api.ts:1723</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -573,22 +538,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> page: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> perPage: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> sortBy: <a href="../enums/packagesortkey.html" class="tsd-signature-type" data-tsd-kind="Enumeration">PackageSortKey</a></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> sortOrder: <a href="../enums/sortenum.html" class="tsd-signature-type" data-tsd-kind="Enumeration">SortEnum</a></h5>
+									<h5>requestParameters: <a href="../interfaces/recipesapilistrecipetagsrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RecipesApiListRecipeTagsRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -602,14 +555,13 @@
 					<a name="listrecipes" class="tsd-anchor"></a>
 					<h3>list<wbr>Recipes</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">list<wbr>Recipes<span class="tsd-signature-symbol">(</span>page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, perPage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, search<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, owner<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, _public<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, keyword<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, permission<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, sortBy<span class="tsd-signature-symbol">?: </span><a href="../enums/repositorysortkey.html" class="tsd-signature-type" data-tsd-kind="Enumeration">RepositorySortKey</a>, sortOrder<span class="tsd-signature-symbol">?: </span><a href="../enums/sortenum.html" class="tsd-signature-type" data-tsd-kind="Enumeration">SortEnum</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/repositorylist.html" class="tsd-signature-type" data-tsd-kind="Interface">RepositoryList</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">list<wbr>Recipes<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">?: </span><a href="../interfaces/recipesapilistrecipesrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RecipesApiListRecipesRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/repositorylist.html" class="tsd-signature-type" data-tsd-kind="Interface">RepositoryList</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/recipesapiinterface.html">RecipesApiInterface</a>.<a href="../interfaces/recipesapiinterface.html#listrecipes">listRecipes</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/recipes-api.ts#L1535">api/recipes-api.ts:1535</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/recipes-api.ts#L1735">api/recipes-api.ts:1735</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -628,34 +580,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> page: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> perPage: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> search: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> name: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> owner: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> _public: <span class="tsd-signature-type">boolean</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> keyword: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> permission: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> sortBy: <a href="../enums/repositorysortkey.html" class="tsd-signature-type" data-tsd-kind="Enumeration">RepositorySortKey</a></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> sortOrder: <a href="../enums/sortenum.html" class="tsd-signature-type" data-tsd-kind="Enumeration">SortEnum</a></h5>
+									<h5>requestParameters: <a href="../interfaces/recipesapilistrecipesrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RecipesApiListRecipesRequest</a><span class="tsd-signature-symbol"> = {}</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -669,14 +597,13 @@
 					<a name="updaterecipe" class="tsd-anchor"></a>
 					<h3>update<wbr>Recipe</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">update<wbr>Recipe<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, repositoryUpdate<span class="tsd-signature-symbol">: </span><a href="../interfaces/repositoryupdate.html" class="tsd-signature-type" data-tsd-kind="Interface">RepositoryUpdate</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/updateaccepted.html" class="tsd-signature-type" data-tsd-kind="Interface">UpdateAccepted</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Recipe<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/recipesapiupdatereciperequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RecipesApiUpdateRecipeRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/updateaccepted.html" class="tsd-signature-type" data-tsd-kind="Interface">UpdateAccepted</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/recipesapiinterface.html">RecipesApiInterface</a>.<a href="../interfaces/recipesapiinterface.html#updaterecipe">updateRecipe</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/recipes-api.ts#L1549">api/recipes-api.ts:1549</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/recipes-api.ts#L1747">api/recipes-api.ts:1747</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -698,13 +625,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>repositoryUpdate: <a href="../interfaces/repositoryupdate.html" class="tsd-signature-type" data-tsd-kind="Interface">RepositoryUpdate</a></h5>
+									<h5>requestParameters: <a href="../interfaces/recipesapiupdatereciperequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RecipesApiUpdateRecipeRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -718,14 +642,13 @@
 					<a name="upsertrecipepermission" class="tsd-anchor"></a>
 					<h3>upsert<wbr>Recipe<wbr>Permission</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">upsert<wbr>Recipe<wbr>Permission<span class="tsd-signature-symbol">(</span>owner<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, repositoryAccessPolicy<span class="tsd-signature-symbol">: </span><a href="../interfaces/repositoryaccesspolicy.html" class="tsd-signature-type" data-tsd-kind="Interface">RepositoryAccessPolicy</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/updateaccepted.html" class="tsd-signature-type" data-tsd-kind="Interface">UpdateAccepted</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">upsert<wbr>Recipe<wbr>Permission<span class="tsd-signature-symbol">(</span>requestParameters<span class="tsd-signature-symbol">: </span><a href="../interfaces/recipesapiupsertrecipepermissionrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RecipesApiUpsertRecipePermissionRequest</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/updateaccepted.html" class="tsd-signature-type" data-tsd-kind="Interface">UpdateAccepted</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/recipesapiinterface.html">RecipesApiInterface</a>.<a href="../interfaces/recipesapiinterface.html#upsertrecipepermission">upsertRecipePermission</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/2bb567d/api/recipes-api.ts#L1563">api/recipes-api.ts:1563</a></li>
+									<li>Defined in <a href="https://github.com/pollination/node-sdk/blob/ed44e8d/api/recipes-api.ts#L1759">api/recipes-api.ts:1759</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -747,13 +670,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>owner: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>repositoryAccessPolicy: <a href="../interfaces/repositoryaccesspolicy.html" class="tsd-signature-type" data-tsd-kind="Interface">RepositoryAccessPolicy</a></h5>
+									<h5>requestParameters: <a href="../interfaces/recipesapiupsertrecipepermissionrequest.html" class="tsd-signature-type" data-tsd-kind="Interface">RecipesApiUpsertRecipePermissionRequest</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request parameters.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -845,7 +765,6 @@
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
