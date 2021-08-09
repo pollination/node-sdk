@@ -25,6 +25,7 @@ models/apitoken-create.ts
 models/apitoken-list.ts
 models/apitoken-private.ts
 models/apitoken.ts
+models/baked-recipe.ts
 models/body-post-plugin-owner-plugins-post.ts
 models/body-post-recipe-owner-recipes-post.ts
 models/cloud-job-list.ts
@@ -166,8 +167,11 @@ models/repository-sort-key.ts
 models/repository-update.ts
 models/repository-user-permissions.ts
 models/repository.ts
+models/resources-duration.ts
 models/role-enum.ts
 models/run-list.ts
+models/run-meta.ts
+models/run-progress.ts
 models/run-result-list.ts
 models/run-status-enum.ts
 models/run-status.ts
@@ -213,6 +217,7 @@ models/team-member.ts
 models/team-role-enum.ts
 models/team-update.ts
 models/team.ts
+models/template-function.ts
 models/update-accepted.ts
 models/usage.ts
 models/user-create.ts
