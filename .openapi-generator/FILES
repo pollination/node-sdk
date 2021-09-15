@@ -151,6 +151,9 @@ models/project-sort-key.ts
 models/project-update.ts
 models/project.ts
 models/public-account-list.ts
+models/quota-list.ts
+models/quota-type.ts
+models/quota.ts
 models/recipe-interface-list.ts
 models/recipe-interface.ts
 models/recipe-package-list.ts

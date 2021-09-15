@@ -13,48 +13,48 @@
  */
 
 
-import { Organization } from './organization';
+import { Quota } from './quota';
 
 /**
  * A list response from a pagination request
  * @export
- * @interface OrganizationList
+ * @interface QuotaList
  */
-export interface OrganizationList {
+export interface QuotaList {
     /**
      * The next page, if this on is not the last
      * @type {number}
-     * @memberof OrganizationList
+     * @memberof QuotaList
      */
     next_page?: number;
     /**
      * The current page the pagination request is on
      * @type {number}
-     * @memberof OrganizationList
+     * @memberof QuotaList
      */
     page: number;
     /**
      * The total number of pages
      * @type {number}
-     * @memberof OrganizationList
+     * @memberof QuotaList
      */
     page_count: number;
     /**
      * The number of pages per pagination request
      * @type {number}
-     * @memberof OrganizationList
+     * @memberof QuotaList
      */
     per_page: number;
     /**
      * 
-     * @type {Array<Organization>}
-     * @memberof OrganizationList
+     * @type {Array<Quota>}
+     * @memberof QuotaList
      */
-    resources: Array<Organization>;
+    resources: Array<Quota>;
     /**
      * The total number of resources matching the list request
      * @type {number}
-     * @memberof OrganizationList
+     * @memberof QuotaList
      */
     total_count: number;
 }
