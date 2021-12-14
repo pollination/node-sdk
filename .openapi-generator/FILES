@@ -7,6 +7,7 @@ api/accounts-api.ts
 api/apitokens-api.ts
 api/artifacts-api.ts
 api/jobs-api.ts
+api/licenses-api.ts
 api/orgs-api.ts
 api/payments-api.ts
 api/plugins-api.ts
@@ -34,6 +35,8 @@ models/body-post-recipe-owner-recipes-post.ts
 models/card-public.ts
 models/cloud-job-list.ts
 models/cloud-job.ts
+models/coupon-duration.ts
+models/coupon.ts
 models/created-content.ts
 models/dag.ts
 models/dagarray-input-alias.ts
@@ -83,6 +86,8 @@ models/dagtask.ts
 models/daily-usage.ts
 models/dependency-kind.ts
 models/dependency.ts
+models/discount-amount.ts
+models/discount.ts
 models/docker-config.ts
 models/file-meta.ts
 models/file-reference.ts
@@ -128,12 +133,18 @@ models/job-status-enum.ts
 models/job-status.ts
 models/job.ts
 models/key-request.ts
+models/license-pool-access-policy.ts
+models/license-pool-policy-subject.ts
+models/license-pool-public.ts
+models/license-public.ts
+models/license-type.ts
 models/license.ts
 models/line-item-list.ts
 models/line-item.ts
 models/local-config.ts
 models/maintainer.ts
 models/meta-data.ts
+models/metadata.ts
 models/new-plugin-package.ts
 models/new-recipe-package.ts
 models/new-subscription-item.ts
