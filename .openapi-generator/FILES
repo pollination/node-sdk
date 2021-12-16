@@ -25,6 +25,8 @@ git_push.sh
 index.ts
 models/account-public.ts
 models/account-type.ts
+models/activation-list.ts
+models/activation.ts
 models/apitoken-create.ts
 models/apitoken-list.ts
 models/apitoken-private.ts
@@ -134,14 +136,17 @@ models/job-status.ts
 models/job.ts
 models/key-request.ts
 models/license-pool-access-policy.ts
+models/license-pool-list.ts
 models/license-pool-policy-subject.ts
 models/license-pool-public.ts
+models/license-pool-update.ts
 models/license-public.ts
 models/license-type.ts
 models/license.ts
 models/line-item-list.ts
 models/line-item.ts
 models/local-config.ts
+models/location.ts
 models/maintainer.ts
 models/meta-data.ts
 models/metadata.ts
