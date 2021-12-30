@@ -23,6 +23,7 @@ base.ts
 configuration.ts
 git_push.sh
 index.ts
+models/accessor.ts
 models/account-public.ts
 models/account-type.ts
 models/activation-list.ts
@@ -135,8 +136,10 @@ models/job-status-enum.ts
 models/job-status.ts
 models/job.ts
 models/key-request.ts
+models/license-pool-access-policy-list.ts
 models/license-pool-access-policy.ts
 models/license-pool-list.ts
+models/license-pool-policy-subject-list.ts
 models/license-pool-policy-subject.ts
 models/license-pool-public.ts
 models/license-pool-update.ts

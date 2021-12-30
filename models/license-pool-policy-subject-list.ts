@@ -13,31 +13,20 @@
  */
 
 
+import { LicensePoolPolicySubject } from './license-pool-policy-subject';
 
 /**
  * 
  * @export
- * @interface RunProgress
+ * @interface LicensePoolPolicySubjectList
  */
-export interface RunProgress {
+export interface LicensePoolPolicySubjectList {
     /**
-     * 
-     * @type {number}
-     * @memberof RunProgress
+     * The list of subjects which currently have access to the pool
+     * @type {Array<LicensePoolPolicySubject>}
+     * @memberof LicensePoolPolicySubjectList
      */
-    completed?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof RunProgress
-     */
-    running?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof RunProgress
-     */
-    total?: number;
+    resources?: Array<LicensePoolPolicySubject>;
 }
 
 

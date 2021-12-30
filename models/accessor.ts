@@ -13,22 +13,27 @@
  */
 
 
+import { AccountPublic } from './account-public';
+import { Permission } from './permission';
 
 /**
- * Enumaration of allowable status strings
+ * 
  * @export
- * @enum {string}
+ * @interface Accessor
  */
-export enum RunStatusEnum {
-    Created = 'Created',
-    Scheduled = 'Scheduled',
-    Running = 'Running',
-    PostProcessing = 'Post-Processing',
-    Failed = 'Failed',
-    Cancelled = 'Cancelled',
-    Succeeded = 'Succeeded',
-    Unknown = 'Unknown'
+export interface Accessor {
+    /**
+     * 
+     * @type {Permission}
+     * @memberof Accessor
+     */
+    permission: Permission;
+    /**
+     * 
+     * @type {AccountPublic}
+     * @memberof Accessor
+     */
+    subject: AccountPublic;
 }
-
 
 

@@ -13,22 +13,20 @@
  */
 
 
+import { LicensePoolAccessPolicy } from './license-pool-access-policy';
 
 /**
- * Enumaration of allowable status strings
+ * 
  * @export
- * @enum {string}
+ * @interface LicensePoolAccessPolicyList
  */
-export enum RunStatusEnum {
-    Created = 'Created',
-    Scheduled = 'Scheduled',
-    Running = 'Running',
-    PostProcessing = 'Post-Processing',
-    Failed = 'Failed',
-    Cancelled = 'Cancelled',
-    Succeeded = 'Succeeded',
-    Unknown = 'Unknown'
+export interface LicensePoolAccessPolicyList {
+    /**
+     * The list of policies granting access to the pool
+     * @type {Array<LicensePoolAccessPolicy>}
+     * @memberof LicensePoolAccessPolicyList
+     */
+    resources?: Array<LicensePoolAccessPolicy>;
 }
-
 
 
