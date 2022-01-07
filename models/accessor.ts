@@ -13,19 +13,28 @@
  */
 
 
+import { AccountPublic } from './account-public';
+import { Permission } from './permission';
+import { Team } from './team';
 
 /**
  * 
  * @export
- * @interface PaymentIntent
+ * @interface Accessor
  */
-export interface PaymentIntent {
+export interface Accessor {
     /**
-     * Secret string to be used to retrieve the resource from the client
-     * @type {string}
-     * @memberof PaymentIntent
+     * 
+     * @type {Permission}
+     * @memberof Accessor
      */
-    client_secret: string;
+    permission: Permission;
+    /**
+     * 
+     * @type {AccountPublic | Team}
+     * @memberof Accessor
+     */
+    subject: AccountPublic | Team;
 }
 
 

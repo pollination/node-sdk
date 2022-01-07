@@ -13,19 +13,20 @@
  */
 
 
+import { LicensePoolAccessPolicy } from './license-pool-access-policy';
 
 /**
- * An enumeration.
+ * 
  * @export
- * @enum {string}
+ * @interface LicensePoolAccessPolicyList
  */
-export enum InvoiceStatus {
-    Draft = 'draft',
-    Open = 'open',
-    Paid = 'paid',
-    Uncollectable = 'uncollectable',
-    Void = 'void'
+export interface LicensePoolAccessPolicyList {
+    /**
+     * The list of policies granting access to the pool
+     * @type {Array<LicensePoolAccessPolicy>}
+     * @memberof LicensePoolAccessPolicyList
+     */
+    resources?: Array<LicensePoolAccessPolicy>;
 }
-
 
 
