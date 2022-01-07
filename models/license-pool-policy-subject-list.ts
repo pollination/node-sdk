@@ -13,19 +13,20 @@
  */
 
 
+import { LicensePoolPolicySubject } from './license-pool-policy-subject';
 
 /**
  * 
  * @export
- * @interface PaymentIntent
+ * @interface LicensePoolPolicySubjectList
  */
-export interface PaymentIntent {
+export interface LicensePoolPolicySubjectList {
     /**
-     * Secret string to be used to retrieve the resource from the client
-     * @type {string}
-     * @memberof PaymentIntent
+     * The list of subjects which currently have access to the pool
+     * @type {Array<LicensePoolPolicySubject>}
+     * @memberof LicensePoolPolicySubjectList
      */
-    client_secret: string;
+    resources?: Array<LicensePoolPolicySubject>;
 }
 
 
