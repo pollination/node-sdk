@@ -13,37 +13,27 @@
  */
 
 
+import { DeleteSubscriptionItem } from './delete-subscription-item';
+import { SubscriptionItem } from './subscription-item';
 
 /**
  * 
  * @export
- * @interface Metadata
+ * @interface SubscriptionItemList
  */
-export interface Metadata {
+export interface SubscriptionItemList {
     /**
      * 
-     * @type {string}
-     * @memberof Metadata
+     * @type {Array<SubscriptionItem | DeleteSubscriptionItem>}
+     * @memberof SubscriptionItemList
      */
-    id?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Metadata
-     */
-    key: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof Metadata
-     */
-    value: string;
+    data: Array<SubscriptionItem | DeleteSubscriptionItem>;
     /**
      * 
      * @type {boolean}
-     * @memberof Metadata
+     * @memberof SubscriptionItemList
      */
-    visible?: boolean;
+    has_more: boolean;
 }
 
 

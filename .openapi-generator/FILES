@@ -87,6 +87,7 @@ models/dagstring-output.ts
 models/dagtask-loop.ts
 models/dagtask.ts
 models/daily-usage.ts
+models/delete-subscription-item.ts
 models/dependency-kind.ts
 models/dependency.ts
 models/discount-amount.ts
@@ -253,8 +254,7 @@ models/step-string-output.ts
 models/subject-type.ts
 models/subscribe.ts
 models/subscription-create.ts
-models/subscription-item-public-list.ts
-models/subscription-item-public.ts
+models/subscription-item-list.ts
 models/subscription-item.ts
 models/subscription-plan.ts
 models/subscription-update.ts
