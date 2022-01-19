@@ -36,6 +36,7 @@ models/baked-recipe.ts
 models/body-post-plugin-owner-plugins-post.ts
 models/body-post-recipe-owner-recipes-post.ts
 models/card-public.ts
+models/card.ts
 models/cloud-job-list.ts
 models/cloud-job.ts
 models/coupon-duration.ts
@@ -169,6 +170,8 @@ models/package-version.ts
 models/payment-create.ts
 models/payment-intent.ts
 models/payment-method-list.ts
+models/payment-method-type.ts
+models/payment-method.ts
 models/payment-setup.ts
 models/period.ts
 models/permission.ts
@@ -267,6 +270,7 @@ models/task-path-reference.ts
 models/task-path-return.ts
 models/task-reference.ts
 models/task-return.ts
+models/tax-amount.ts
 models/team-create.ts
 models/team-list.ts
 models/team-member-list.ts
@@ -277,6 +281,7 @@ models/team.ts
 models/template-function.ts
 models/update-accepted.ts
 models/update-invoice-preview.ts
+models/update-payment-method.ts
 models/usage.ts
 models/user-create.ts
 models/user-permission.ts
