@@ -13,27 +13,20 @@
  */
 
 
-import { ResourcesDuration } from './resources-duration';
-import { RunProgress } from './run-progress';
+import { Quota } from './quota';
 
 /**
  * 
  * @export
- * @interface RunMeta
+ * @interface SubscriptionUpdateDryRun
  */
-export interface RunMeta {
+export interface SubscriptionUpdateDryRun {
     /**
-     * progress of the run
-     * @type {RunProgress}
-     * @memberof RunMeta
+     * A list of quotas exceeded by a proposed subscription update
+     * @type {Array<Quota>}
+     * @memberof SubscriptionUpdateDryRun
      */
-    progress?: RunProgress;
-    /**
-     * resource usage
-     * @type {ResourcesDuration}
-     * @memberof RunMeta
-     */
-    resources_duration?: ResourcesDuration;
+    exceeded_quotas?: Array<Quota>;
 }
 
 

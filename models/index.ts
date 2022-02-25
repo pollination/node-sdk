@@ -212,6 +212,7 @@ export * from './subscription-create';
 export * from './subscription-payment';
 export * from './subscription-plan';
 export * from './subscription-update';
+export * from './subscription-update-dry-run';
 export * from './task-argument';
 export * from './task-file-reference';
 export * from './task-folder-reference';
