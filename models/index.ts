@@ -77,6 +77,7 @@ export * from './dagtask-loop';
 export * from './daily-usage';
 export * from './dependency';
 export * from './dependency-kind';
+export * from './deployment-config';
 export * from './docker-config';
 export * from './file-meta';
 export * from './file-reference';

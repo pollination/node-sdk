@@ -17,27 +17,27 @@
 /**
  * 
  * @export
- * @interface RunProgress
+ * @interface DeploymentConfig
  */
-export interface RunProgress {
+export interface DeploymentConfig {
     /**
-     * 
+     * The maximum number of CPU cores that can be used by the application.
      * @type {number}
-     * @memberof RunProgress
+     * @memberof DeploymentConfig
      */
-    completed?: number;
+    cpu_limit?: number;
     /**
-     * 
-     * @type {number}
-     * @memberof RunProgress
+     * Whether the application requires login.
+     * @type {boolean}
+     * @memberof DeploymentConfig
      */
-    running?: number;
+    login_required?: boolean;
     /**
-     * 
+     * The maximum amount of memory that can be used by the application.
      * @type {number}
-     * @memberof RunProgress
+     * @memberof DeploymentConfig
      */
-    total?: number;
+    memory_limit?: number;
 }
 
 
