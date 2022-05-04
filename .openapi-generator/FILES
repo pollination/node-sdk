@@ -47,7 +47,7 @@ models/application.ts
 models/baked-recipe.ts
 models/billing-info.ts
 models/billing-option.ts
-models/body-post-plugin-owner-plugins-post.ts
+models/body-cython-function-or-method-owner-plugins-post.ts
 models/body-post-recipe-owner-recipes-post.ts
 models/build-status-enum.ts
 models/build-status.ts
