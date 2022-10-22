@@ -21,7 +21,7 @@ export * from './application-version-list';
 export * from './baked-recipe';
 export * from './billing-info';
 export * from './billing-option';
-export * from './body-post-plugin-owner-plugins-post';
+export * from './body-cython-function-or-method-owner-plugins-post';
 export * from './body-post-recipe-owner-recipes-post';
 export * from './build-status';
 export * from './build-status-enum';
