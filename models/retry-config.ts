@@ -13,26 +13,19 @@
  */
 
 
-import { SubjectType } from './subject-type';
 
 /**
  * 
  * @export
- * @interface LicensePoolPolicySubject
+ * @interface RetryConfig
  */
-export interface LicensePoolPolicySubject {
+export interface RetryConfig {
     /**
-     * The name of the policy subject
-     * @type {string}
-     * @memberof LicensePoolPolicySubject
+     * Hard retry, will delete run data and restart from scratch
+     * @type {boolean}
+     * @memberof RetryConfig
      */
-    name: string;
-    /**
-     * 
-     * @type {SubjectType}
-     * @memberof LicensePoolPolicySubject
-     */
-    subject_type: SubjectType;
+    hard?: boolean;
 }
 
 

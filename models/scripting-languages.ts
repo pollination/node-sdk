@@ -15,13 +15,12 @@
 
 
 /**
- * Dependency kind.
+ * Supported Scripting Languages
  * @export
  * @enum {string}
  */
-export enum DependencyKind {
-    Recipe = 'recipe',
-    Plugin = 'plugin'
+export enum ScriptingLanguages {
+    Python = 'python'
 }
 
 
