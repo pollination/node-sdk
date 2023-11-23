@@ -227,6 +227,7 @@ models/run.ts
 models/s3-upload-request.ts
 models/s3.ts
 models/scripting-languages.ts
+models/sdkenum.ts
 models/sort-enum.ts
 models/status-type.ts
 models/step-array-input.ts
