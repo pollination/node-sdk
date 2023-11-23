@@ -199,6 +199,7 @@ export * from './run-status';
 export * from './run-status-enum';
 export * from './s3';
 export * from './s3-upload-request';
+export * from './sdkenum';
 export * from './scripting-languages';
 export * from './sort-enum';
 export * from './status-type';

@@ -15,13 +15,14 @@
 
 
 /**
- * Dependency kind.
+ * An enumeration.
  * @export
  * @enum {string}
  */
-export enum DependencyKind {
-    Recipe = 'recipe',
-    Plugin = 'plugin'
+export enum SDKEnum {
+    Streamlit = 'streamlit',
+    Dash = 'dash',
+    React = 'react'
 }
 
 
