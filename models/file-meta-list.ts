@@ -13,48 +13,48 @@
  */
 
 
-import { ApplicationVersion } from './application-version';
+import { FileMeta } from './file-meta';
 
 /**
  * A list response from a pagination request
  * @export
- * @interface ApplicationVersionList
+ * @interface FileMetaList
  */
-export interface ApplicationVersionList {
+export interface FileMetaList {
     /**
      * The next page, if this on is not the last
      * @type {number}
-     * @memberof ApplicationVersionList
+     * @memberof FileMetaList
      */
     next_page?: number;
     /**
      * The current page the pagination request is on
      * @type {number}
-     * @memberof ApplicationVersionList
+     * @memberof FileMetaList
      */
     page: number;
     /**
      * The total number of pages
      * @type {number}
-     * @memberof ApplicationVersionList
+     * @memberof FileMetaList
      */
     page_count: number;
     /**
      * The number of pages per pagination request
      * @type {number}
-     * @memberof ApplicationVersionList
+     * @memberof FileMetaList
      */
     per_page: number;
     /**
      * 
-     * @type {Array<ApplicationVersion>}
-     * @memberof ApplicationVersionList
+     * @type {Array<FileMeta>}
+     * @memberof FileMetaList
      */
-    resources: Array<ApplicationVersion>;
+    resources: Array<FileMeta>;
     /**
      * The total number of resources matching the list request
      * @type {number}
-     * @memberof ApplicationVersionList
+     * @memberof FileMetaList
      */
     total_count: number;
 }
