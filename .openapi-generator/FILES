@@ -105,6 +105,7 @@ models/dependency-kind.ts
 models/dependency.ts
 models/deployment-config.ts
 models/docker-config.ts
+models/file-meta-list.ts
 models/file-meta.ts
 models/file-reference.ts
 models/folder-reference.ts

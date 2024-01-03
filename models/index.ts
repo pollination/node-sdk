@@ -80,6 +80,7 @@ export * from './dependency-kind';
 export * from './deployment-config';
 export * from './docker-config';
 export * from './file-meta';
+export * from './file-meta-list';
 export * from './file-reference';
 export * from './folder-reference';
 export * from './function';
