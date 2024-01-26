@@ -103,6 +103,7 @@ models/dagtask.ts
 models/daily-usage.ts
 models/dependency-kind.ts
 models/dependency.ts
+models/deployment-config-update.ts
 models/deployment-config.ts
 models/docker-config.ts
 models/file-meta-list.ts

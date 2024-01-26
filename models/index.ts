@@ -78,6 +78,7 @@ export * from './daily-usage';
 export * from './dependency';
 export * from './dependency-kind';
 export * from './deployment-config';
+export * from './deployment-config-update';
 export * from './docker-config';
 export * from './file-meta';
 export * from './file-meta-list';
