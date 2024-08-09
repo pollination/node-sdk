@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "target": "es6",
+    "target": "ES6",
     "module": "commonjs",
     "noImplicitAny": true,
     "outDir": "dist",
     "rootDir": ".",
+    "moduleResolution": "node",
     "typeRoots": [
       "node_modules/@types"
     ]
@@ -13,11 +14,5 @@
   "exclude": [
     "dist",
     "node_modules"
-  ],
-  "typedocOptions": {
-    "entryPoints": [
-      "index.ts"
-    ],
-    "out": "docs"
-  }
+  ]
 }
