@@ -15,42 +15,42 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { JobComputeUsage } from './job-compute-usage';
+import type { OrganisationMemberUsage } from './organisation-member-usage';
 
 /**
- * A report on cloud compute usage for an account
+ * A report on compute usage by organisation members
  * @export
- * @interface ReportComputeUsage
+ * @interface ReportOrganisationMemberUsage
  */
-export interface ReportComputeUsage {
+export interface ReportOrganisationMemberUsage {
     /**
      * 
      * @type {string}
-     * @memberof ReportComputeUsage
+     * @memberof ReportOrganisationMemberUsage
      */
     'account_id': string;
     /**
      * 
      * @type {string}
-     * @memberof ReportComputeUsage
+     * @memberof ReportOrganisationMemberUsage
      */
     'created_at'?: string;
     /**
      * 
-     * @type {Array<JobComputeUsage>}
-     * @memberof ReportComputeUsage
+     * @type {Array<OrganisationMemberUsage>}
+     * @memberof ReportOrganisationMemberUsage
      */
-    'data': Array<JobComputeUsage>;
+    'data': Array<OrganisationMemberUsage>;
     /**
      * 
      * @type {string}
-     * @memberof ReportComputeUsage
+     * @memberof ReportOrganisationMemberUsage
      */
     'from_date'?: string;
     /**
      * 
      * @type {string}
-     * @memberof ReportComputeUsage
+     * @memberof ReportOrganisationMemberUsage
      */
     'to_date'?: string;
 }

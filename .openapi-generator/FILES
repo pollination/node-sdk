@@ -182,6 +182,7 @@ models/metadata.ts
 models/new-application-version.ts
 models/new-plugin-package.ts
 models/new-recipe-package.ts
+models/organisation-member-usage.ts
 models/organization-create.ts
 models/organization-list.ts
 models/organization-member-list.ts
@@ -225,6 +226,7 @@ models/recipe-package-list.ts
 models/recipe-package.ts
 models/recipe.ts
 models/report-compute-usage.ts
+models/report-organisation-member-usage.ts
 models/repository-access-policy-list.ts
 models/repository-access-policy.ts
 models/repository-create.ts
