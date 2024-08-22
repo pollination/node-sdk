@@ -15,58 +15,52 @@
 
 
 /**
- * 
+ * A row in a report on CAD license usage
  * @export
- * @interface Payment
+ * @interface CADLicenseUsage
  */
-export interface Payment {
-    /**
-     * 
-     * @type {number}
-     * @memberof Payment
-     */
-    'amount': number;
+export interface CADLicenseUsage {
     /**
      * 
      * @type {string}
-     * @memberof Payment
+     * @memberof CADLicenseUsage
      */
-    'currency': string;
-    /**
-     * 
-     * @type {number}
-     * @memberof Payment
-     */
-    'id': number;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof Payment
-     */
-    'is_one_off_charge': boolean;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof Payment
-     */
-    'is_paid': boolean;
+    'action': string;
     /**
      * 
      * @type {string}
-     * @memberof Payment
+     * @memberof CADLicenseUsage
      */
-    'payout_date': string;
+    'app_version': string;
     /**
      * 
      * @type {string}
-     * @memberof Payment
+     * @memberof CADLicenseUsage
      */
-    'receipt_url'?: string;
+    'created_at': string;
     /**
      * 
-     * @type {number}
-     * @memberof Payment
+     * @type {string}
+     * @memberof CADLicenseUsage
      */
-    'subscription_id': number;
+    'product_id': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CADLicenseUsage
+     */
+    'product_name': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CADLicenseUsage
+     */
+    'user_id': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CADLicenseUsage
+     */
+    'user_name': string;
 }
 

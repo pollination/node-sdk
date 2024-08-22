@@ -15,42 +15,42 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { JobComputeUsage } from './job-compute-usage';
+import type { CADLicenseUsage } from './cadlicense-usage';
 
 /**
- * A report on cloud compute usage for an account
+ * A report on CAD license usage
  * @export
- * @interface ReportComputeUsage
+ * @interface ReportCADLicenseUsage
  */
-export interface ReportComputeUsage {
+export interface ReportCADLicenseUsage {
     /**
      * 
      * @type {string}
-     * @memberof ReportComputeUsage
+     * @memberof ReportCADLicenseUsage
      */
     'account_id': string;
     /**
      * 
      * @type {string}
-     * @memberof ReportComputeUsage
+     * @memberof ReportCADLicenseUsage
      */
     'created_at'?: string;
     /**
      * 
-     * @type {Array<JobComputeUsage>}
-     * @memberof ReportComputeUsage
+     * @type {Array<CADLicenseUsage>}
+     * @memberof ReportCADLicenseUsage
      */
-    'data': Array<JobComputeUsage>;
+    'data': Array<CADLicenseUsage>;
     /**
      * 
      * @type {string}
-     * @memberof ReportComputeUsage
+     * @memberof ReportCADLicenseUsage
      */
     'from_date'?: string;
     /**
      * 
      * @type {string}
-     * @memberof ReportComputeUsage
+     * @memberof ReportCADLicenseUsage
      */
     'to_date'?: string;
 }
