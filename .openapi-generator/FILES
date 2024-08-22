@@ -52,6 +52,7 @@ models/billing-info.ts
 models/billing-option.ts
 models/build-status-enum.ts
 models/build-status.ts
+models/cadlicense-usage.ts
 models/card-type.ts
 models/cloud-job-list.ts
 models/cloud-job.ts
@@ -225,6 +226,7 @@ models/recipe-interface.ts
 models/recipe-package-list.ts
 models/recipe-package.ts
 models/recipe.ts
+models/report-cadlicense-usage.ts
 models/report-compute-usage.ts
 models/report-organization-member-usage.ts
 models/repository-access-policy-list.ts
