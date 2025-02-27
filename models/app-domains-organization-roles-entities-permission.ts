@@ -15,22 +15,18 @@
 
 
 /**
- * Content for created response.
+ * An enumeration.
  * @export
- * @interface CreatedContent
+ * @enum {string}
  */
-export interface CreatedContent {
-    /**
-     * Id for the newly created resource.
-     * @type {string}
-     * @memberof CreatedContent
-     */
-    'id': string;
-    /**
-     *  A human readable message
-     * @type {string}
-     * @memberof CreatedContent
-     */
-    'message'?: string;
-}
+
+export const AppDomainsOrganizationRolesEntitiesPermission = {
+    Read: 'read',
+    Write: 'write',
+    Admin: 'admin'
+} as const;
+
+export type AppDomainsOrganizationRolesEntitiesPermission = typeof AppDomainsOrganizationRolesEntitiesPermission[keyof typeof AppDomainsOrganizationRolesEntitiesPermission];
+
+
 

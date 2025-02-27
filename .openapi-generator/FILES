@@ -35,6 +35,8 @@ models/apitoken-create.ts
 models/apitoken-list.ts
 models/apitoken-private.ts
 models/apitoken.ts
+models/app-domains-organization-roles-entities-permission.ts
+models/app-server-rest-access-policies-dto-permission.ts
 models/application-access-policy-list.ts
 models/application-access-policy.ts
 models/application-create.ts
@@ -188,7 +190,9 @@ models/organization-list.ts
 models/organization-member-list.ts
 models/organization-member-usage.ts
 models/organization-member.ts
+models/organization-role-binding.ts
 models/organization-role-enum.ts
+models/organization-role.ts
 models/organization-update.ts
 models/organization.ts
 models/package-sort-key.ts
@@ -198,7 +202,6 @@ models/pay-link.ts
 models/payment-method-enum.ts
 models/payment-method.ts
 models/payment.ts
-models/permission.ts
 models/plan-type.ts
 models/plugin-config.ts
 models/plugin-package-list.ts
