@@ -15,7 +15,7 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import type { TeamRoleEnum } from './team-role-enum';
+import type { OrganizationRole } from './organization-role';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { UserPublic } from './user-public';
@@ -23,22 +23,20 @@ import type { UserPublic } from './user-public';
 /**
  * 
  * @export
- * @interface TeamMember
+ * @interface OrganizationRoleBinding
  */
-export interface TeamMember {
+export interface OrganizationRoleBinding {
     /**
-     * The role the user has within the team
-     * @type {TeamRoleEnum}
-     * @memberof TeamMember
+     * The role that is being bound to the user
+     * @type {OrganizationRole}
+     * @memberof OrganizationRoleBinding
      */
-    'role': TeamRoleEnum;
+    'role': OrganizationRole;
     /**
-     * The team member
+     * The user that is being bound to the organization role
      * @type {UserPublic}
-     * @memberof TeamMember
+     * @memberof OrganizationRoleBinding
      */
     'user': UserPublic;
 }
-
-
 
