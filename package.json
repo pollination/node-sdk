@@ -1,6 +1,6 @@
 {
   "name": "@pollination-solutions/pollination-sdk",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "description": "OpenAPI client for @pollination-solutions/pollination-sdk",
   "author": "OpenAPI-Generator Contributors",
   "repository": {
