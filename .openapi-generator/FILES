@@ -7,6 +7,7 @@ api/accounts-api.ts
 api/apitokens-api.ts
 api/applications-api.ts
 api/artifacts-api.ts
+api/billing-api.ts
 api/jobs-api.ts
 api/licenses-api.ts
 api/orgs-api.ts
@@ -35,6 +36,8 @@ models/apitoken-create.ts
 models/apitoken-list.ts
 models/apitoken-private.ts
 models/apitoken.ts
+models/app-server-rest-billing-dto-pay-link.ts
+models/app-server-rest-subscriptions-dto-pay-link.ts
 models/application-access-policy-list.ts
 models/application-access-policy.ts
 models/application-create.ts
@@ -50,6 +53,13 @@ models/baked-recipe-templates-inner.ts
 models/baked-recipe.ts
 models/billing-info.ts
 models/billing-option.ts
+models/billing-price.ts
+models/billing-product.ts
+models/billing-subscription-create.ts
+models/billing-subscription-item.ts
+models/billing-subscription-update.ts
+models/billing-transaction-preview.ts
+models/billing-transaction.ts
 models/build-status-enum.ts
 models/build-status.ts
 models/cadlicense-usage.ts
@@ -196,7 +206,6 @@ models/organization.ts
 models/package-sort-key.ts
 models/package-version.ts
 models/paused-reason.ts
-models/pay-link.ts
 models/payment-method-enum.ts
 models/payment-method.ts
 models/payment.ts
