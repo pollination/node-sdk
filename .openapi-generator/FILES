@@ -209,10 +209,13 @@ models/organization-update.ts
 models/organization.ts
 models/package-sort-key.ts
 models/package-version.ts
+models/paddle-billing-checkout.ts
 models/paddle-billing-price.ts
 models/paddle-billing-product.ts
+models/paddle-billing-subscription-custom-data.ts
 models/paddle-billing-subscription-item.ts
 models/paddle-billing-subscription-status.ts
+models/paddle-billing-transaction-item.ts
 models/paused-reason.ts
 models/payment-method-enum.ts
 models/payment-method.ts
