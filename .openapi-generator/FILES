@@ -217,6 +217,8 @@ models/paddle-billing-subscription-item.ts
 models/paddle-billing-subscription-status.ts
 models/paddle-billing-transaction-details.ts
 models/paddle-billing-transaction-item.ts
+models/paddle-billing-transaction-line-item.ts
+models/paddle-billing-transaction-product.ts
 models/paused-reason.ts
 models/payment-method-details.ts
 models/payment-method-enum.ts
@@ -315,6 +317,7 @@ models/subscription-create.ts
 models/subscription-payment.ts
 models/subscription-plan.ts
 models/subscription-update-dry-run.ts
+models/subscription-update-transaction.ts
 models/subscription-update.ts
 models/subscription.ts
 models/task-argument.ts
@@ -333,6 +336,7 @@ models/team-role-enum.ts
 models/team-update.ts
 models/team.ts
 models/template-function.ts
+models/transaction-item-totals.ts
 models/transaction-payment.ts
 models/transaction-totals.ts
 models/update-accepted.ts
