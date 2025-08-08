@@ -51,6 +51,7 @@ models/application-version.ts
 models/application.ts
 models/baked-recipe-templates-inner.ts
 models/baked-recipe.ts
+models/billing-details.ts
 models/billing-info.ts
 models/billing-option.ts
 models/billing-period.ts
@@ -212,13 +213,15 @@ models/package-version.ts
 models/paddle-billing-checkout.ts
 models/paddle-billing-price.ts
 models/paddle-billing-product.ts
-models/paddle-billing-subscription-custom-data.ts
 models/paddle-billing-subscription-item.ts
 models/paddle-billing-subscription-status.ts
+models/paddle-billing-transaction-details.ts
 models/paddle-billing-transaction-item.ts
 models/paused-reason.ts
+models/payment-method-details.ts
 models/payment-method-enum.ts
 models/payment-method.ts
+models/payment-terms.ts
 models/payment.ts
 models/permission.ts
 models/plan-type.ts
@@ -238,6 +241,7 @@ models/project-recipe-filter.ts
 models/project-sort-key.ts
 models/project-update.ts
 models/project.ts
+models/proration.ts
 models/public-account-list.ts
 models/quantity-constraints.ts
 models/quota-list.ts
@@ -329,6 +333,8 @@ models/team-role-enum.ts
 models/team-update.ts
 models/team.ts
 models/template-function.ts
+models/transaction-payment.ts
+models/transaction-totals.ts
 models/update-accepted.ts
 models/usage.ts
 models/user-create.ts
