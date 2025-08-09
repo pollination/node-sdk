@@ -54,6 +54,7 @@ models/baked-recipe.ts
 models/billing-details.ts
 models/billing-info.ts
 models/billing-option.ts
+models/billing-payment-method.ts
 models/billing-period.ts
 models/billing-price.ts
 models/billing-product.ts
@@ -211,6 +212,9 @@ models/organization.ts
 models/package-sort-key.ts
 models/package-version.ts
 models/paddle-billing-checkout.ts
+models/paddle-billing-payment-method-card.ts
+models/paddle-billing-payment-method-paypal.ts
+models/paddle-billing-payment-method-type.ts
 models/paddle-billing-price.ts
 models/paddle-billing-product.ts
 models/paddle-billing-subscription-item.ts
