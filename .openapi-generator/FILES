@@ -53,6 +53,7 @@ models/baked-recipe-templates-inner.ts
 models/baked-recipe.ts
 models/billing-details.ts
 models/billing-info.ts
+models/billing-invoice-request-create.ts
 models/billing-option.ts
 models/billing-payment-method.ts
 models/billing-period.ts
@@ -70,6 +71,7 @@ models/cadlicense-usage.ts
 models/card-type.ts
 models/cloud-job-list.ts
 models/cloud-job.ts
+models/country-choice.ts
 models/created-content.ts
 models/dag.ts
 models/dagarray-input-alias-inner.ts
