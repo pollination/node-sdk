@@ -238,6 +238,7 @@ models/plugin-package-list.ts
 models/plugin-package.ts
 models/plugin.ts
 models/policy-subject.ts
+models/product.ts
 models/project-access-policy-list.ts
 models/project-access-policy.ts
 models/project-create.ts
@@ -345,6 +346,7 @@ models/template-function.ts
 models/transaction-item-totals.ts
 models/transaction-payment.ts
 models/transaction-totals.ts
+models/trial-status-response.ts
 models/update-accepted.ts
 models/usage.ts
 models/user-create.ts
