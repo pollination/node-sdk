@@ -15,17 +15,17 @@
 
 
 /**
- * Dependency kind.
+ * An enumeration.
  * @export
  * @enum {string}
  */
 
-export const DependencyKind = {
-    Recipe: 'recipe',
-    Plugin: 'plugin'
+export const Product = {
+    RhinoPlugin: 'rhino_plugin',
+    RevitPlugin: 'revit_plugin'
 } as const;
 
-export type DependencyKind = typeof DependencyKind[keyof typeof DependencyKind];
+export type Product = typeof Product[keyof typeof Product];
 
 
 
